@@ -52,7 +52,7 @@ I: Do you have any discomfort with watching or planning about watching busking?
 B: Yeah, I have one experience related to that. When famous singer Jang-Bum-Joon came to busk in Gung-dong** **I missed that because I didn’t notice that early. My friend noticed me about that when the busking starts, but I couldn’t go there because I had other appointment already.
 ````
 #### (3) Sketch
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch1.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/raw/master/img/Sketch1.png)
 
 ### 2) Observation & Interview 2
 
@@ -105,7 +105,7 @@ I: Why was that so?
 B: She tried to search via facebook and instagram using various keywords including hashtags. However, the busker did not show up in any of the result set.
 ````
 #### (3) Sketch
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch2.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/raw/master/img/Sketch2.png)
 
 ### 3) Observation & Interview 3
 
@@ -157,7 +157,7 @@ I: Why don’t you ask directly to the performer?
 B: It is hard to talk to them while they are performing. Moreover, I try to memorize the name of bands or singer but I often forget their name when I’m back home. Finding out the name of band is even harder than recalling their name. 
 ````
 #### (3) Sketch
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch3.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/raw/master/img/Sketch3.png)
 
 ### 4) Observation & Interview 4
 
@@ -213,7 +213,7 @@ I: How do you find that ‘interesting bands’ that you described currently?
 B: There exist two ways. I met them busking in the street, totally by chance. Otherwise, my friend talks to me about interesting band they saw on the street. There is no other way. 
 ````
 #### (3) Sketch
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch4.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/raw/master/img/Sketch4.png)
 
 ### 5) Observation & Interview 5
 
@@ -282,7 +282,7 @@ I: Thank you!
 B: Thank you.
 ````
 #### (3) Sketch
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch5.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/raw/master/img/Sketch5.png)
 
 ## 3. Needs (Total 12)
 I# in parentheses means that the need is derived from particular interviewee
