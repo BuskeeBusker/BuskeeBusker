@@ -1,6 +1,6 @@
-#DP1 Report  - Needsfinding
+# DP1 Report  - Needsfinding
 
-###[MC2] Team Buskee Busker
+### [MC2] Team Buskee Busker
 
 **Hyoungseok Kim 20140176**
 
@@ -10,15 +10,15 @@
 
 **Eun-Young Ko (audit) 20090044**
 
-##1. Experience
+## 1. Experience
 Redesign the experience of meeting between buskers and buskee.
 
-##2. Observations & Interviews
+## 2. Observations & Interviews
 As we aim to redesign the experience of meeting between buskers and buskee, we tried to listen from both groups. Our team interviewed four buskee (interview 1 - 4) and one busker (interview 5).  We categorized buskee into two groups, active and passive. Active buskees actively searches for various busking and sometimes watching busking itself is their main purpose of visiting the venue. On the other hand, passive buskee happens to watch busking by chance. Out of four buskee we tried to look for one extremely active buskee, one active buskee, and two passive buskee. Due to time constraint, we could only interview one busker. However, the busker we interviewed has a lot of busking experience. Therefore, we are confident that we gathered very detailed and wide range of busker’s need from him.  
 
-###1) Observation & Interview 1
+### 1) Observation & Interview 1
 
-####(1) Overview 
+#### (1) Overview 
 * Participant: Female undergraduate student who likes to watch busking.
 * Interviewer: Hyoungseok Kim
 * Why interviewed? : I chose to interview her because she represents a group of people who really like to watch busking.
@@ -33,7 +33,7 @@ As we aim to redesign the experience of meeting between buskers and buskee, we t
     * She couldn’t go to watch famous singer’s busking because she didn’t know that in advance.
     * She looked sad when she thought about the experience of missing that busking. 
 
-####(2) Narrative
+#### (2) Narrative
 ````
 Interviewer: Do you know what is busking and do you like it?
 
@@ -51,9 +51,9 @@ I: Do you have any discomfort with watching or planning about watching busking?
 
 B: Yeah, I have one experience related to that. When famous singer Jang-Bum-Joon came to busk in Gung-dong** **I missed that because I didn’t notice that early. My friend noticed me about that when the busking starts, but I couldn’t go there because I had other appointment already.
 ````
-###2) Observation & Interview 2
+### 2) Observation & Interview 2
 
-####(1) Overview 
+#### (1) Overview 
 
 * Participant: Male undergraduate
 * Interviewer: Kyung Je Jo
@@ -71,7 +71,7 @@ B: Yeah, I have one experience related to that. When famous singer Jang-Bum-Joon
     * "I wish to watch more buskings, but I do not know when and where they perform" - interviewee*
     * "Sometimes, buskers were amazing and I wanted to learn about them" - interviewee
 
-####(2) Narrative
+#### (2) Narrative
 ````
 Interviewer: Hi, have you ever watched busking?
 
@@ -101,9 +101,9 @@ I: Why was that so?
 
 B: She tried to search via facebook and instagram using various keywords including hashtags. However, the busker did not show up in any of the result set.
 ````
-###3) Observation & Interview 3
+### 3) Observation & Interview 3
 
-####(1) Overview
+#### (1) Overview
 
 * Participant: A man watching busking at Hongdae street, age 29
 * Interviewer: Eun-Young Ko
@@ -120,7 +120,7 @@ B: She tried to search via facebook and instagram using various keywords includi
     * Sometimes he goes to watch busking of the performer he followed in SNS, when the pre-announced place and time work for him. 
     * The most inconvenience experience: Sometimes he loves the song of buskers but it is hard to know the names of singers and reach them again.
 
-####(2) Narrative
+#### (2) Narrative
 ````
 Interviewee: How did you get here (the place of busking, near Hongdae subway station)? 
 
@@ -150,9 +150,9 @@ I: Why don’t you ask directly to the performer?
 
 B: It is hard to talk to them while they are performing. Moreover, I try to memorize the name of bands or singer but I often forget their name when I’m back home. Finding out the name of band is even harder than recalling their name. 
 ````
-###4) Observation & Interview 4
+### 4) Observation & Interview 4
 
-####(1) Overview
+#### (1) Overview
 
 * Participant: A graduate student living in Seoul, age 25
 * Interviewer: Eun-Young Ko
@@ -169,7 +169,7 @@ B: It is hard to talk to them while they are performing. Moreover, I try to memo
     * He tries to support indie band/ unpopular band with great talent but it is hard to reach them. 
     * He wants to share impressive buskers’ performance with his friends who shares same interests - music, indiebands. However, it is hard to deliver my impression, especially when he cannot reach the buskers’ information. 
 
-####(2) Narrative
+#### (2) Narrative
 ````
 Interviewer: How often do you watch buskings? 
 
@@ -203,9 +203,9 @@ I: How do you find that ‘interesting bands’ that you described currently?
 
 B: There exist two ways. I met them busking in the street, totally by chance. Otherwise, my friend talks to me about interesting band they saw on the street. There is no other way. 
 ````
-###5) Observation & Interview 5
+### 5) Observation & Interview 5
 
-####(1) Overview
+#### (1) Overview
 
 * Participant: male weekly busker who likes to do busking
 * Interviewer: Seokchan Ahn
@@ -227,7 +227,7 @@ B: There exist two ways. I met them busking in the street, totally by chance. Ot
         * 3. regional flow population
     * He said that if busker had a short period of busking, s/he would have difficulty in advertising, and most of them use facebook for advertising themselves.
 
-####(2) Narrative
+#### (2) Narrative
 ````
 Interviewee: Please tell me about yourself.
 
@@ -270,12 +270,12 @@ I: Thank you!
 B: Thank you.
 ````
 
-##3. Needs (Total 12)
+## 3. Needs (Total 12)
 I# in parentheses means that the need is derived from particular interviewee
 
-###(1) Needs from buskees - I1, I2, I3, I4
+### (1) Needs from buskees - I1, I2, I3, I4
 
-####1. WHEN and WHERE (for both of active and passive users)
+#### 1. WHEN and WHERE (for both of active and passive users)
     
     1. Information of busking venue/time in advance (I1, I2, I3, I4) 
     
@@ -285,7 +285,7 @@ I# in parentheses means that the need is derived from particular interviewee
     
     4. Information on nearby, real-time busking performance (I3)
 
-####2. WHO and WHAT (for active users)
+#### 2. WHO and WHAT (for active users)
 
     5. Recommendation/Ranking of buskers (I4)
 
@@ -293,9 +293,9 @@ I# in parentheses means that the need is derived from particular interviewee
 
     7. Better methods to share the performance with other friends (I4)
     
-###(2) Needs from buskers - I5
+### (2) Needs from buskers - I5
 
-####3. Quality of Busking
+#### 3. Quality of Busking
 
     8. Avoid conflicts with other buskers on venue and schedule (I5)
 
@@ -303,13 +303,13 @@ I# in parentheses means that the need is derived from particular interviewee
 
     10. Increase exposure/publicity to people (I5)
 
-####4. Promoting
+#### 4. Promoting
 
     11. Information on possible busking place (I5)
 
     12. More promotion channels or more fans (I5)
 
-##4. Insights (Total 11)
+## 4. Insights (Total 11)
 
 1. Connection between buskers and buskees - we should include both
 
@@ -333,19 +333,19 @@ I# in parentheses means that the need is derived from particular interviewee
 
 11. Solving the "inter-busker" conflicts with venue or time
 
-##5. Studio Reflections
+## 5. Studio Reflections
 
-###1) "Likes" Feedback
+### 1) "Likes" Feedback
 
 (1) Team’s approach that attempts to find needs from both perspective of buskers and buskees is great.
 
 (2) Sketches are nice and it represents the content well.
 
-###2) "Wishes" Feedback
+### 2) "Wishes" Feedback
 
 (1) Currently, buskees use SNS a channel of gathering information on various busking. However, the structure of SNS is not optimized to buskee’s needs such as in the feature of showing schedules of busking.  It would be helpful for the team to give attention in improving the current UI of busking information in SNS.
 
-###3) Our reflection
+### 3) Our reflection
 
 We tried to catch as much needs as possible regarding busking performances. That’s why we analyzed from two perspectives, one from buskers’ and the other from buskees. We are delighted to get "Likes" feedback from that point. To reflect “Wishes” feedback, we are going to investigate the current SNS information gathering process. To be specific, we are going to visit SNS like facebook and twitter first. Then, we will find popular busking pages or busker accounts that a lot of followers. Finally, we will analyze the UI of the posts related to busking schedules. We hope we would catch the current UI problem in SNS and come up with better idea to meet the needs. 
 
