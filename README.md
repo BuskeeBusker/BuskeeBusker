@@ -1,4 +1,4 @@
-# DP1 Report  - Needsfinding
+# DP1 Report  - Needfinding
 
 ### [MC2] Team Buskee Busker
 
@@ -11,7 +11,7 @@
 **Eun-Young Ko (audit) 20090044**
 
 ## 1. Experience
-Redesign the experience of meeting between buskers and buskee.
+Redesign the experience of meeting between buskers and buskees.
 
 ## 2. Observations & Interviews
 As we aim to redesign the experience of meeting between buskers and buskee, we tried to listen from both groups. Our team interviewed four buskee (interview 1 - 4) and one busker (interview 5).  We categorized buskee into two groups, active and passive. Active buskees actively searches for various busking and sometimes watching busking itself is their main purpose of visiting the venue. On the other hand, passive buskee happens to watch busking by chance. Out of four buskee we tried to look for one extremely active buskee, one active buskee, and two passive buskee. Due to time constraint, we could only interview one busker. However, the busker we interviewed has a lot of busking experience. Therefore, we are confident that we gathered very detailed and wide range of busker’s need from him.  
@@ -349,4 +349,10 @@ I# in parentheses means that the need is derived from particular interviewee
 
 We tried to catch as much needs as possible regarding busking performances. That’s why we analyzed from two perspectives, one from buskers’ and the other from buskees. We are delighted to get "Likes" feedback from that point. To reflect “Wishes” feedback, we are going to investigate the current SNS information gathering process. To be specific, we are going to visit SNS like facebook and twitter first. Then, we will find popular busking pages or busker accounts that a lot of followers. Finally, we will analyze the UI of the posts related to busking schedules. We hope we would catch the current UI problem in SNS and come up with better idea to meet the needs. 
 
-Below we present our first observations on busker’s SNS use. In most cases, buskers use their SNS page to announce their schedule in advance, notify sudden change in schedule or cancellation. It seems that there exist some limitations on current way of how buskee and buskers meet each other. Most importantly, only buskee following a busker’s SNS can know the busker’s performance schedule. Another channel that can gives busking information to active user searching for a busking to watch or passive user near busking place would be beneficial to both buskee and buskers. In addition to that, in case of sudden change or cancellation of busking, buskers worry a lot about buskee coming to their performance. However, what buskers usually do is writing a post about change or cancellation and therefore there exist some buskee making a trip for nothing. We also tried to find a band’s facebook account based on their busking time and venue, however, getting the information was extremely hard as the facebook search result highly depend on ‘keyword’. For example, if the date is ‘March 17’ on busker’s facebook post, we cannot find their post by searching with keyword ‘3/17’. 
+Below we present our first observations on busker’s SNS use. In most cases, buskers use their SNS page to announce their schedule in advance, notify sudden change in schedule or cancellation. It seems that there exist some limitations on current way of how buskee and buskers meet each other. Most importantly, only buskee following a busker’s SNS can know the busker’s performance schedule. Another channel that can gives busking information to active user searching for a busking to watch or passive user near busking place would be beneficial to both buskee and buskers. In addition to that, in case of sudden change or cancellation of busking, buskers worry a lot about buskee coming to their performance. However, what buskers usually do is writing a post about change or cancellation and therefore there exist some buskee making a trip for nothing. We also tried to find a band’s facebook account based on their busking time and venue, however, getting the information was extremely hard as the facebook search result highly depend on ‘keyword’. For example, if the date is ‘March 17’ on busker’s facebook post, we cannot find their post by searching with keyword ‘3/17’.
+
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch1.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch2.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch3.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch4.png)
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch5.png)
