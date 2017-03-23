@@ -51,6 +51,9 @@ I: Do you have any discomfort with watching or planning about watching busking?
 
 B: Yeah, I have one experience related to that. When famous singer Jang-Bum-Joon came to busk in Gung-dong** **I missed that because I didn’t notice that early. My friend noticed me about that when the busking starts, but I couldn’t go there because I had other appointment already.
 ````
+#### (3) Sketch
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch1.png)
+
 ### 2) Observation & Interview 2
 
 #### (1) Overview 
@@ -101,6 +104,9 @@ I: Why was that so?
 
 B: She tried to search via facebook and instagram using various keywords including hashtags. However, the busker did not show up in any of the result set.
 ````
+#### (3) Sketch
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch2.png)
+
 ### 3) Observation & Interview 3
 
 #### (1) Overview
@@ -150,6 +156,9 @@ I: Why don’t you ask directly to the performer?
 
 B: It is hard to talk to them while they are performing. Moreover, I try to memorize the name of bands or singer but I often forget their name when I’m back home. Finding out the name of band is even harder than recalling their name. 
 ````
+#### (3) Sketch
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch3.png)
+
 ### 4) Observation & Interview 4
 
 #### (1) Overview
@@ -203,6 +212,9 @@ I: How do you find that ‘interesting bands’ that you described currently?
 
 B: There exist two ways. I met them busking in the street, totally by chance. Otherwise, my friend talks to me about interesting band they saw on the street. There is no other way. 
 ````
+#### (3) Sketch
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch4.png)
+
 ### 5) Observation & Interview 5
 
 #### (1) Overview
@@ -269,6 +281,8 @@ I: Thank you!
 
 B: Thank you.
 ````
+#### (3) Sketch
+![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch5.png)
 
 ## 3. Needs (Total 12)
 I# in parentheses means that the need is derived from particular interviewee
@@ -350,9 +364,3 @@ I# in parentheses means that the need is derived from particular interviewee
 We tried to catch as much needs as possible regarding busking performances. That’s why we analyzed from two perspectives, one from buskers’ and the other from buskees. We are delighted to get "Likes" feedback from that point. To reflect “Wishes” feedback, we are going to investigate the current SNS information gathering process. To be specific, we are going to visit SNS like facebook and twitter first. Then, we will find popular busking pages or busker accounts that a lot of followers. Finally, we will analyze the UI of the posts related to busking schedules. We hope we would catch the current UI problem in SNS and come up with better idea to meet the needs. 
 
 Below we present our first observations on busker’s SNS use. In most cases, buskers use their SNS page to announce their schedule in advance, notify sudden change in schedule or cancellation. It seems that there exist some limitations on current way of how buskee and buskers meet each other. Most importantly, only buskee following a busker’s SNS can know the busker’s performance schedule. Another channel that can gives busking information to active user searching for a busking to watch or passive user near busking place would be beneficial to both buskee and buskers. In addition to that, in case of sudden change or cancellation of busking, buskers worry a lot about buskee coming to their performance. However, what buskers usually do is writing a post about change or cancellation and therefore there exist some buskee making a trip for nothing. We also tried to find a band’s facebook account based on their busking time and venue, however, getting the information was extremely hard as the facebook search result highly depend on ‘keyword’. For example, if the date is ‘March 17’ on busker’s facebook post, we cannot find their post by searching with keyword ‘3/17’.
-
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch1.png)
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch2.png)
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch3.png)
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch4.png)
-![alt tag](https://github.com/BuskeeBusker/BuskeeBusker/blob/master/img/Sketch5.png)
