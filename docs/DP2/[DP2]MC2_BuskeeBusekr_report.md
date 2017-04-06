@@ -15,8 +15,8 @@ A buskee who incidentally became a fan of a busker by watching the busker’s bu
 
 ## 2. Persona
 ### 1) Demographic information
-![img](Persona1.png)
-````
+<img src="Persona1.png" alt="persona1" width="30%"/>
+
 * Name: Suzy
 * Gender: Female
 * Age: 23
@@ -26,10 +26,10 @@ A buskee who incidentally became a fan of a busker by watching the busker’s bu
 * Preferences: Indie band, new artist
 * Goals: Watch buskings that her favorite buskers performs in the street. Construct a perfect playlist of songs that she loves.
 
-````
+
 ### 2) Story
-![img](Persona2.png)
-![img](Persona3.png)
+<img src="Persona2.png" alt="persona2" width="40%"/> <img src="Persona3.png" alt="persona3" width="44%"/>
+
 On Suzy’s birthday, she was walking on Hongdae street feeling tipsy and stuck to a R&B busking by chance. She fell in love with that busking and promised to herself  to add its songs on her playlist.  After she went home, she tried to remember the busker and the songs. However, Suzy couldn’t remember the busker and her further attempt to find the information about the busker online failed. The other day, she returned to Hongdae street, feeling nostalgic for that busking in her mind.
 
 ## 3. HMW questions for POV
@@ -57,49 +57,49 @@ From our POV, we extracted two important parts, memorizing and searching.  HMW q
 
 ## 5. Solution ideas for HMW questions
 ### Solution 1
-Provide Q&A board buskee and busker.
-Crowdsource of schedule. (manual fill-in)
-Provide a QR code for each busker so that buskee can take photo.
-Notify when user is watching busking. (GPS based)
-Make bukser report their busking informations.
-Get Information from other buskers who watching that busking.
-Make buskee note informations after they watch busking.
-Provide quiz contest which ask what was that song at that busking.
-Provide 1:1 (busker-to-buskee) chatting service to get past information.
-Make a board which buskees provide some information about buskings.
+1. Provide Q&A board buskee and busker.
+2. Crowdsource of schedule. (manual fill-in)
+3. Provide a QR code for each busker so that buskee can take photo.
+4. Notify when user is watching busking. (GPS based)
+5. Make bukser report their busking informations.
+6. Get Information from other buskers who watching that busking.
+7. Make buskee note informations after they watch busking.
+8. Provide quiz contest which ask what was that song at that busking.
+9. Provide 1:1 (busker-to-buskee) chatting service to get past information.
+10. Make a board which buskees provide some information about buskings.
 ### Solution 2
-Put busking places to digital map and provide related information when user clicks on map.
-Share busking information that buskees have reported to public.
-Sort busking events with various tags to enable buskees to find favorite buskings efficiently.
-Make place to upload question about busking and receive answer from crowds.
-Employee people who can answer to busking-related questions.
-Make place for buskers to promote themselves efficiently.
-Make buskers to upload their information or schedules regularly.
-Make buskers to upload their videos on searchable streaming site like youtube.
-Make buskers to become famous by hosting TV shows.
-Make designated place where buskers and buskees usually gather and share information.
+1. Put busking places to digital map and provide related information when user clicks on map.
+2. Share busking information that buskees have reported to public.
+3. Sort busking events with various tags to enable buskees to find favorite buskings efficiently.
+4. Make place to upload question about busking and receive answer from crowds.
+5. Employee people who can answer to busking-related questions.
+6. Make place for buskers to promote themselves efficiently.
+7. Make buskers to upload their information or schedules regularly.
+8. Make buskers to upload their videos on searchable streaming site like youtube.
+9. Make buskers to become famous by hosting TV shows.
+10. Make designated place where buskers and buskees usually gather and share information.
 ### Solution 3
-Present related busking videos (by band name, location, genre).
-Make buskees get point from just searching a busker and provide ranking over them. 
-Make a system with Hopscotch-like design that buskees collect buskers in order to enlarge their area.    
-Provide tips from other buskees on how to enjoy buskings. 
-Present extra information that the buskees may enjoy, such as snippet of popular busker, suggestion of similar songs, or special events related to buskings. 
-Provide a system that suggest busker that one might like by collecting some data from buskee (like “VonVon”). 
-Make buskee searching for a busker can join a group of buskee that shares similar interest or favor so that they together enjoy communicating with each other.
-Make another buskers with detailed information to be seen  more attractive so that buskee fall in love with this new band instead of one was in her mind. 
-Connect buskers and buskee so that other buskers can come and contact the buskee who is finding a busker, in order to advertise themselves. 
-Make a platform where the search action is similar to existing system like google or facebook, but the search result only contains busking related information. 
+1. Present related busking videos (by band name, location, genre).
+2. Make buskees get point from just searching a busker and provide ranking over them. 
+3. Make a system with Hopscotch-like design that buskees collect buskers in order to enlarge their area.    
+4. Provide tips from other buskees on how to enjoy buskings. 
+5. Present extra information that the buskees may enjoy, such as snippet of popular busker, suggestion of similar songs, or special events related to buskings. 
+6. Provide a system that suggest busker that one might like by collecting some data from buskee (like “VonVon”). 
+7. Make buskee searching for a busker can join a group of buskee that shares similar interest or favor so that they together enjoy communicating with each other.
+8. Make another buskers with detailed information to be seen  more attractive so that buskee fall in love with this new band instead of one was in her mind. 
+9. Connect buskers and buskee so that other buskers can come and contact the buskee who is finding a busker, in order to advertise themselves. 
+10. Make a platform where the search action is similar to existing system like google or facebook, but the search result only contains busking related information. 
 
 ## Top 3 solution ideas and how
 Among 10 solution ideas for each of 3 HMW questions, we tried to pick solutions that can can effectively account our HMW questions. The applied two criterias for selecting Top 3 solutions. Firstly, we considered actual benefits that users will get from the solutions. Solutions with more benefits should be prioritized than others. Secondly, we considered our team’s ability to implement the features. Even though some solution ideas are awesome, it those solutions are almost impossible to implement, then it’s hard to make the product at the final. We considered these two criterias and picked 3 solution ideas as below.
 
 ### Top 3 solution ideas
-Provide chronological schedule of busking in various busking venues
-Sort busking events with various tags to enable buskees to find favorite buskings efficiently.
-Present extra information that the buskees may enjoy such as
-snippet of popular busker
-suggestion of similar songs (genre, busker ...)
-special events related to buskings
+* Provide chronological schedule of busking in various busking venues
+* Sort busking events with various tags to enable buskees to find favorite buskings efficiently.
+* Present extra information that the buskees may enjoy such as
+  * snippet of popular busker
+  * suggestion of similar songs (genre, busker ...)
+  * special events related to buskings
 
 ## 7. Storyboards
 
@@ -125,13 +125,13 @@ Suzy went to Hongdae street and incidentally watched busking on the street. Afte
 
 ## 8. Studio Reflections
 ### “Likes” Feedback
-(1) Topic of solving problem related to busking is interesting.
-(2) Well organized problem as memorizing and searching problem.
+1. Topic of solving problem related to busking is interesting.
+2. Well organized problem as memorizing and searching problem.
 
 
 ### "Wishes" Feedback
-(1) Real-time location saving feature would help. For example, if buskees approaches busker, automatically save location and sync it with busker information.
-(2) Some solutions like third solution might be hard to implement . It would be hard to implement suggestion of other information to users
+1. Real-time location saving feature would help. For example, if buskees approaches busker, automatically save location and sync it with busker information.
+2. Some solutions like third solution might be hard to implement . It would be hard to implement suggestion of other information to users
 
 ### Our reflection
 As we investigated the needs and insights from our users we defined our problem as memorizing and searching problems related to busking events. We are happy to get positive feedbacks for our decision.
