@@ -60,7 +60,7 @@ We experimented our paper prototype to 3 participants. All of the three particip
 	* Asked to friends to recommended with who likes watching busking. A friend introduced her as a frequent buskee.
 
 ### 3) Buskee3
-One Line Description:
+* One Line Description:
 	Buskee who wants to do busking in the near future.
 * Demographic:
 	* Gender: male
