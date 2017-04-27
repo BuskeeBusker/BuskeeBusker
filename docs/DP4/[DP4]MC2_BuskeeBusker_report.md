@@ -85,9 +85,9 @@ Prototype link: https://marvelapp.com/87c89be
 ## 4. Observations
 We observed user testing process from three different users and derived usability issues from them. There were total 11 usability issues in the process and we analyzed them by giving critically of High, Medium and Low. We used three standard criteria, which are written below, to determine criticality.
 * Criticality criteria
- *How many participants mentioned a function? 
- *How much do other functions affected by a mentioned function?
- *How can issues in POV be better tackled by a mentioned function?
+	* How many participants mentioned a function? 
+	* How much do other functions affected by a mentioned function?
+ 	* How can issues in POV be better tackled by a mentioned function?
 ### 1) Usability Problems
 *P# means #th participant introduced above.
 #### Task 1
