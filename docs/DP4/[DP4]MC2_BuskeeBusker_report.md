@@ -46,7 +46,7 @@ Clicking on “i” icon provides selected busker’s information, where buskee 
 #### Feed
 
 As buskees can follow a busker they wish to follow (The follow can be done in the busker information page which is shown in Search tab), the “feed” tab provides collective information of buskers the buskee follow. The information would offer anything buskers post/upload to share with their fans.
-Search
+#### Search
 
 This page tries to remove burdens of buskees trying hard to memorize information about buskers they liked. Buskees can search for a busker with various tags: genre, location, gender or even by a bit of the busker’s name as the example shows.
 
