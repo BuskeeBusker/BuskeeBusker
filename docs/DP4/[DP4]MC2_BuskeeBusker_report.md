@@ -35,26 +35,25 @@ We are planning to implement key tasks in three tabs: 1) Schedule 2) Feed 3) Sea
 #### (1) Schedule
 ![img](1_1_Schedule.png)
 This is the main page of BukeeBusker. It offers various schedules of buskers searchable by date and location. 
+
 ![img](1_2_map.png)
-
 It also offers many informations such as time, weather forecast of the venue at the time and moreover the detailed information on the location.
-![img](1_3_BuskerInfo.png)
 
+![img](1_3_BuskerInfo.png)
 Clicking on “i” icon provides selected busker’s information, where buskee can obtain information scent. 
 
 #### (2) Feed
 ![img](2_Feed.png)
-
 As buskees can follow a busker they wish to follow (The follow can be done in the busker information page which is shown in Search tab), the “feed” tab provides collective information of buskers the buskee follow. The information would offer anything buskers post/upload to share with their fans.
+
 #### (3) Search
 ![img](3_1_SearchResult.png)
-
 This page tries to remove burdens of buskees trying hard to memorize information about buskers they liked. Buskees can search for a busker with various tags: genre, location, gender or even by a bit of the busker’s name as the example shows.
+
 ![img](3_2_BuskerInfo.png)
-
 Buskees can learn more about any buskers and can also follow the buskers. It gives information about busker, and upcoming busking schedules and photos of buskers.
-![img](3_3_BuskerVideo.png)
 
+![img](3_3_BuskerVideo.png)
 Buskees can also access through one-click event to busker’s previous performance. 
 
 ### 4) Instructions
@@ -132,7 +131,6 @@ For each tasks, we defined criticality for each usability issues with the level 
 #### In digital prototype
 * Efficiency and Safety issues are discovered a lot
 	* Participants subject to specific procedures because state transition can be made only in specific sections and it managed by computer.
-* Affordance
 * Internal consistency 
 	* Participants care more about internal consistency in digital prototype than in paper prototype	
 * Internal connections
