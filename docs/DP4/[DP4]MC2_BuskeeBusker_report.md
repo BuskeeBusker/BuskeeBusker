@@ -120,19 +120,19 @@ For each tasks, we defined criticality for each usability issues with the level 
  
 ## 5. Paper vs Digital
 ### 1) Types of identified usability issues
-* In paper prototype
-	* Learnability issues are discovered a lot
-		* Participants consider mainly about what are these information because this is handwriting object, not a computer.
-		* Participants are not concentrated on results and overlook results because a human plays a role as a computer, so they are not concentrated on format of input and output.
-		* Participants tends to try many functions because they feel a ‘context’ of prototype.
-* In digital prototype
-	* Efficiency and Safety issues are discovered a lot
-		* Participants subject to specific procedures because state transition can be made only in specific sections and it managed by computer.
-	* Affordance
-	* Internal consistency 
-		* Participants care more about internal consistency in digital prototype than in paper prototype	
-	* Internal connections
-		* Participants were more curious on internal connections between pages and windows and found out more internal connection problems in our prototype. 
+#### In paper prototype
+* Learnability issues are discovered a lot
+	* Participants consider mainly about what are these information because this is handwriting object, not a computer.
+	* Participants are not concentrated on results and overlook results because a human plays a role as a computer, so they are not concentrated on format of input and output.
+	* Participants tends to try many functions because they feel a ‘context’ of prototype.
+#### In digital prototype
+* Efficiency and Safety issues are discovered a lot
+	* Participants subject to specific procedures because state transition can be made only in specific sections and it managed by computer.
+* Affordance
+* Internal consistency 
+	* Participants care more about internal consistency in digital prototype than in paper prototype	
+* Internal connections
+	* Participants were more curious on internal connections between pages and windows and found out more internal connection problems in our prototype. 
 ### 2) Participants’ reaction and expectation to prototypes
 Participants’ reactions and expectations are as follow.
 #### In paper prototype, participants were focused on
