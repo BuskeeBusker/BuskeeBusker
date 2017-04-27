@@ -33,7 +33,7 @@ We avoided to implement following features in Lo-fi prototype.
 
 ### 3) Representative screenshots
 We are planning to implement key tasks in three tabs: 1) Schedule 2) Feed 3) Search
-#### Schedule
+#### (1) Schedule
 1_1_Schedule
 
 This is the main page of BukeeBusker. It offers various schedules of buskers searchable by date and location. 
@@ -43,10 +43,10 @@ It also offers many informations such as time, weather forecast of the venue at 
 
 Clicking on “i” icon provides selected busker’s information, where buskee can obtain information scent. 
 
-#### Feed
+#### (2) Feed
 
 As buskees can follow a busker they wish to follow (The follow can be done in the busker information page which is shown in Search tab), the “feed” tab provides collective information of buskers the buskee follow. The information would offer anything buskers post/upload to share with their fans.
-#### Search
+#### (3) Search
 
 This page tries to remove burdens of buskees trying hard to memorize information about buskers they liked. Buskees can search for a busker with various tags: genre, location, gender or even by a bit of the busker’s name as the example shows.
 
@@ -56,26 +56,28 @@ Buskees can also access through one-click event to busker’s previous performan
 
 ### 4) Instructions
 You would start on the main page and you can change between three tabs anytime you wish. If you wish, you can refresh the current tab’s page by clicking the tab again.
+
 Prototype link: https://marvelapp.com/87c89be
-#### Schedule tab (main page)
-First select a date and a location to search (* Only March 25th and Daejeon is the option)
-Press on map icon, where available, to see more about locational information
-Pressing the “i” icon next to busker’s name provides detailed information about buskers.
-If you press “see more”, you will be redirected to busker’s page
-#### Feed tab
-Not much features are available yet, as more buskers post, the more posts you will see in this tab
-Transition between “recommended” and “hot now” is possible
-You can follow your favorite busker - it is fixed to Aancod in the prototype - and be redirected to the busker’s page as you click on their thumbnail image or the name.
-#### Search tab - Searching
-You will be able to choose one radio input for each row
-You can type-in whatever tags, keyword you can remember about the busker you saw
-As you click search completing the above, even without full detailed information about busker, it will show you the result of the search query. 
-#### Search tab - Busker’s page
-This page belongs to “Search” tab because it is the final result of searching no matter how it is accessed
-You can click search tab again to go back to searching for other buskers
-You can follow busker by clicking heart (* only available in the very first page of Aancod’s page)
-You can see the busker’s thumbnail (* only first two images are available)
-You can watch busker’s video by clicking the video preview on the bottom (* only the first one works)
+
+#### (1) Schedule tab (main page)
+* First select a date and a location to search (* Only March 25th and Daejeon is the option)
+* Press on map icon, where available, to see more about locational information
+* Pressing the “i” icon next to busker’s name provides detailed information about buskers.
+	*If you press “see more”, you will be redirected to busker’s page
+#### (2) Feed tab
+* Not much features are available yet, as more buskers post, the more posts you will see in this tab
+* Transition between “recommended” and “hot now” is possible
+* You can follow your favorite busker - it is fixed to Aancod in the prototype - and be redirected to the busker’s page as you click on their thumbnail image or the name.
+#### (3)-(1) Search tab - Searching
+* You will be able to choose one radio input for each row
+* You can type-in whatever tags, keyword you can remember about the busker you saw
+* As you click search completing the above, even without full detailed information about busker, it will show you the result of the search query. 
+#### (3)-(2)Search tab - Busker’s page
+* This page belongs to “Search” tab because it is the final result of searching no matter how it is accessed
+* You can click search tab again to go back to searching for other buskers
+* You can follow busker by clicking heart (* only available in the very first page of Aancod’s page)
+* You can see the busker’s thumbnail (* only first two images are available)
+* You can watch busker’s video by clicking the video preview on the bottom (* only the first one works)
 
 ## 4. Observations
 We observed user testing process from three different users and derived usability issues from them. There were total 11 usability issues in the process and we analyzed them by giving critically of High, Medium and Low. We used three standard criteria, which are written below, to determine criticality.
