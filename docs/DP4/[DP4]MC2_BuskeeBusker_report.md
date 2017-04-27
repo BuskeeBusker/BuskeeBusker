@@ -1,9 +1,16 @@
 # DP4 Report  - Lo-fi Prototyping
+
 ### [MC2] Team Buskee Busker
+
 **20140176	Hyoungseok Kim**
+
 **20130799	Kyung Je Jo**
+
 **20140330 	Seokchan Ahn**
+
 **20090044 	Eun-Young Ko (audit)**
+
+
 
 
 ## 1. POV
