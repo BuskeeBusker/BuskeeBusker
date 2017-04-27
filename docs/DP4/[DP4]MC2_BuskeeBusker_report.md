@@ -190,8 +190,10 @@ Participants’ reactions and expectations are as follow.
 6.  Etc: There were several other comments on ‘typos’, ‘credibilty of informations’ (that we hard coded). 
 
 ### 3) Our reflection
-1.  Reflection on DP3 feedbacks
+1. Reflection on DP3 feedbacks
+
 We tried to reflect ‘wishes’ feedbacks in DP3 to our Lo-fi prototype.  Firstly, we add ‘location’ filter on our schedule search page to help buskee to find a busker and remember them based on location. Also, we added a UI that enables ‘quick’ move to scheduled on day before/after the selected day. However, we decided to not implement ‘week before’ or ‘month before’ function in schedule table. Instead, we will try to make it easier for user to select the date week before or month before on calendar. In addition to that, we implemented ‘info’ window on the right-side of schedule so that user can see information about busker quickly while browsing a schedule. Lastly, by supporting ‘Feed’ function, we made buskee can manage his/her favorite buskers of their own. 
 
 2. Reflection on DP4 feedbacks 
+
 Among 6 groups of ‘wishes’ feedbacks we got from studio, we think the first four groups of concerns need active reflection while the last two groups of comments can be resolved easily.  First of all, regarding the succinctness of schedule page, we will try to make it more readable, by adding more images and redesigning the table. However, as all of the information shown in the table is necessary for buskees, our reflection will not reduce the amount of information but will redesign where and when to show the information.  Second, regarding the necessity of feature page, our team need more discussion and external interview on that. We have not decided to or not to maintain the ‘feed’ feature but will try hard to get the better answer. Third, regarding the new needs, we are happy to get such comments and willing to introduce such function in our system. However, the ‘information’ page need another design/testing iteration we need more time to explicitly implement it. Lastly, regarding the confusing features, we decided to ‘add’ or ‘redesign’ the buttons so that user can easily catch functionality of each button.  
