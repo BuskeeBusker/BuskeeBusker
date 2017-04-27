@@ -148,7 +148,7 @@ Participants’ reactions and expectations are as follow.
   	* How about the coverage of functions?
  * How about the overall harmony of UI?
  	* Is there a redundant information?
-  	*Is the information in a page consistent?
+  	* Is the information in a page consistent?
 #### In digital prototype, participants were focused on
  * How to deliver contents
   	* Where is that information?
@@ -158,7 +158,7 @@ Participants’ reactions and expectations are as follow.
   	* What is the path to reach that information?
 	* Is the path to information optimal?
 * How about the placement ratio of UI components
-		*Is there an internal/external consistency?
+	* Is there an internal/external consistency?
 
 ### 3) Changes in digital prototype based on the feedback of paper prototype
 #### From T1 in paper prototype
