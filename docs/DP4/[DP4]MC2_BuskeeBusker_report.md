@@ -71,7 +71,7 @@ Prototype link: https://marvelapp.com/87c89be
 * You will be able to choose one radio input for each row
 * You can type-in whatever tags, keyword you can remember about the busker you saw
 * As you click search completing the above, even without full detailed information about busker, it will show you the result of the search query. 
-#### (3)-(2)Search tab - Busker’s page
+#### (3)-(2) Search tab - Busker’s page
 * This page belongs to “Search” tab because it is the final result of searching no matter how it is accessed
 * You can click search tab again to go back to searching for other buskers
 * You can follow busker by clicking heart (* only available in the very first page of Aancod’s page)
@@ -86,16 +86,16 @@ We observed user testing process from three different users and derived usabilit
  *How can issues in POV be better tackled by a mentioned function?
 ### 1) Usability Problems
 *P# means #th participant introduced above.
-* Task 1
+#### Task 1
  1. High: It seems that the website has too much information in the main page which is schedule page. (P1, P2, P3)
  2. Medium: The logo on the top-left is not clickable. It should link to the main page of the website. (P1)
  3. Low: There is no button for getting default “recommended/hot now tab” to get back. (P2)
  4. Low: Only hot now tab can be selected now. Recommended tab is not working. (P2)
-* Task 2
+#### Task 2
  5. High: It’s hard to know about how to find buskers’ page and follow them to subscribe to their posts. (P2, P3)
  6. Low: It is not possible to unfollow the busker. (P1)
  7. Low: It might be better if I can write comments to the busker’s post.(P3)
-* Task 3
+#### Task 3
  8. High: Radio buttons make it hard to find target entry of the category. Also it might be too verbose if there are much entries for each of the categories. (P1, P2, P3)
  9. Medium: There should be more specific selections for place category. (P1, P3)
  10. Medium: Some buskers might not have recorded videos, so it might be useless for them. (P3)
@@ -103,16 +103,16 @@ We observed user testing process from three different users and derived usabilit
 
 ### 2) Plan to improve
 For each tasks, we defined criticality for each usability issues with the level High, Medium and Low. As higher level of criticality means higher importance to our system, we are going to solve higher level criticality issues first. The specific plans for each usability issues are written below. More general improvement plan is discussed on Studio Reflection section. 
-* Task 1 
+#### Task 1 
  1. Make main page that has only introductory information of the website.
  2. If a user clicks the logo on the top-left, the website should move to the main page.
  3. Add close button to overlapped information like map or busker preview. If a user clicks it, then the default tab will occur.
  4. Enable recommend tab to work properly.
-* Task 2
+#### Task 2
  5. Add tutorial or another indicator to help learning the process of following buskers.
  6. Add unfollow button to the busker page.
  7. Add commenting functions to the busker’s post.
-* Task 3
+#### Task 3
  8. Change radio buttons to drop-down list. It will help a user to view entries at a glance.
  9. Add more locations to the category and add it all to the drop-down list.
  10. Some might not have videos, but we think that the video is the best medium to show the impression of the buskers. So, for the buskers who does not have any video contents, we will replace the video tab of them with other contents
