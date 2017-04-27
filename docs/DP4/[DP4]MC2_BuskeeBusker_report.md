@@ -24,10 +24,12 @@ A buskee who incidentally became a fan of a busker by watching the busker’s bu
 Our group used “marvel” for lo-fi prototyping. It was first time for all group members to use a prototyping tool. Thus, we first tried out all three recommended tools. Among three, we found marvel most convenient for collaboration. Marvel offers a collaboration project space where each group members can work on their individual page. However, there was a clear shortcoming, compared to proto.io, that “marvel” does not offer enough built-in manipulations such as producing a table. Whenever we were to add a content to a page we had to make the content as a image from powerpoint. We tried to overcome the limitation by using an app called “sketch” which is compatible with “marvel.”
 
 ### 2) Design choices
-Selecting all possible options such as dates in calendar, radio inputs in each row because different options would not lead to a different page, it will just lead to different contents. 
-Scrolling movement. In the Hi-Fi prototype, it is very likely to be implemented, however, in Lo-Fi, it was not our key feature to demonstrate a large data for buskees. Moreover, we tried to make the interface externally consistent with popular SNS. Hopefully, we thought this would allow buskees to assume that there will be more data about schedule, feed, etc. in the actual service.
-Recommended contents. In Lo-Fi prototype, we did not try to implement ‘recommendation’ algorithms. The efficiency or relevancy of recommendation are not what we tested in this level of prototype.  
-Log-in and relevant individual setting pages are not implemented because those pages are not much related to the main tasks. To focus more on main tasks, we omitted those pages and assumed that a user is logged-in with appropriate settings.
+We avoided to implement following features in Lo-fi prototype. 
+1. Selecting all possible options such as dates in calendar, radio inputs in each row because different options would not lead to a different page, it will just lead to different contents.
+1. Selecting all possible options such as dates in calendar, radio inputs in each row because different options would not lead to a different page, it will just lead to different contents. 
+2. Scrolling movement. In the Hi-Fi prototype, it is very likely to be implemented, however, in Lo-Fi, it was not our key feature to demonstrate a large data for buskees. Moreover, we tried to make the interface externally consistent with popular SNS. Hopefully, we thought this would allow buskees to assume that there will be more data about schedule, feed, etc. in the actual service.
+3. Recommended contents. In Lo-Fi prototype, we did not try to implement ‘recommendation’ algorithms. The efficiency or relevancy of recommendation are not what we tested in this level of prototype.  
+4. Log-in and relevant individual setting pages are not implemented because those pages are not much related to the main tasks. To focus more on main tasks, we omitted those pages and assumed that a user is logged-in with appropriate settings.
 
 ### 3) Representative screenshots
 We are planning to implement key tasks in three tabs: 1) Schedule 2) Feed 3) Search
