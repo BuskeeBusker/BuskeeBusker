@@ -25,7 +25,6 @@ Our group used “marvel” for lo-fi prototyping. It was first time for all gro
 
 ### 2) Design choices
 We avoided to implement following features in Lo-fi prototype. 
-1. Selecting all possible options such as dates in calendar, radio inputs in each row because different options would not lead to a different page, it will just lead to different contents.
 1. Selecting all possible options such as dates in calendar, radio inputs in each row because different options would not lead to a different page, it will just lead to different contents. 
 2. Scrolling movement. In the Hi-Fi prototype, it is very likely to be implemented, however, in Lo-Fi, it was not our key feature to demonstrate a large data for buskees. Moreover, we tried to make the interface externally consistent with popular SNS. Hopefully, we thought this would allow buskees to assume that there will be more data about schedule, feed, etc. in the actual service.
 3. Recommended contents. In Lo-Fi prototype, we did not try to implement ‘recommendation’ algorithms. The efficiency or relevancy of recommendation are not what we tested in this level of prototype.  
@@ -63,7 +62,7 @@ Prototype link: https://marvelapp.com/87c89be
 * First select a date and a location to search (* Only March 25th and Daejeon is the option)
 * Press on map icon, where available, to see more about locational information
 * Pressing the “i” icon next to busker’s name provides detailed information about buskers.
-	*If you press “see more”, you will be redirected to busker’s page
+	* If you press “see more”, you will be redirected to busker’s page.
 #### (2) Feed tab
 * Not much features are available yet, as more buskers post, the more posts you will see in this tab
 * Transition between “recommended” and “hot now” is possible
@@ -118,45 +117,46 @@ For each tasks, we defined criticality for each usability issues with the level 
  9. Add more locations to the category and add it all to the drop-down list.
  10. Some might not have videos, but we think that the video is the best medium to show the impression of the buskers. So, for the buskers who does not have any video contents, we will replace the video tab of them with other contents
  11. Add title text boxes to videos.
+ 
 ## 5. Paper vs Digital
 ### 1) Types of identified usability issues
 * In paper prototype
- * Learnability issues are discovered a lot
-  * Participants consider mainly about what are these information because this is handwriting object, not a computer.
-  * Participants are not concentrated on results and overlook results because a human plays a role as a computer, so they are not concentrated on format of input and output.
-  * Participants tends to try many functions because they feel a ‘context’ of prototype.
+	* Learnability issues are discovered a lot
+		* Participants consider mainly about what are these information because this is handwriting object, not a computer.
+		* Participants are not concentrated on results and overlook results because a human plays a role as a computer, so they are not concentrated on format of input and output.
+		* Participants tends to try many functions because they feel a ‘context’ of prototype.
 * In digital prototype
- * Efficiency and Safety issues are discovered a lot
-  * Participants subject to specific procedures because state transition can be made only in specific sections and it managed by computer.
- * Affordance
- * Internal consistency 
-  * Participants care more about internal consistency in digital prototype than in paper prototype
- * Internal connections
-  * Participants were more curious on internal connections between pages and windows and found out more internal connection problems in our prototype. 
+	* Efficiency and Safety issues are discovered a lot
+		* Participants subject to specific procedures because state transition can be made only in specific sections and it managed by computer.
+	* Affordance
+	* Internal consistency 
+		* Participants care more about internal consistency in digital prototype than in paper prototype	
+	* Internal connections
+		* Participants were more curious on internal connections between pages and windows and found out more internal connection problems in our prototype. 
 ### 2) Participants’ reaction and expectation to prototypes
 Participants’ reactions and expectations are as follow.
 * In paper prototype, participants were focused on
 	* What is the contents
-  * What are these information?
-  * Why are these functions?
-  * Is this needed information or extra information?
- * What is the end-to-end usage scenario
-  * What is the goal of this service/page?
-  * Is there affordance in the scenario?
-  * How about the coverage of functions?
- * How about the overall harmony of UI?
-  * Is there a redundant information?
-  *Is the information in a page consistent?
+		* What are these information?
+		* Why are these functions?
+		* Is this needed information or extra information?
+	* What is the end-to-end usage scenario
+  		* What is the goal of this service/page?
+  		* Is there affordance in the scenario?
+  		* How about the coverage of functions?
+	 * How about the overall harmony of UI?
+  		* Is there a redundant information?
+  		*Is the information in a page consistent?
 * In digital prototype, participants were focused on
- * How to deliver contents
-  * Where is that information?
-  * When is the information shown?
-  * Is the amount of information appropriate?
- * What is the execution sequence
-  * What is the path to reach that information?
-  * Is the path to information optimal?
- * How about the placement ratio of UI components
-  *Is there an internal/external consistency?
+ 	* How to deliver contents
+  		* Where is that information?
+  		* When is the information shown?
+  		* Is the amount of information appropriate?
+ 	* What is the execution sequence
+  		* What is the path to reach that information?
+		* Is the path to information optimal?
+	* How about the placement ratio of UI components
+		*Is there an internal/external consistency?
 
 ### 3) Changes in digital prototype based on the feedback of paper prototype
 * From T1 in paper prototype
