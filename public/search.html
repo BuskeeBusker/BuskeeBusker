@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<!-- Site Properties -->
+	<title>Buskee Busker</title>
+	<link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="dist/semantic/dist/semantic.min.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/search.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!-- Fixed Top Menu Start -->
+  <div class="ui fixed inverted pointing menu" id="main_menu">
+    <div class="ui container">
+      <a href="index.html" class="header item">
+        <i class="music icon"></i>
+        BuskeeBusker
+      </a>
+      <a href="schedule.html" class="item">Schedule</a>
+      <a href="feed.html" class="item">Feed</a>
+      <a href="search.html" class="item">Search</a>
+    </div>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search Buskers..."/> 
+          <i class="play link icon"> </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fixed Top Menu End -->
+
+  <div id="main_container" class="ui grid container">
+  	<div class = "sixteen wide column">
+		<div class="ui message">
+			<div class="row">
+				<div class="ui center aligned grid">
+					<div class="column">
+						<h2>Search buskers you want to find!</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ui form">
+				  <div class="inline fields">
+				  	<div class="two wide field">
+				    	<div class="classification">Genre</div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="genre" checked="checked">
+				        <label>All</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="genre">
+				        <label>Pop</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="genre">
+				        <label>R&B</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="genre">
+				        <label>Hiphop</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="genre">
+				        <label>Rock</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="genre">
+				        <label>Jazz</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="genre">
+				        <label>Others</label>
+				      </div>
+				    </div> 
+				  </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ui form">
+				  <div class="inline fields">
+				  	<div class="two wide field">
+				    	<div class="classification">Gender</div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="gender" checked="checked">
+				        <label>All</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="gender">
+				        <label>Male</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="gender">
+				        <label>Female</label>
+				      </div>
+				    </div>
+				    <div class="two wide field">
+				      <div class="ui radio checkbox">
+				        <input type="radio" name="gender">
+				        <label>Mixed</label>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ui form">
+				  <div class="inline fields">
+				  	<div class="two wide field">
+				    	<div class="classification">Location</div>
+				    </div>
+						<div class="field">
+							<div class="ui dropdown">
+							  <span class="text">Select Location</span>
+							  <i class="dropdown icon"></i>
+							  <div class="menu">
+							    <div class="item">
+							      <span class="text">All</span>
+							    </div>
+							    <div class="item">
+							      <i class="dropdown icon"></i>
+							      <span class="text">Seoul</span>
+							      <div class="menu">
+							        <div class="item">Sinchon</div>
+							        <div class="item">Hongdae</div>
+							        <div class="item">Itaewon</div>
+							        <div class="item">Apgujeong</div>
+							        <div class="item">Seoul/Others</div>
+							      </div>
+							    </div>
+							    <div class="item">
+							      <span class="text">Busan</span>
+							    </div>
+							   	<div class="item">
+							      <span class="text">Daejeon</span>
+							    </div>
+							   	<div class="item">
+							      <span class="text">Incheon</span>
+							    </div>
+							    <div class="item">
+							      <span class="text">Gwangju</span>
+							    </div>
+							    <div class="item">
+							      <span class="text">Ulsan</span>
+							    </div>
+							    <div class="item">
+							      <span class="text">Daegu</span>
+							    </div>
+							    <div class="item">
+							      <span class="text">Others</span>
+							    </div>
+							  </div>
+							</div>
+						</div>
+				  	</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ui form">
+				  <div class="inline fields">
+				  	<div class="two wide field">
+				    	<div class="classification">Search</div>
+				    </div>
+				    <div class="six wide field">
+				    	<input type="text" placeholder="Write info related to busker">
+				    </div>
+				    <div class="two wide field">
+				    	<button id ="search-button" class="ui button" type="submit">Submit</button>
+				    </div>
+				  </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="sixteen wide column">
+		<div id="search-result" class="ui message">
+			<div class="row">
+				<div class="ui center aligned grid">
+					<div class="sixteen wide column">
+						<h3>0 buskers found</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+  </div>
+
+  <script src="js/search.js"></script>
+</body>
+</html>
+
+

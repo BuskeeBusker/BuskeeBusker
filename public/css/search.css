@@ -1,0 +1,28 @@
+.row {
+	margin-top: 20px;
+}
+
+.classification {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.ui.dropdown {
+	background: #FFFFFF;
+	border: 1px solid rgba(34, 36, 38, 0.15);
+	color: rgba(0, 0, 0, 0.3);
+	box-shadow: none;
+	border-radius: 0.28571429rem;
+	display: inline-block;
+  	padding: 0.6em 0.5em 0.6em 1em;
+
+}
+
+#main_menu {
+  background-color: #ff69b4;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#main_container {
+	margin-top: 50px;
+}
