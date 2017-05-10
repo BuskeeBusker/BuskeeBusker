@@ -1,5 +1,6 @@
 #main_menu {
   background-color: #ff69b4;
+  font-size: 20px;
 }
 
 #main_tab {
@@ -9,4 +10,27 @@
 
 body {
   background-color: #E9EBEE;
+}
+
+div.ui.grid {
+	margin-top: 15px;
+}
+
+div.ui.card {
+	background-color: white;
+	width: auto;
+}
+
+
+div.ui.comments {
+	margin-top: 0px;
+	margin-left: 10px;
+}
+
+div.extra.image {
+	margin: 5px;
+}
+
+div#ranking {
+	margin-top: 10px;
 }
