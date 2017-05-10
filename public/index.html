@@ -8,17 +8,48 @@
 <script src="dist/semantic/dist/semantic.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <html>
+<head>
+</head>
 <body>
-  <div class="ui five item menu" id="main_menu">
-    <div class="ui item" id="menu_logo"><img class="ui image" id="menu_logo" src="img/BuskeeBusker_Logo.png"/></div>
-    <div class="ui item" id="main_tab">Schedule</div>
-    <div class="ui item" id="main_tab">Feed</div>
-    <div class="ui item" id="main_tab">Search</div>
-    <div class="ui item"></div>
+
+  <!-- Fixed Top Menu Start -->
+  <div class="ui fixed inverted pointing menu" id="main_menu">
+    <div class="ui container">
+      <a href="index.html" class="header item">
+        <i class="music icon"></i>
+        BuskeeBusker
+      </a>
+      <a href="schedule.html" class="item">Schedule</a>
+      <a href="feed.html" class="item">Feed</a>
+      <a href="search.html" class="item">Search</a>
+    </div>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui transparent icon input">
+          <input type="text" placeholder="Search Buskers..."/> 
+          <i class="play link icon"> </i>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- Fixed Top Menu End -->
+
+  <!-- Body Start -->
   <div class="ui grid">
-    <div class="ten wide column"><img class="ui image" src="img/main_left.png" /></div>
-    <div class="six wide column"><img class="ui image" src="img/main_right.png" /></div>
+
+     <!-- Grid Margin -->
+    <div class="one wide column">
+    </div>
+
+    <div class="nine wide column"><img class="ui image" src="img/main_left.png" /></div>
+    <div class="fifth wide column"><img class="ui image" src="img/main_right.png" /></div>
+
+     <!-- Grid Margin -->
+    <div class="one wide column">
+    </div>
+
   </div>
+  <!-- Body End -->
+
 </body>
 </html>
