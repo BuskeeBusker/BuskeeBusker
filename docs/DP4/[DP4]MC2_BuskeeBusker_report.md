@@ -137,42 +137,43 @@ For each tasks, we defined criticality for each usability issues with the level 
 	* Participants were more curious on internal connections between pages and windows and found out more internal connection problems in our prototype. 
 ### 2) Participants’ reaction and expectation to prototypes
 Participants’ reactions and expectations are as follow.
-#### In paper prototype, participants focused on
-* What is the contents?
+#### In paper prototype, participants were focused on
+* What is the contents
 	* What are these information?
 	* Why are these functions?
 	* Is this needed information or extra information?
-* What is the end-to-end usage scenario?
+* What is the end-to-end usage scenario
  	* What is the goal of this service/page?
   	* Is there affordance in the scenario?
   	* How about the coverage of functions?
-* How about the overall harmony of UI?
+ * How about the overall harmony of UI?
  	* Is there a redundant information?
   	* Is the information in a page consistent?
-#### In digital prototype, participants focused on
-* How to deliver contents?
+#### In digital prototype, participants were focused on
+ * How to deliver contents
   	* Where is that information?
   	* When is the information shown?
   	* Is the amount of information appropriate?
-* What is the execution sequence?
+ * What is the execution sequence
   	* What is the path to reach that information?
 	* Is the path to information optimal?
-* How about the placement ratio of UI components?
+* How about the placement ratio of UI components
 	* Is there an internal/external consistency?
 
 ### 3) Changes in digital prototype based on the feedback of paper prototype
-*parenthesis indicates the usability problems for each of the tasks defined in DP3.
-
 #### From T1 in paper prototype
-* Added default information to the schedule tab (high)
-* Showed busking information as a table (medium.1)
-* Maked a search function and Distinguish busking with location (medium.2)
+* Make a base homepage (high)
+* Show busking information as a table (medium.1)
+* Make a search function and Distinguish busking with location (medium.2)
+* To solve the low priority feedback, we will be implemented by using a jquery date selector
 #### From T2 in paper prototype
- * Marked starting time and ending time and showed unfinished buskings until selected time (high)
- * Showed busking continuously through days (low.2)
+ * Mark starting time and ending time and Show unfinished buskings until selected time (high)
+ * Show busking continuously through days (low.2)
+ * To solve the low.1 priority feedback, we will be implemented by showing only busking-activated time
 #### From T3 in paper prototype
- * Added real time ranking in right side (medium.1)
- * Added ‘Feed’ function for busker can write (low.2)
+ * Add real time ranking in right side (medium.1)
+ * Add ‘Feed’ function for busker can write (low.2)
+ * To solve the medium.2 priority feedback, we will be implemented by providing sort options by time or views
 
 ## 6. Studio Reflections 
 
