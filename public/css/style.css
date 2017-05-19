@@ -1,11 +1,5 @@
 #main_menu {
-  background-color: #ff69b4;
-  font-size: 20px;
-}
-
-#main_tab {
-  color: white;
-  font-size: 25px;
+	background: linear-gradient(to right, deeppink, darkviolet);
 }
 
 body {
