@@ -1,19 +1,11 @@
+#main_menu {
+	background: linear-gradient(to right, deeppink, darkviolet);
+}
+
 body {
   background-color: #E9EBEE;
 }
 
-div#main_menu {
-  background-color: #ff69b4;
-  font-size: 20px;
-}
-
-div#main_tab {
-  color: white;
-  font-family: Lato;
-  font-size: 150%;
-  font-style: oblique;
-  display: table;
-}
 
 div.ui.grid {
 	margin-top: 15px;
