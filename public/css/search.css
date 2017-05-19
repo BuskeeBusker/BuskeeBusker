@@ -10,7 +10,7 @@
 .ui.dropdown {
 	background: #FFFFFF;
 	border: 1px solid rgba(34, 36, 38, 0.15);
-	color: rgba(0, 0, 0, 0.3);
+	color: rgba(0, 0, 0, 1);
 	box-shadow: none;
 	border-radius: 0.28571429rem;
 	display: inline-block;
@@ -25,4 +25,19 @@
 }
 #main_container {
 	margin-top: 50px;
+}
+
+.ui.message {
+	font-size: 20px;
+	background: #FFFFFF;
+    padding-bottom: 2em;
+}
+
+.ui.message.search:hover {
+	border: 2px solid #ff00ff;
+}
+
+#search-button {
+	background: #ff69b4;
+	color: rgba(255, 255, 255, 0.9);
 }
