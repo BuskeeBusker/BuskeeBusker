@@ -1,0 +1,52 @@
+#main_container {
+	margin-top: 50px;
+}
+
+#selecteddate{
+	width: 160px;
+}
+#selectedid{
+	text-align:right;
+}
+.sub_container{
+	background-color:#ffffff;
+	margin-left:50px;
+}
+.ui.search.dropdown{
+	max-height: 20px;
+}
+
+#datelocation{
+	vertical-align: center;
+}
+
+#DateText{
+	width:100px;
+}
+
+#DatePick{
+	width:200px;
+}
+
+#LocationPick{
+	width:200px;
+}
+.scheduleoption{
+	width:100%;
+	margin-top:30px;
+	margin-bottom: 20px;
+}
+#headers{
+	font-weight:bold;
+	border-bottom:2px solid-black;
+}
+
+table{
+	font-size:20px;
+}
+td{
+	height:40px;
+}
+table { 
+    border-collapse: collapse; 
+}
