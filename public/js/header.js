@@ -8,7 +8,7 @@ $(document)
             <img class="ui right spaced avatar image" src="img/elliot.jpg"/> Eliot\
             <i class="dropdown icon"></i>\
             <div class="menu">\
-              <div class="item" href="mypage.html">My Page</div>\
+              <div class="item"><a href="mypage.html" style="color:black">My Page</a></div>\
               <div class="item" id="log_out">Log Out</div>\
             </div>\
           </div>\
