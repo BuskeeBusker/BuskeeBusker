@@ -97,3 +97,9 @@ div.video {
   overflow-y: hidden !important;
   white-space: nowrap;
 }
+
+div.row div div.inner {
+  background-color: #FFFFFF;
+  height:100%;
+  padding: 15px;
+}

@@ -17,46 +17,10 @@
   <script src="dist/semantic/dist/semantic.min.js"></script>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="dist/tooltipster/dist/css/tooltipster.bundle.min.css" />
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
   <script type="text/javascript" src="dist/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+<script src="js/header.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
-  $(document).ready(function() {
-    $('.tooltip').tooltipster();
-    $("#hongdae1").mouseover(function () {
-      $("iframe.map").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=Hongdae");
-    });
-    $("#hongdae2").mouseover(function () {
-      $("iframe.map").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=Hongdae");
-    });
-    $("#hongdae3").mouseover(function () {
-      $("iframe.map").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=Hongdae");
-    });
-    $("#sinchon1").mouseover(function () {
-      $("iframe.map").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=Sinchon");
-    });
-    $("#sinchon2").mouseover(function () {
-      $("iframe.map").attr("src","https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=Sinchon");
-    });
-    $("#11").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/mH63DXpHQ70")});
-    $("#21").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/mH63DXpHQ70")});
-    $("#12").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/M8vgPhi4vPk")});
-    $("#22").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/M8vgPhi4vPk")});
-    $("#13").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/H5QvzsCdvts")});
-    $("#23").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/H5QvzsCdvts")});
-    $("#14").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/3KSt2MgRLHU")});
-    $("#24").mouseover(function () {
-      $("iframe.video").attr("src","https://www.youtube.com/embed/3KSt2MgRLHU")});
-  });
-  </script>
 </head>
 <body>
 <script type="text/javascript">
@@ -67,40 +31,36 @@ function onClick() {
   if (bl=="false"){
     click+=1;
     $("#like").attr("data",'true');
-    $(".fa-heart").attr("style","color:red");
   }
   else {
     click-=1;
     $("#like").attr("data",'false');
-    $(".fa-heart").attr("style","color:white");
   }
-  document.getElementById("like").innerHTML = click;
+  document.getElementById("like").innerHTML = '<span style="cursor:default;">'+click+'</span>';
   
 }
 </script>
   <!-- Fixed Top Menu Start -->
-  <div class="ui fixed inverted pointing menu" id="main_menu">
+  <div class="ui massive top inverted fixed menu" id="main_menu">
+
     <div class="ui container">
-      <a href="index.html" class="header item">
+      <a class="header item" href="index.html">
         <i class="music icon"></i>
         BuskeeBusker
       </a>
-      <a href="schedule.html" class="item">Schedule</a>
-      <a href="feed.html" class="item">Feed</a>
-      <a href="search.html" class="item">Search</a>
-    </div>
-    <div class="right menu">
-      <div class="item">
-        <div class="ui transparent icon input">
-          <input type="text" placeholder="Search Buskers..."/> 
-          <i class="play link icon"> </i>
-        </div>
+      <a class="item" href="schedule.html">Schedule</a>
+      <a class="active item" href="feed.html">Feed</a>
+      <a class="item" href="search.html">Search</a>
+
+      <div class="right menu" id='private_section'>
       </div>
     </div>
   </div>
   <!-- Fixed Top Menu End -->
-  <div class="ui grid container">
-    <div class="main ten wide column" id="BuskerInfo">
+  <div id="main_container" class="ui grid container">
+    <div class="ui row">
+    <div class="ten wide column">
+      <div class="inner">
       <h2 style="color: #ff69b4;">Busker Information</h2>
       <div class="ui grid">
         <div class="twelve wide column">
@@ -122,37 +82,47 @@ function onClick() {
                   <td>R&B, Ballad, K-Pop</td>
               </tr>
               <tr>
-                <th scope="row">Recent Busking Venue</th>
+                <th scope="row">Recent Performed @</th>
                 <td title="">
-                  <span class="tooltip" id="hongdae1" data-tooltip-content="#tooltip_content">Hongade St.,</span>
-                  <span> </span>
-                  <span class="tooltip" id="sinchon1"  data-tooltip-content="#tooltip_content">Sinchon</span>
+                  <span>Hongade Station </span><span class="tooltip" id="hongdae1" style="cursor:pointer;" data-tooltip-content="#tooltip_content"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span>
+                  <span>, Sinchon Station </span><span class="tooltip" id="sinchon1" style="cursor:pointer;" data-tooltip-content="#tooltip_content"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span>
                 </td>
               </tr>
           </table>
           <div class="ui grid">
-          <div class="three wide column"></div>
-          <div class="five wide column">
-            <button class="ui button" onclick="onClick()">
-             <i class="fa fa-heart" style="color:white;" aria-hidden="true"></i>
-              <span>Like <a id="like" data="false">1349</a></span>
-            </button>
+          <div class="two wide column"></div>
+            <div class="ui six wide column">
+            <div class="ui labeled button" tabindex="0">
+              <div class="ui pink button" onclick="onClick()">
+                <i class="heart icon"></i> Like
+              </div>
+              <a class="ui basic pink left pointing label" id="like" data="false">
+                <span style="cursor:default;">1349</span>
+              </a>
             </div>
-            <div class="five wide column">
-            <button class="ui button">
-             <i class="fa fa-play" style="color:white;" aria-hidden="true"></i>
-              <span> Played <a id="like" data="false">12k</a></span>
-            </button>
+            </div>
+            <div class="ui six wide column">
+            <div class="ui labeled button" tabindex="0" style="cursor:default;">
+              <div class="ui blue button" onclick="return false;" style="cursor:default;">
+                <i class="play icon"></i> Played
+              </div>
+              <a class="ui basic blue label" style="cursor:default;">
+                12k+
+              </a>
+            </div>
             </div>
           </div>
         </div>
         <div class="four wide column">
-        <img class="BuskerMainImage" src="img/BuskerHu.png">  
+          <img class="BuskerMainImage" src="img/BuskerHu.png">
         </div>
       </div>
+      </div>
     </div>
-    <div class="main five wide column" id="BuskerThumbnail">
+    <div class="six wide column">
+      <div class="inner">
       <h2 style="color: #ff69b4;">Upcoming Busking</h2>
+      <div class="table_content" style="height:235px; overflow:auto;">
       <table class="ui celled table">
         <thead>
           <tr>
@@ -165,27 +135,45 @@ function onClick() {
         <tbody>
           <tr>
             <td>April, 05, 2017</td>
-            <td><span class="tooltip" id="sinchon2"  data-tooltip-content="#tooltip_content">Sinchon</span></td>
+            <td><span>Sinchon </span><span class="tooltip" id="sinchon2" style="cursor:pointer;" data-tooltip-content="#tooltip_content"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span></td>
             <td>7pm</td>
             <td><i class="fa fa-sun-o"></i></td>
           </tr>
           <tr>
             <td>April, 23, 2017</td>
-            <td><span class="tooltip" id="hongdae2" data-tooltip-content="#tooltip_content">Hongdae</span></td>
+            <td><span>Hongdae </span><span class="tooltip" id="hongdae2" style="cursor:pointer;" data-tooltip-content="#tooltip_content"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span></td>
             <td>3pm</td>
             <td><i class="fa fa-cloud"></i></td>
           </tr>
           <tr>
             <td>May, 01, 2017</td>
-            <td><span class="tooltip" id="hongdae3" data-tooltip-content="#tooltip_content">Hongdae</span></td>
+            <td><span>Hongdae </span><span class="tooltip" id="hongdae3" style="cursor:pointer;" data-tooltip-content="#tooltip_content"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span></td>
+            <td>5pm</td>
+            <td><i class="fa fa-cloud"></i></td>
+          </tr>
+          <tr>
+            <td>May, 10, 2017</td>
+            <td><span>Gangnam  </span><span class="tooltip" id="gangnam" style="cursor:pointer;" data-tooltip-content="#tooltip_content"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span></td>
             <td>7pm</td>
             <td><i class="fa fa-cloud"></i></td>
           </tr>
+          <tr>
+            <td>May, 13, 2017</td>
+            <td><span>Daejeon </span><span class="tooltip" id="daejeon" style="cursor:pointer;" data-tooltip-content="#tooltip_content"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span></td>
+            <td>6pm</td>
+            <td><i class="fa fa-cloud"></i></td>
+          </tr>
+
         </tbody>
       </table>
+      </div>
+  </div>
+      </div>
     </div>
-    <div class="main fifteen wide column">
-       <h2 style="color: #ff69b4;">Busker Videos</h2>
+    <div class="ui row">
+    <div class="sixteen wide column">
+      <div class="inner">
+       <h2 style="color: #ff69b4;">Videos Linked by Busker</h2>
       <div class="ui four column padded grid" style="display: inherit; overflow-x:scroll;overflow-y:hidden;white-space:nowrap;">
         <div class="column">
           <div class="ui horizontal segment">
@@ -229,16 +217,35 @@ function onClick() {
         </div>
       </div>
     </div>
+    </div>
   </div>
+    </div>
+  
 </body>
+  <script src="js/busker_info.js"></script>
+    <script>
+  $(document).ready(function() {
+    $('.tooltip').tooltipster({
+       animation: 'fade',
+       theme: 'tooltipster-punk',
+       trigger: 'click',
+      interactive: true,
+      side: 'top',
+      triggerClose: {
+        click: true
+    }
+    });
+  });
+  </script>
 </html>
+
   <div class="tooltip_temp">
   <span id="tooltip_content">
-       <iframe class="map" frameborder="0" style="border:0" height = 400px; width = 400px; src=""></iframe>
+       <iframe class="map" frameborder="0" style="border:0" height = 0px; width = 0px; src=""></iframe>
   </span>
 </div>
       <div class="tooltip_tmp">
   <span id="tooltip_video">
-       <iframe class="video" frameborder="0" style="border:0" height = 400px; width = 400px; src=""></iframe>
+       <iframe class="video" frameborder="0" style="border:0" height = 0px; width = 0px; src="" allowfullscreen="allowfullscreen"></iframe>
   </span>
     </div>
