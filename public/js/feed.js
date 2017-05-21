@@ -3,10 +3,6 @@ $(document)
 
   var posts_array = []
 
-  $('.menu .item')
-  .tab()
-  ;
-
   var reply_templete = `
   <div class="ui comments">
   <div class="comment">
@@ -216,6 +212,10 @@ $(document)
 
     </div>
       `);
+    
+    $('.menu .item')
+    .tab()
+    ;
 
     infoRef.once("value", function(newData) {
       info = newData.val();
