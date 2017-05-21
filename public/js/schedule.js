@@ -245,6 +245,9 @@ $(document).ready(function() {
     </div>      
     </div>
   		`);
+    $('#locationdetail').hide();
+    $('#buskerdetail').hide();
+    $('#hotnow').show();
     $('.menu .item')
     .tab()
     ;
