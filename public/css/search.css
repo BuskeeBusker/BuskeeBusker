@@ -7,7 +7,7 @@
 	font-weight: bold;
 }
 
-.ui.dropdown {
+.ui.dropdown.filter {
 	background: #FFFFFF;
 	border: 1px solid rgba(34, 36, 38, 0.15);
 	color: rgba(0, 0, 0, 1);
