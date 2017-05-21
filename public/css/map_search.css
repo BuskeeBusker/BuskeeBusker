@@ -62,3 +62,10 @@ hr {
     border: 0;
     border-top: 1px solid #555;
 }
+
+.carousel-text {
+    width:100%;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}

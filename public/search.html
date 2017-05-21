@@ -8,6 +8,7 @@
 
 	<!-- Site Properties -->
 	<title>Buskee Busker</title>
+
 	<link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
 	<script
 	  src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -28,9 +29,9 @@
 				<i class="music icon"></i>
 				BuskeeBusker
 			</a>
-			<a class="item" href="schedule.html">Schedule</a>
-			<a class="active item" href="feed.html">Feed</a>
-			<a class="item" href="search.html">Search</a>
+			<a class="item" style="width:120px; text-align:center; display:block;" href="schedule.html">Schedule</a>
+            <a class="active item" style="width:120px; text-align:center; display:block;" href="search.html">Buskers</a>
+			<a class="item" style="width:120px; text-align:center; display:block;" href="feed.html">My Feed</a>
 
 			<div class="right menu" id='private_section'>
 			</div>
@@ -56,43 +57,43 @@
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="genre" checked="checked">
+				        <input type="radio" value="All" name="genre" checked="checked">
 				        <label>All</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="genre">
+				        <input type="radio" value="Pop" name="genre">
 				        <label>Pop</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="genre">
+				        <input type="radio" value="R&B" name="genre">
 				        <label>R&B</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="genre">
+				        <input type="radio" value="Hiphop" name="genre">
 				        <label>Hiphop</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="genre">
+				        <input type="radio" value="Rock" name="genre">
 				        <label>Rock</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="genre">
+				        <input type="radio" value="Jazz" name="genre">
 				        <label>Jazz</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="genre">
+				        <input type="radio" value="Others" name="genre">
 				        <label>Others</label>
 				      </div>
 				    </div> 
@@ -107,25 +108,25 @@
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="gender" checked="checked">
+				        <input type="radio" value="All" name="gender" checked="checked">
 				        <label>All</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="gender">
+				        <input type="radio" value="Male" name="gender">
 				        <label>Male</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="gender">
+				        <input type="radio" value="Female" name="gender">
 				        <label>Female</label>
 				      </div>
 				    </div>
 				    <div class="two wide field">
 				      <div class="ui radio checkbox">
-				        <input type="radio" name="gender">
+				        <input type="radio" value="Mixed" name="gender">
 				        <label>Mixed</label>
 				      </div>
 				    </div>
@@ -191,7 +192,7 @@
 				    	<div class="classification">Search</div>
 				    </div>
 				    <div class="six wide field">
-				    	<input type="text" placeholder="Write keyword related to busker">
+				    	<input id ="search-input" type="text" placeholder="Write keyword related to busker">
 				    </div>
 				    <div class="two wide field">
 				    	<button id ="search-button" class="ui button" type="submit">Submit</button>
@@ -207,7 +208,7 @@
           <div class="row">
               <div class="ui center aligned grid">
                   <div class="sixteen wide column">
-                      <h3 id="search-result">No result is found for the keyword.</h3>
+                      <h3 id="search-result">Loading now...</h3>
                   </div>
               </div>
           </div>
@@ -219,7 +220,7 @@
 	</div>
 
   </div>
-
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
   <script src="js/search.js"></script>
 </body>
 </html>

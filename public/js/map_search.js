@@ -15,6 +15,28 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 var info = database.ref("info");
+var initialZoom = 15;
+
+var zoomArray = {20 : 1128.497220,
+                19 : 2256.994440,
+                18 : 4513.988880,
+                17 : 9027.977761,
+                16 : 18055.955520,
+                15 : 36111.911040,
+                14 : 72223.822090,
+                13 : 144447.644200,
+                12 : 288895.288400,
+                11 : 577790.576700,
+                10 : 1155581.153000,
+                9  : 2311162.307000,
+                8  : 4622324.614000,
+                7  : 9244649.227000,
+                6  : 18489298.450000,
+                5  : 36978596.910000,
+                4  : 73957193.820000,
+                3  : 147914387.600000,
+                2  : 295828775.300000,
+                1  : 591657550.500000};
 
 $(document).ready(function() {
 
@@ -36,6 +58,8 @@ function getEventFromDB() {
                     var event = events[eventKeys[i]];
                     var locObj = event["Location"];
                     var time = event["StartTime"];
+                    time = formatDate(time);
+                    time = matchFormat(time);
                     var location = {
                         lat: Number(locObj["LTT"]),
                         lng: Number(locObj["LGT"]),
@@ -52,7 +76,7 @@ function getEventFromDB() {
             }
 
         }
-    })
+    });
 }
 
 
@@ -75,7 +99,7 @@ function initMap() {
     }
 
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
+        zoom: initialZoom,
         center: sinchon,
         mapTypeId: 'roadmap',
         zoomControl: false,
@@ -157,15 +181,19 @@ function addEvent(location, buskerName, time, locationName) {
     markers.push(marker);
 }
 function addCircle(location) {
+    console.log(map.getZoom());
+    var initDistance = zoomArray[initialZoom];
+    var currentDisance = zoomArray[map.getZoom()];
+    var scaleRatio = currentDisance / initDistance;
     var cityCircle = new google.maps.Circle({
-        strokeColor: '#FF0000',
+        strokeColor: '#ff69b4',
         strokeOpacity: 0.8,
         strokeWeight: 0.3,
-        fillColor: '#FF0000',
+        fillColor: '#ff69b4',
         fillOpacity: 0.35,
         map: map,
         center: location,
-        radius: Math.sqrt(10) * 100
+        radius: Math.sqrt(10) * 100 * scaleRatio
     });
     for (var j = 0; j < markers.length; j++) {
         var marker = markers[j];
@@ -218,8 +246,8 @@ function CenterControl(controlDiv, map) {
 
     // Set CSS for the control border.
     var controlUI = document.createElement('div');
-    controlUI.style.backgroundColor = '#fea6aa';
-    controlUI.style.border = '1.5px solid #fea6aa';
+    controlUI.style.backgroundColor = '#ff69b4';
+    controlUI.style.border = '1.5px solid #ff69b4';
     controlUI.style.borderRadius = '3px';
     controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
     controlUI.style.cursor = 'pointer';
@@ -288,4 +316,58 @@ function makeCard(name, time, location) {
     `
 
     return card;
+}
+
+function formatDate(date_str) {
+    var date_time = date_str.split("T");
+    const [year, month, day] = date_time[0].split('-');
+    const [hour, min, second] = date_time[1].split(':');
+
+    return new Date(year, month-1, day, hour, min, second);
+}
+
+function matchFormat(date) {
+    var d = date;
+    /*
+    var monthNames = [
+        "Jan", "Feb", "March",
+        "April", "May", "June", "July",
+        "August", "September", "October",
+        "November", "December"
+    ];
+
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+    var time = date.getHours();
+
+    var result = year + "-" + monthIndex + "-" + day + " " + time;
+    */
+    var datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
+        d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+
+    var year = d.getFullYear();
+    var month = ("0"+(d.getMonth()+1)).slice(-2);
+    var day = ("0" + d.getDate()).slice(-2);
+    var result = year + "-" + month + "-" + day + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+
+    return result;
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
 }
