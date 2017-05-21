@@ -62,6 +62,13 @@ $(document).ready(function() {
 });
 
 function getBuskerInfo(isAll) {
+    $('#search_box').append(`
+      <div class="ui segment" id='loading' style="height: 250px">
+        <div class="ui active inverted dimmer">
+          <div class="ui text loader">Loading Buskers</div>
+        </div>
+      </div>`)
+
     info.once("value", function(snapshot) {
         var buskers = [];
         if (snapshot.val() != null) {
@@ -84,6 +91,7 @@ function getBuskerInfo(isAll) {
         if (!isAll) {
             buskers = filterBuskers(buskers);
         }
+        $('#loading').remove();
         addBuskersToView(buskers);
     });
 }
