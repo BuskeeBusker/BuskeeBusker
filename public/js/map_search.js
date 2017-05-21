@@ -54,25 +54,33 @@ function getEventFromDB() {
                 var buskerName = obj["Name"];
                 var events = obj["Events"];
                 var eventKeys = Object.keys(events);
+                console.log("=========");
+                console.log(events.length);
                 for (var j = 0; j <events.length; j++) {
-                    var event = events[eventKeys[i]];
+                    var event = events[eventKeys[j]];
                     var locObj = event["Location"];
                     var time = event["StartTime"];
                     time = formatDate(time);
+                    console.log(time);
+                    var isToday = (time.getDate() == "22");
+                    if (!isToday) {
+                        continue;
+                    }
                     time = matchFormat(time);
                     var location = {
                         lat: Number(locObj["LTT"]),
                         lng: Number(locObj["LGT"]),
                     };
                     var locationName = locObj["Region"];
-                    //console.log(time);
-                    //console.log(location)
+                    console.log(buskerName);
+                    console.log(time);
+                    console.log(location);
                     addEvent(location, buskerName, time, locationName);
                     map.setCenter(location);
                 }
             }
             if (markers.length != 0) {
-                addCircle(markers[markers.length - 1].getPosition());
+                addCircle(markers[0].getPosition());
             }
 
         }
