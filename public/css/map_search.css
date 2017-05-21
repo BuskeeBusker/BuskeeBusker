@@ -1,0 +1,64 @@
+#map {
+    height: 500px;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #E9EBEE;
+}
+#floating-panel {
+    position: absolute;
+    top: 80px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#main_container {
+    background-color: #E9EBEE;
+}
+
+.ui.message {
+    font-size: 20px;
+    background: #FFFFFF;
+    padding-bottom: 2em;
+}
+
+.ui.grid.content {
+    margin-top: 20px;
+}
+
+.ui.centered.grid.hline {
+    margin-bottom: 5px;
+}
+
+.ui.card.fluid {
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    height:400px;
+    width: 100%;
+    margin: auto;
+}
+
+.caption-text {
+    font-size: 20px;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #555;
+}
