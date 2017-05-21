@@ -1,9 +1,4 @@
 $(document).ready(function(){
-  var config = {
-    apiKey: "AIzaSyDtYfBRd2SFynGz7FplveLrkgjT1Nqa1dE",
-   databaseURL: "https://buskeebusker-656a6.firebaseio.com"
-  }
-  firebase.initializeApp(config);
   var buskerinfos=[];
   var buskerinfodata = firebase.database().ref("/").once("value",function(snapshot){
     buskerinfos = snapshot.val()["info"];
@@ -43,7 +38,6 @@ $(document).ready(function(){
   $('#like')[0].innerHTML=bsklk;
   var bskvs=curbsk["Views"];
   $('#played')[0].innerHTML=bskvs;
-  console.log($('#likebutton')[0]);
   $('#likebutton')[0].onclick=onemorelike;
 
   function onemorelike(){
@@ -61,20 +55,100 @@ $(document).ready(function(){
   var bskimg=curbsk["ProfileImage"];
   $('#buskerimage')[0].src=bskimg;
   //Image link//
+
+
   //Recent loca//
   var recentloca=$('#recentloca')[0];
   var geo1=pastevents[0]["ltt"]+','+ pastevents[0]["lgt"];
   var geo2=pastevents[1]["ltt"]+','+pastevents[1]["lgt"];
-  recentloca.innerHTML='<span id="loca1">'+pastevents[0]["location"]+'</span><div class="tooltip" id="loca1map" value="'+geo1+'" style="cursor:pointer;display:inline" data-tooltip-content="#tooltip_content" name="recentloca"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></div><span id="loca2">  '+pastevents[1]["location"]+'</span><div class="tooltip" id="loca2map" value="'+geo2+'"style="cursor:pointer;display:inline" data-tooltip-content="#tooltip_content" name="recentloca"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></div>'
+  var fstloca=pastevents[0]["location"];
+  var sndloca=pastevents[1]["location"];
+  var fstspan = '<span id="local1">'+fstloca+"</span>"
+  var snd = '<span class="map" style="cursor:pointer;" onmouseover="show_popup('+"'"+fstloca.toLowerCase()+"'"+',this)"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span>'
+  var trd='<span>, '+sndloca+'</span>'
+  var four='<span class="map" style="cursor:pointer;" onmouseover="show_popup('+"'"+sndloca.toLowerCase()+"'"+',this)"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span>'
+  var newlocahtml=fstspan+snd+trd+four;
+  recentloca.innerHTML=newlocahtml;
   //Recent loca finish//
+  //Upcoming Buskings//
+  var table=document.getElementById("futureevents");
+  var tleng=table.rows.length;
+  for(i=0;i<tleng-1;i++){
+    table.deleteRow(1);
+  }
+  addRows(upcomingevents);
+  //Upcomong Buskings finish//
 
+  //Busker Vedio start//
+ var videocolumns=document.getElementsByName("videocolumn");
+ var videosources=curbsk["Video"];
+ for (k=0;k<videosources.length;k++){
+  var viid='vi'+(k+1);
+  var videoaddr=videosources[k];
+  document.getElementById(viid).src='http://img.youtube.com/vi/'+getVideoID(videoaddr)+'/0.jpg'
+}
+
+  //Busker Vedio finish// 
 
 })
 })
 
-function Reload(){
+function getVideoID(videoaddr){
+  //https://www.youtube.com/embed/RYv1TeUHLz4"
+  return videoaddr.trim().split("/")[4]
+}
+
+var videosources
+var buskerinfos=[];
+firebase.database().ref("/").once("value",function(snapshot){
+    buskerinfos = snapshot.val()["info"];
+    var buskername= $('#buskername')[0].innerText;
+    var curbsk=buskerinfos[0];
+    var bskidx=0;
+    for(var i=0;i<buskerinfos.length;i++){
+      if(buskerinfos[i].Name==buskername){
+        curbsk=buskerinfos[i];
+        bskidx=i;
+      }
+    }
+   videosources=curbsk["Video"];
+});
+
+function addRows(schedules){
+
+  var leng=schedules.length;
+  for(i=0;i<leng;i++){
+    schedule=schedules[i];
+    addRow(schedule);
+  }}
+function addRow(schedule){
+  var table=document.getElementById("futureevents");
+  var row=table.insertRow(1);
+  var date=row.insertCell(0);
+  var location=row.insertCell(1);
+  var time=row.insertCell(2);
+  var weather=row.insertCell(3);
+  var fulldate=schedule["Date"];
+  date.innerHTML=fulldate.split(",")[0];
+  time.innerHTML=schedule["Time"];
+    givenweather=schedule["weather"];
+    if(givenweather=='Sunny'){
+      weather.innerHTML='25 &#8451; &emsp; <i class="fa fa-sun-o"></i>';
+    }
+    if(givenweather=='Cloud'){
+      weather.innerHTML='22 &#8451; &emsp; <i class="fa fa-cloud"></i>';
+    }
+    var ltt=schedule["ltt"];
+    var lgt=schedule["lgt"];
+    var geocoord={ltt, lgt};
+    newloca=schedule["location"];
+    var fstspan = '<span id="local1">'+newloca+"</span>"
+    var snd = '<span class="map" style="cursor:pointer;" onmouseover="show_popup('+"'"+newloca.toLowerCase()+"'"+',this)"><i class="fa fa-map-marker" style="color:red;" aria-hidden="true"></i></span>'
+ 
+    location.innerHTML=fstspan+snd;  
 
 }
+
 
 function pasteventonly(events){
   var schedules=[];
@@ -183,116 +257,166 @@ function parseDate(data){
   return {"year":year,"month":month,"date":day, "hour":hour, "min":min}
 } 
 
+
+function show_popup(location,pos){
+  console.log("Hi")
+  if (location.trim()=="hongdae"){
+    console.log("loc",location);
+    $(pos)
+    .popup({
+      html: '<iframe class="map" frameborder="0" style="border:0" height = 400px; width = 400px; src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=HongdaeStation"></iframe>',
+      on: 'click'
+    })
+  }
+  else if (location.trim()=="sinchon"){
+    console.log("loc",location);
+    $(pos)
+    .popup({
+      html: '<iframe class="map" frameborder="0" style="border:0" height = 400px; width = 400px; src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=SinchonStation"></iframe>',
+      on: 'click'
+    })
+  }
+  else if (location.trim()=="daejeon"){
+    console.log("loc",location);
+    $(pos)
+    .popup({
+      html: '<iframe class="map" frameborder="0" style="border:0" height = 400px; width = 400px; src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=SinchonStation"></iframe>',
+      on: 'click'
+    })
+  }
+  else if (location.trim()=="gangnam"){
+    console.log("loc",location);
+    $(pos)
+    .popup({
+      html: '<iframe class="map" frameborder="0" style="border:0" height = 400px; width = 400px; src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=GangnamStation"></iframe>',
+      on: 'click'
+    })
+  }
+  else if (location.trim()=="video"){
+    var curid=pos.id
+    var curidx=curid[1]-1;
+    console.log(videosources);
+    videoaddr=videosources[curidx];
+    console.log(videoaddr);
+       $(pos)
+        .popup({
+          html: '<iframe class="map" frameborder="0" style="border:0" height = 400px; width = 500px; src="'+ videoaddr + '" allowfullscreen></iframe>',
+          on: 'click'
+        })
+    }
+ 
+  }
+  
   /// Like click increment
 
 
-$("#loca1map").click(function () {
-      $("iframe.map").attr(
-        {
-          "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=HongdaeStation",
-          "width":"400px",
-          "height":"400px"
-        });
-    });
-$("#loca2map").click(function () {
-  $("iframe.map").attr(
-    {
-      "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=HongdaeStation",
-      "width":"400px",
-      "height":"400px"
-    });
-});
-$("#hongdae3").click(function () {
-  $("iframe.map").attr(
-    {
-      "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=HongdaeStation",
-      "width":"400px",
-      "height":"400px"
-    });
-});
-$("#sinchon1").click(function () {
-  $("iframe.map").attr(
-    {
-      "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=SinchonStation",
-      "width":"400px",
-      "height":"400px"
-    });
-});
-$("#sinchon2").click(function () {
-  $("iframe.map").attr(
-    {
-      "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=SinchonStation",
-      "width":"400px",
-      "height":"400px"
-    });
-});
-$("#gangnam").click(function () {
-  $("iframe.map").attr(
-    {
-      "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=GangnamStation",
-      "width":"400px",
-      "height":"400px"
-    });
-});
-$("#daejeon").click(function () {
-  $("iframe.map").attr(
-    {
-      "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=DaejeonStation",
-      "width":"400px",
-      "height":"400px"
-    });
-});
-$("#11").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/mH63DXpHQ70?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#21").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/mH63DXpHQ70?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#11").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/mH63DXpHQ70?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#12").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/M8vgPhi4vPk?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#22").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/M8vgPhi4vPk?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#13").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/H5QvzsCdvts?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#23").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/H5QvzsCdvts?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#14").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/3KSt2MgRLHU?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
-$("#24").click(function () {
-  $("iframe.video").attr({
-    "src":"https://www.youtube.com/embed/3KSt2MgRLHU?html5=1",
-    "width":"600px",
-    "height":"600px"
-  })});
+// $("#loca1map").click(function () {
+//       $("iframe.map").attr(
+//         {
+//           "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=HongdaeStation",
+//           "width":"400px",
+//           "height":"400px"
+//         });
+//     });
+// $("#loca2map").click(function () {
+//   $("iframe.map").attr(
+//     {
+//       "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=HongdaeStation",
+//       "width":"400px",
+//       "height":"400px"
+//     });
+// });
+// $("#hongdae3").click(function () {
+//   $("iframe.map").attr(
+//     {
+//       "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=HongdaeStation",
+//       "width":"400px",
+//       "height":"400px"
+//     });
+// });
+// $("#sinchon1").click(function () {
+//   $("iframe.map").attr(
+//     {
+//       "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=SinchonStation",
+//       "width":"400px",
+//       "height":"400px"
+//     });
+// });
+// $("#sinchon2").click(function () {
+//   $("iframe.map").attr(
+//     {
+//       "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=SinchonStation",
+//       "width":"400px",
+//       "height":"400px"
+//     });
+// });
+// $("#gangnam").click(function () {
+//   $("iframe.map").attr(
+//     {
+//       "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=GangnamStation",
+//       "width":"400px",
+//       "height":"400px"
+//     });
+// });
+// $("#daejeon").click(function () {
+//   $("iframe.map").attr(
+//     {
+//       "src":"https://www.google.com/maps/embed/v1/place?key=AIzaSyCzHXjfvCCkYIyrEQPvdVOudynW0T_luYY&q=DaejeonStation",
+//       "width":"400px",
+//       "height":"400px"
+//     });
+// });
+// $("#11").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/mH63DXpHQ70?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#21").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/mH63DXpHQ70?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#11").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/mH63DXpHQ70?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#12").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/M8vgPhi4vPk?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#22").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/M8vgPhi4vPk?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#13").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/H5QvzsCdvts?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#23").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/H5QvzsCdvts?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#14").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/3KSt2MgRLHU?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
+// $("#24").click(function () {
+//   $("iframe.video").attr({
+//     "src":"https://www.youtube.com/embed/3KSt2MgRLHU?html5=1",
+//     "width":"600px",
+//     "height":"600px"
+//   })});
