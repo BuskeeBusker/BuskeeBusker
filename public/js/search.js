@@ -133,9 +133,7 @@ function filterBuskers(buskers) {
 function filterBuskersByKey(buskers, keyName, valueName) {
     var result = [];
     valueName = $.trim(valueName);
-    if (valueName == "") {
-        return result;
-    }
+
     if (keyName == "Location") {
         if (allowLocation.indexOf(valueName) != -1) {
             result = buskers;
