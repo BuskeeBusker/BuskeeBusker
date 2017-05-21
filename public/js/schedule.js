@@ -51,10 +51,10 @@ $(document).ready(function() {
  	var infobutton=infobuttons[i];
  	infobutton.onclick = function(){
  		var bskname=infobutton.value;
- 		for (var i = 0; i < buskerinfos.length; i++){
+ 		for (var j = 0; j < buskerinfos.length; j++){
  		 // look for the entry with a matching `code` value
-			  if (buskerinfos[i].Name == bskname){
-			  	var mybsk=buskerinfos[i];
+			  if (buskerinfos[j].Name == bskname){
+			  	var mybsk=buskerinfos[j];
 			  	var bskimg=mybsk["ProfileImage"];
 			  	var bskgnr=mybsk["Genre"];
 			  	var bsktg=mybsk["HashTag"];
