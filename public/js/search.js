@@ -11,10 +11,10 @@ var allowLocation = ["All", "Seoul", "Sinchon", "Hongdae", "Itaewon", "Apgujeong
 $(document).ready(function() {
     getBuskerInfo(true);
 
-	$(".ui.dropdown").dropdown({
+	$(".ui.dropdown.filter").dropdown({
           allowCategorySelection: true
 	  });
-    $(".ui.dropdown").dropdown('set selected', 'All');
+    $(".ui.dropdown.filter").dropdown('set selected', 'All');
     /*
 	$("#search-button").on("click", function() {
         $("#search-result").text("1 result is found for the keyword");
@@ -105,7 +105,7 @@ function filterBuskers(buskers) {
     var gender = $('input[name="gender"]:checked').val();
     temp = filterBuskersByKey(temp, "Gender", gender);
 
-    var location = $(".ui.dropdown").dropdown('get value');
+    var location = $(".ui.dropdown.filter").dropdown('get value');
     temp = filterBuskersByKey(temp, "Location", location);
 
     var tag = $("#search-input").val();
