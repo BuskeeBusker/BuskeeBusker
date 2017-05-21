@@ -316,10 +316,10 @@ function circleContainsLocation(circle,latlng) {
 
 function makeCard(name, time, location) {
     var card = `
-    <div class="ui card fluid">
+    <div class="ui fluid pink card">
         <div class="header">${name}</div>
-        <div class="description">${time}</div>
-        <div class="description">${location}</div>
+        <div class="description"><i class="calendar icon"></i>${time}</div>
+        <div class="description"><i class="map pin icon"></i>${location}</div>
     </div>
     `
 
