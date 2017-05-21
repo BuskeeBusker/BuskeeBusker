@@ -33,6 +33,8 @@ $(document).ready(function() {
   addRows(defaultschedule);
   var ssearch=document.getElementById("Schedule_search");
   ssearch.onclick = function(){
+  $('#locationdetail').hide();
+  $('#buskerdetail').hide();
   var selected_date=document.getElementById("selecteddate");
   var selected_region=document.getElementById('location_dropdown');
   var selected_schedules=filterschedule(schedules,selected_date,selected_region);
