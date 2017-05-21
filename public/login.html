@@ -141,10 +141,11 @@ function processInput() {
     }
     else if (snapshot.val()[given_id] === given_password) {
       localStorage.setItem('logIn', true);
+      localStorage.setItem('id', given_id);
       history.go(-1);
 
     } else {
-      localStorage.setItem('login', false);
+      localStorage.setItem('logIn', false);
       $('.password.nag')
         .nag('show')
       ;
