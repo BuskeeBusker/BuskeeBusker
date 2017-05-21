@@ -187,7 +187,7 @@ function addBuskersToView(buskers) {
         $("#busker" + i).css("cursor", "pointer");
         $("#busker" + i).on("click", function() {
             //console.log("./busker_info_" + this +".html");
-            window.location.href = "./busker_info_" + buskerName +".html";
+            window.location.href = "./busker_info_" + this +".html";
         }.bind(buskerName));
     }
 }
