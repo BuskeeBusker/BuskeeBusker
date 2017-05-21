@@ -71,14 +71,14 @@ $(document).ready(function() {
 		var buskerpage='busker_info_'+bskname;
 		$('#moreinfo')[0].onclick=function () {
         location.href = buskerpage+".html";
-    }.bind(infobutton);
+    }
  		$('#buskerdetail').show()
  		var clsinfo=document.getElementById('closeinfo');
  		clsinfo.onclick = function(){
  			$('#buskerdetail').hide();
  		}
 
- 	}
+ 	}.bind(infobutton);
  }
  var mapbuttons=document.getElementsByName("maps");
  for (i = 0, len = mapbuttons.length; i < len; i++){
