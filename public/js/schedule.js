@@ -50,7 +50,7 @@ $(document).ready(function() {
  for (i = 0, len = infobuttons.length; i < len; i++){
  	var infobutton=infobuttons[i];
  	infobutton.onclick = function(){
- 		var bskname=infobutton.value;
+ 		var bskname=this.value;
  		for (var j = 0; j < buskerinfos.length; j++){
  		 // look for the entry with a matching `code` value
 			  if (buskerinfos[j].Name == bskname){
@@ -71,20 +71,20 @@ $(document).ready(function() {
 		var buskerpage='busker_info_'+bskname;
 		$('#moreinfo')[0].onclick=function () {
         location.href = buskerpage+".html";
-    };
+    }
  		$('#buskerdetail').show()
  		var clsinfo=document.getElementById('closeinfo');
  		clsinfo.onclick = function(){
  			$('#buskerdetail').hide();
  		}
 
- 	}
+ 	}.bind(infobutton);
  }
  var mapbuttons=document.getElementsByName("maps");
  for (i = 0, len = mapbuttons.length; i < len; i++){
  	var mapbutton=mapbuttons[i];
  	mapbutton.onclick = function(){
- 		var locainfo=mapbutton.value;
+ 		var locainfo=this.value;
  		var locaname = locainfo.split(";")[0];
  		var localtt = locainfo.split(";")[1];
  		var localgt = locainfo.split(";")[2];
@@ -97,7 +97,7 @@ $(document).ready(function() {
  			$('#locationdetail').hide();
  		}
 
- 	}
+ 	}.bind(mapbutton);
  }
 
 
