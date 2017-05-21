@@ -536,7 +536,7 @@ crossorigin="anonymous"></script>
     <!-- Right Section Start -->
     <div class="five wide column">
       <!-- My Page Start -->
-      <div class="ui link pink cards">
+      <!-- <div class="ui link pink cards">
         <div class="card">
           <div class="image">
             <img src="img/veronika.jpg">
@@ -561,104 +561,33 @@ crossorigin="anonymous"></script>
             </span>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- My Page End -->
 
       <!-- How Now, Recommended Section Start-->
-      <div id="ranking">
-        <div class="ui top attached tabular menu">
-          <a class="item active">
-            <i class="star icon"></i>
-            Hot now
-          </a>
-          <a class="item">
-            <i class="like icon"></i>
-            Recommended
-          </a>
-        </div>
-        <div class="ui bottom attached segment">
-          <div class="ui segment">
-            <h3>1. Festival </h3>
-            <div class="card">
-              <div class="content">
-                <img class="left float ui image" src="img/elliot.jpg">
-                <div class="header">
-                  <i class="user icon"></i>
-                  SEOKCHAN, 
-                </div>
-                <div class="meta">
-                  <i class="calendar icon"></i>
-                  5/17(SUN) 18:00 ~ 21:00
-                </div>
-                <div class="description">
-                  <i class="marker icon"></i>
-                  Hongdae, Seoul
-                </div>
-              </div>
-              <div class="extra content">
-                <div class="ui two buttons">
-                  <div class="ui basic pink button">
-                    <i class="sticky note outline icon"> </i>
-                    Check for attend
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui segment">
-            <h3>2. Festival </h3>
-            <div class="card">
-              <div class="content">
-                <img class="left float ui image" src="img/elliot.jpg">
-                <div class="header">
-                  SEOKCHAN, 
-                </div>
-                <div class="meta">
-                  5/17(SUN) 18:00 ~ 21:00
-                </div>
-                <div class="description">
-                  Hongdae, Seoul
-                </div>
-              </div>
-              <div class="extra content">
-                <div class="ui two buttons">
-                  <div class="ui basic pink button">
-                    <i class="sticky note outline icon"> </i>
-                    Check for attend
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui segment">
-            <h3>3. Festival </h3>
-            <div class="card">
-              <div class="content">
-                <img class="left float ui image" src="img/elliot.jpg">
-                <div class="header">
-                  SEOKCHAN, 
-                </div>
-                <div class="meta">
-                  5/17(SUN) 18:00 ~ 21:00
-                </div>
-                <div class="description">
-                  Hongdae, Seoul
-                </div>
-              </div>
-              <div class="extra content">
-                <div class="ui two buttons">
-                  <div class="ui basic pink button">
-                    <i class="sticky note outline icon"> </i>
-                    Check for attend
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="ui container">
+      <div class="ui top attached tabular menu">
+        <a class="item" data-tab="first">
+          <i class="yellow star icon"></i>
+          Hot Now
+        </a>
+        <a class="item active" data-tab="second">
+          <i class="red heart icon"></i>
+          Recommend
+        </a>
       </div>
-      <!-- How Now, Recommended Section End -->
+
+      <div class="ui bottom attached tab segment" data-tab="first">
+        First
+      </div>
+
+      <div class="ui bottom attached tab segment active" data-tab="second">
+        Second
+      </div>
+      </div>
     </div>
+
+    <!-- How Now, Recommended Section End -->
     <!-- Right Section End -->
 
   </div>
