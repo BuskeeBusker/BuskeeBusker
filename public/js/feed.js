@@ -92,7 +92,7 @@ $(document)
                 Hi. I will give you best R&B song.
               </div>
             </div>
-            <div class="ui bottom attached button">
+            <div class="ui bottom attached pink basic button">
               <i class="pin icon"></i>
               Pin this Busker
             </div>
@@ -113,7 +113,7 @@ $(document)
                 Rock! and! Roll!
               </div>
             </div>
-            <div class="ui bottom attached button">
+            <div class="ui bottom attached pink basic button">
               <i class="pin icon"></i>
               Pin this Busker
             </div>
@@ -134,7 +134,7 @@ $(document)
                 We are sexy dance team! XD
               </div>
             </div>
-            <div class="ui bottom attached button">
+            <div class="ui bottom attached pink basic button">
               <i class="pin icon"></i>
               Pin this Busker
             </div>
@@ -160,7 +160,7 @@ $(document)
                 5 buskers and Korea No.1 Busking Festival
               </div>
             </div>
-            <div class="ui bottom attached button">
+            <div class="ui bottom attached pink basic button">
               <i class="pin icon"></i>
               Pin this Busking
             </div>
@@ -178,12 +178,12 @@ $(document)
                 <div class="ui fluid basic label">
                   <i class="at icon"></i> Sinchon, Seoul
                 </div>
-                
+                No description. Just Come!
               </div>
             </div>
-            <div class="ui bottom attached button">
+            <div class="ui bottom attached pink basic button">
               <i class="pin icon"></i>
-              No description. Just Come!
+              Pin this Busking
             </div>
           </div>
           <div class="card">
@@ -202,7 +202,7 @@ $(document)
                 Love Busking? Love us Plz
               </div>
             </div>
-            <div class="ui bottom attached button">
+            <div class="ui bottom attached pink basic button">
               <i class="pin icon"></i>
               Pin this Busking
             </div>
