@@ -8,6 +8,7 @@ integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 crossorigin="anonymous"></script>
 <script src="dist/semantic/dist/semantic.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
 <script src="js/header.js"></script>
 <script src="js/feed.js"></script>
 
@@ -53,43 +54,36 @@ crossorigin="anonymous"></script>
 
   <!-- Body Start -->
   <div class="ui grid container">
+
+    <div class="ui nag">
+      <span class="title">
+        Sorry, You can't use Comment function now.
+      </span>
+      <i class="close icon"></i>
+    </div>
     <!-- Left Section Start -->
     <div class="eleven wide column">
 
+      <div class="ui segment" id='loading' style="height: 100%">
+        <div class="ui active inverted dimmer">
+          <div class="ui text loader">Loading</div>
+        </div>
+      </div>
+
       <!-- Post Cards Section Only -->
-      <div class="ui pink card">
+      <!-- <div class="ui pink card">
         <div class="content">
           <div class="header">
             <a class="image" href="#">
               <img class="ui avatar image" src="img/helen.jpg">
             </a>
             Lovely Helen
-            <div class="ui icon top right floated pointing dropdown transparent button">
-              <i class="dropdown icon"></i>
+            <div class="ui icon top right floated pointing dropdown basic button">
+              <i class="pink pin icon"></i>
               <div class="menu">
-                <div class="header">Display Density</div>
-                <div class="item">Comfortable</div>
-                <div class="item">Cozy</div>
-                <div class="item">Compact</div>
-                <div class="ui divider"></div>
-                <div class="item">Settings</div>
-                <div class="item">
-                  <i class="dropdown icon"></i>
-                  <span class="text">Upload Settings</span>
-                  <div class="menu">
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Convert Uploaded Files to PDF
-                    </div>
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Digitize Text from Uploaded Files
-                    </div>
-                  </div>
-                </div>
-                <div class="item">Manage Apps</div>
-                <div class="item">Keyboard Shortcuts</div>
-                <div class="item">Help</div>
+                <div class="item"> Pin this busker</div>
+                <div class="item">Pin this busking</div>
+                <div class="item">Pin this post</div>
               </div>
             </div>
           </div>
@@ -98,6 +92,44 @@ crossorigin="anonymous"></script>
             <span class="category">singer</span>
           </div>
           <div class="description">
+            <div class="ui fluid pink card">
+              <div class="content">
+                <div class="pink header" style="color: #FF0095"> <i class="info icon"></i> Busking - Love and Romance</div>
+                <div class="meta"></div>
+                <div class="description">
+                  <div class="ui list">
+                    <div class="item">
+                      <div class="content">
+                        <div class="ui fluid pink label">
+                          <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <div class="ui fluid label">
+                          <i class="at icon"></i> Hongdae, Seoul
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <div class="ui fluid label">
+                          <i class="users icon"></i> Helen, JSB
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="content">
+                        <div class="ui fluid label">
+                          <i class="dollar icon"></i> 15000 won
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <p>
               Hello Everyone!
               I am Helen.
@@ -115,436 +147,54 @@ crossorigin="anonymous"></script>
             40
           </div>
         </div>
-        <div class="ui divider"> </div>
-        <div class="ui comments">
-          <div class="comment">
-            <a class="avatar">
-              <img src="img/elliot.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Stevie Feliciano</a>
-              <div class="metadata">
-                <div class="date">2 hours ago</div>
-                <div class="rating">
-                  <i class="star icon"></i>
-                  5 Faves
-                </div>
-              </div>
-              <div class="text">
-                Hey guys, I hope you hear her songs!!
-              </div>
-            </div>
+        <div class="ui styled fluid accordion">
+          <div class="title">
+            <i class="comment icon"></i>
+            See comments
           </div>
-        </div>
-      </div>
-
-
-      <div class="ui pink card">
-        <div class="content">
-          <div class="header">
-            <a class="image" href="#">
-              <img class="ui avatar image" src="img/steve.jpg">
-            </a>
-            Elliot
-            <div class="ui icon top right floated pointing dropdown button">
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="header">Display Density</div>
-                <div class="item">Comfortable</div>
-                <div class="item">Cozy</div>
-                <div class="item">Compact</div>
-                <div class="ui divider"></div>
-                <div class="item">Settings</div>
-                <div class="item">
-                  <i class="dropdown icon"></i>
-                  <span class="text">Upload Settings</span>
-                  <div class="menu">
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Convert Uploaded Files to PDF
-                    </div>
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Digitize Text from Uploaded Files
+          <div class="content">
+            <div class="ui comments">
+              <div class="comment">
+                <a class="avatar">
+                  <img src="img/elliot.jpg">
+                </a>
+                <div class="content" style="padding-bottom: 0px">
+                  <a class="author">Stevie Feliciano</a>
+                  <div class="metadata">
+                    <div class="date">2 hours ago</div>
+                    <div class="rating">
+                      <i class="star icon"></i>
+                      15 Faves
                     </div>
                   </div>
-                </div>
-                <div class="item">Manage Apps</div>
-                <div class="item">Keyboard Shortcuts</div>
-                <div class="item">Help</div>
-              </div>
-            </div>
-          </div>
-          <div class="meta">
-            <span class="right floated time">1 days ago</span>
-            <span class="category">rapper</span>
-          </div>
-          <div class="description">
-            <p>
-              Am I handsome?
-              <a href="#"> my instagram here! </a>
-            </p>
-          </div>
-          <div class="extra image">
-            <img class="ui image" src="img/steve.jpg">
-          </div>
-        </div>
-        <div class="extra content">
-          <i class="like icon"></i>
-          579
-          <div class="right floated">
-            <i class="star icon"></i>
-            57
-          </div>
-        </div>
-        <div class="ui divider"> </div>
-        <div class="ui comments">
-          <div class="comment">
-            <a class="avatar">
-              <img src="img/jenny.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Jenny Wood</a>
-              <div class="metadata">
-                <div class="date">1 days ago</div>
-                <div class="rating">
-                  <i class="star icon"></i>
-                  40 Faves
-                </div>
-              </div>
-              <div class="text">
-                Nope.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ui pink card">
-        <div class="content">
-          <div class="header">
-            <a class="image" href="#">
-              <img class="ui avatar image" src="img/helen.jpg">
-            </a>
-            Lovely Helen
-            <div class="ui icon top right floated pointing dropdown button">
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="header">Display Density</div>
-                <div class="item">Comfortable</div>
-                <div class="item">Cozy</div>
-                <div class="item">Compact</div>
-                <div class="ui divider"></div>
-                <div class="item">Settings</div>
-                <div class="item">
-                  <i class="dropdown icon"></i>
-                  <span class="text">Upload Settings</span>
-                  <div class="menu">
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Convert Uploaded Files to PDF
-                    </div>
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Digitize Text from Uploaded Files
-                    </div>
+                  <div class="text">
+                    Hey guys, I hope you hear her songs!!
                   </div>
                 </div>
-                <div class="item">Manage Apps</div>
-                <div class="item">Keyboard Shortcuts</div>
-                <div class="item">Help</div>
               </div>
-            </div>
-          </div>
-          <div class="meta">
-            <span class="right floated time">2 hours ago</span>
-            <span class="category">singer</span>
-          </div>
-          <div class="description">
-            <p>
-              Hello Everyone!
-              I am Helen.
-              R&B Singer.
-              <br/>
-              Enjoy <3
-            </p>
-          </div>
-        </div>
-        <div class="extra content">
-          <i class="like icon"></i>
-          1,023
-          <div class="right floated">
-            <i class="star icon"></i>
-            40
-          </div>
-        </div>
-        <div class="ui divider"> </div>
-        <div class="ui comments">
-          <div class="comment">
-            <a class="avatar">
-              <img src="img/elliot.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Stevie Feliciano</a>
-              <div class="metadata">
-                <div class="date">2 hours ago</div>
-                <div class="rating">
-                  <i class="star icon"></i>
-                  5 Faves
-                </div>
-              </div>
-              <div class="text">
-                Hey guys, I hope you hear her songs!!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="ui pink card">
-        <div class="content">
-          <div class="header">
-            <a class="image" href="#">
-              <img class="ui avatar image" src="img/helen.jpg">
-            </a>
-            Lovely Helen
-            <div class="ui icon top right floated pointing dropdown button">
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="header">Display Density</div>
-                <div class="item">Comfortable</div>
-                <div class="item">Cozy</div>
-                <div class="item">Compact</div>
-                <div class="ui divider"></div>
-                <div class="item">Settings</div>
-                <div class="item">
-                  <i class="dropdown icon"></i>
-                  <span class="text">Upload Settings</span>
-                  <div class="menu">
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Convert Uploaded Files to PDF
-                    </div>
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Digitize Text from Uploaded Files
+              <div class="comment">
+                <a class="avatar">
+                  <img src="img/helen.jpg">
+                </a>
+                <div class="content" style="padding-bottom: 0px">
+                  <a class="author">Lovely Helen</a>
+                  <div class="metadata">
+                    <div class="date">2 hours ago</div>
+                    <div class="rating">
+                      <i class="star icon"></i>
+                      24 Faves
                     </div>
                   </div>
-                </div>
-                <div class="item">Manage Apps</div>
-                <div class="item">Keyboard Shortcuts</div>
-                <div class="item">Help</div>
-              </div>
-            </div>
-          </div>
-          <div class="meta">
-            <span class="right floated time">2 hours ago</span>
-            <span class="category">singer</span>
-          </div>
-          <div class="description">
-            <p>
-              Hello Everyone!
-              I am Helen.
-              R&B Singer.
-              <br/>
-              Enjoy <3
-            </p>
-          </div>
-        </div>
-        <div class="extra content">
-          <i class="like icon"></i>
-          1,023
-          <div class="right floated">
-            <i class="star icon"></i>
-            40
-          </div>
-        </div>
-        <div class="ui divider"> </div>
-        <div class="ui comments">
-          <div class="comment">
-            <a class="avatar">
-              <img src="img/elliot.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Stevie Feliciano</a>
-              <div class="metadata">
-                <div class="date">2 hours ago</div>
-                <div class="rating">
-                  <i class="star icon"></i>
-                  5 Faves
-                </div>
-              </div>
-              <div class="text">
-                Hey guys, I hope you hear her songs!!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="ui pink card">
-        <div class="content">
-          <div class="header">
-            <a class="image" href="#">
-              <img class="ui avatar image" src="img/helen.jpg">
-            </a>
-            Lovely Helen
-            <div class="ui icon top right floated pointing dropdown button">
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="header">Display Density</div>
-                <div class="item">Comfortable</div>
-                <div class="item">Cozy</div>
-                <div class="item">Compact</div>
-                <div class="ui divider"></div>
-                <div class="item">Settings</div>
-                <div class="item">
-                  <i class="dropdown icon"></i>
-                  <span class="text">Upload Settings</span>
-                  <div class="menu">
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Convert Uploaded Files to PDF
-                    </div>
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Digitize Text from Uploaded Files
-                    </div>
+                  <div class="text">
+                    Thanks, Enjoy BuskeeBusker! it's AWESOME
                   </div>
                 </div>
-                <div class="item">Manage Apps</div>
-                <div class="item">Keyboard Shortcuts</div>
-                <div class="item">Help</div>
-              </div>
-            </div>
-          </div>
-          <div class="meta">
-            <span class="right floated time">2 hours ago</span>
-            <span class="category">singer</span>
-          </div>
-          <div class="description">
-            <p>
-              Hello Everyone!
-              I am Helen.
-              R&B Singer.
-              <br/>
-              Enjoy <3
-            </p>
-          </div>
-        </div>
-        <div class="extra content">
-          <i class="like icon"></i>
-          1,023
-          <div class="right floated">
-            <i class="star icon"></i>
-            40
-          </div>
-        </div>
-        <div class="ui divider"> </div>
-        <div class="ui comments">
-          <div class="comment">
-            <a class="avatar">
-              <img src="img/elliot.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Stevie Feliciano</a>
-              <div class="metadata">
-                <div class="date">2 hours ago</div>
-                <div class="rating">
-                  <i class="star icon"></i>
-                  5 Faves
-                </div>
-              </div>
-              <div class="text">
-                Hey guys, I hope you hear her songs!!
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="ui pink card">
-        <div class="content">
-          <div class="header">
-            <a class="image" href="#">
-              <img class="ui avatar image" src="img/helen.jpg">
-            </a>
-            Lovely Helen
-            <div class="ui icon top right floated pointing dropdown button">
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="header">Display Density</div>
-                <div class="item">Comfortable</div>
-                <div class="item">Cozy</div>
-                <div class="item">Compact</div>
-                <div class="ui divider"></div>
-                <div class="item">Settings</div>
-                <div class="item">
-                  <i class="dropdown icon"></i>
-                  <span class="text">Upload Settings</span>
-                  <div class="menu">
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Convert Uploaded Files to PDF
-                    </div>
-                    <div class="item">
-                      <i class="check icon"></i>
-                      Digitize Text from Uploaded Files
-                    </div>
-                  </div>
-                </div>
-                <div class="item">Manage Apps</div>
-                <div class="item">Keyboard Shortcuts</div>
-                <div class="item">Help</div>
-              </div>
-            </div>
-          </div>
-          <div class="meta">
-            <span class="right floated time">2 hours ago</span>
-            <span class="category">singer</span>
-          </div>
-          <div class="description">
-            <p>
-              Hello Everyone!
-              I am Helen.
-              R&B Singer.
-              <br/>
-              Enjoy <3
-            </p>
-          </div>
-        </div>
-        <div class="extra content">
-          <i class="like icon"></i>
-          1,023
-          <div class="right floated">
-            <i class="star icon"></i>
-            40
-          </div>
-        </div>
-        <div class="ui divider"> </div>
-        <div class="ui comments">
-          <div class="comment">
-            <a class="avatar">
-              <img src="img/elliot.jpg">
-            </a>
-            <div class="content">
-              <a class="author">Stevie Feliciano</a>
-              <div class="metadata">
-                <div class="date">2 hours ago</div>
-                <div class="rating">
-                  <i class="star icon"></i>
-                  5 Faves
-                </div>
-              </div>
-              <div class="text">
-                Hey guys, I hope you hear her songs!!
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- Post Cards Section End -->
 
     </div>
@@ -553,7 +203,7 @@ crossorigin="anonymous"></script>
     <!-- Right Section Start -->
     <div class="five wide column">
       <!-- My Page Start -->
-      <div class="ui link pink cards">
+      <!-- <div class="ui link pink cards">
         <div class="card">
           <div class="image">
             <img src="img/veronika.jpg">
@@ -578,105 +228,161 @@ crossorigin="anonymous"></script>
             </span>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- My Page End -->
 
       <!-- How Now, Recommended Section Start-->
-      <div id="ranking">
-        <div class="ui top attached tabular menu">
-          <a class="item active">
-            <i class="star icon"></i>
-            Hot now
-          </a>
-          <a class="item">
-            <i class="like icon"></i>
-            Recommended
-          </a>
-        </div>
-        <div class="ui bottom attached segment">
-          <div class="ui segment">
-            <h3>1. Festival </h3>
-            <div class="card">
-              <div class="content">
-                <img class="left float ui image" src="img/elliot.jpg">
-                <div class="header">
-                  <i class="user icon"></i>
-                  SEOKCHAN, 
-                </div>
-                <div class="meta">
-                  <i class="calendar icon"></i>
-                  5/17(SUN) 18:00 ~ 21:00
-                </div>
-                <div class="description">
-                  <i class="marker icon"></i>
-                  Hongdae, Seoul
-                </div>
+      <div class="ui top attached tabular menu">
+        <a class="item active" data-tab="first" style="width: 50% !important">
+          <i class="yellow star icon"></i>
+          Hot <br/> Busker
+        </a>
+        <a class="item" data-tab="second" style="width: 50% !important">
+          <i class="red heart icon"></i>
+          Hot <br/> Busking
+        </a>
+      </div>
+
+      <div class="ui bottom attached tab segment active" data-tab="first">
+        <div class="ui cards">
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <div class="left floated ui pink label" style="margin-right: 5px">1</div>
+                Elliot Fu
               </div>
-              <div class="extra content">
-                <div class="ui two buttons">
-                  <div class="ui basic pink button">
-                    <i class="sticky note outline icon"> </i>
-                    Check for attend
-                  </div>
+              <div class="description">
+                <div class="ui fluid basic label">
+                  <i class="music icon"></i> R&B Solo
                 </div>
+                <div class="ui fluid basic label">
+                  <i class="at icon"></i> Sinchon, Seoul
+                </div>
+                Hi. I will give you best R&B song.
               </div>
             </div>
-          </div>
-          <div class="ui segment">
-            <h3>2. Festival </h3>
-            <div class="card">
-              <div class="content">
-                <img class="left float ui image" src="img/elliot.jpg">
-                <div class="header">
-                  SEOKCHAN, 
-                </div>
-                <div class="meta">
-                  5/17(SUN) 18:00 ~ 21:00
-                </div>
-                <div class="description">
-                  Hongdae, Seoul
-                </div>
-              </div>
-              <div class="extra content">
-                <div class="ui two buttons">
-                  <div class="ui basic pink button">
-                    <i class="sticky note outline icon"> </i>
-                    Check for attend
-                  </div>
-                </div>
-              </div>
+            <div class="ui bottom attached button">
+              <i class="pin icon"></i>
+              Pin this Busker
             </div>
           </div>
-          <div class="ui segment">
-            <h3>3. Festival </h3>
-            <div class="card">
-              <div class="content">
-                <img class="left float ui image" src="img/elliot.jpg">
-                <div class="header">
-                  SEOKCHAN, 
-                </div>
-                <div class="meta">
-                  5/17(SUN) 18:00 ~ 21:00
-                </div>
-                <div class="description">
-                  Hongdae, Seoul
-                </div>
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <div class="left floated ui pink label" style="margin-right: 5px">2</div>
+                Veronika Ossi
               </div>
-              <div class="extra content">
-                <div class="ui two buttons">
-                  <div class="ui basic pink button">
-                    <i class="sticky note outline icon"> </i>
-                    Check for attend
-                  </div>
+              <div class="description">
+                <div class="ui fluid basic label">
+                  <i class="music icon"></i> Rock Band
                 </div>
+                <div class="ui fluid basic label">
+                  <i class="at icon"></i> Sinchon, Seoul
+                </div>
+                Rock! and! Roll!
               </div>
+            </div>
+            <div class="ui bottom attached button">
+              <i class="pin icon"></i>
+              Pin this Busker
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <div class="left floated ui pink label" style="margin-right: 5px">3</div>
+                Jenny Hess 
+              </div>
+              <div class="description">
+                <div class="ui fluid basic label">
+                  <i class="music icon"></i> Dance Team
+                </div>
+                <div class="ui fluid basic label">
+                  <i class="at icon"></i> Sinchon, Seoul
+                </div>
+                We are sexy dance team! XD
+              </div>
+            </div>
+            <div class="ui bottom attached button">
+              <i class="pin icon"></i>
+              Pin this Busker
             </div>
           </div>
         </div>
       </div>
-      <!-- How Now, Recommended Section End -->
+
+      <div class="ui bottom attached tab segment" data-tab="second">
+        <div class="ui cards">
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <div class="left floated ui pink label" style="margin-right: 5px">1</div>
+                SUPER Festival
+              </div>
+              <div class="description">
+                <div class="ui fluid basic label">
+                  <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
+                </div>
+                <div class="ui fluid basic label">
+                  <i class="at icon"></i> Sinchon, Seoul
+                </div>
+                5 buskers and Korea No.1 Busking Festival
+              </div>
+            </div>
+            <div class="ui bottom attached button">
+              <i class="pin icon"></i>
+              Pin this Busking
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <div class="left floated ui pink label" style="margin-right: 5px">2</div>
+                BuskerBusker Busking
+              </div>
+              <div class="description">
+                <div class="ui fluid basic label">
+                  <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
+                </div>
+                <div class="ui fluid basic label">
+                  <i class="at icon"></i> Sinchon, Seoul
+                </div>
+                
+              </div>
+            </div>
+            <div class="ui bottom attached button">
+              <i class="pin icon"></i>
+              No description. Just Come!
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <div class="header">
+                <div class="left floated ui pink label" style="margin-right: 5px">3</div>
+                Baby Buskers
+              </div>
+              <div class="description">
+                <div class="ui fluid basic label">
+                  <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
+                </div>
+                <div class="ui fluid basic label">
+                  <i class="at icon"></i> Sinchon, Seoul
+                </div>
+                Love Busking? Love us Plz
+              </div>
+            </div>
+            <div class="ui bottom attached button">
+              <i class="pin icon"></i>
+              Pin this Busking
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <!-- Right Section End -->
+
+      <!-- How Now, Recommended Section End -->
+      <!-- Right Section End -->
 
   </div>
   <!-- Body End -->

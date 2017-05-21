@@ -187,11 +187,21 @@ function addRow(schedule){
 
 
 function filterschedule(schedules,selected_date,selected_region){
+	selate=selected_date.value
+	m=selate.split(' ')[0];
+	d=selate.split(' ')[1].split(',')[0];
+	year=selate.split(' ')[2];
+	if(Number(d)<10){
+		d="0"+d;
+	}
+	seldate=m +" "+d+", "+year;
+
+	
 	var result = [];
 	var leng=schedules.length;
 	for(i=0;i<leng;i++){
 		schedule=schedules[i];
-		if ((schedule["City"]==selected_region.value)&&(schedule["Date"]==selected_date.value))
+		if ((schedule["City"]==selected_region.value)&&(schedule["Date"]==seldate))
 			{result.push({schedule});}
 	}
 	return result;
