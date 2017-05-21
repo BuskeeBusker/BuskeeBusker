@@ -28,6 +28,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+   <script src="js/header.js"></script>
 <style>
   #map {
     height: 100%;
@@ -43,22 +44,18 @@
 <body>
 
   <!-- Fixed Top Menu Start -->
-  <div class="ui fixed inverted pointing menu" id="main_menu">
+  <div class="ui massive top inverted fixed menu" id="main_menu">
+
     <div class="ui container">
-      <a href="index.html" class="header item">
+      <a class="header item" href="index.html">
         <i class="music icon"></i>
         BuskeeBusker
       </a>
-      <a href="schedule.html" class="item">Schedule</a>
-      <a href="feed.html" class="item">Feed</a>
-      <a href="search.html" class="item">Search</a>
-    </div>
-    <div class="right menu">
-      <div class="item">
-        <div class="ui transparent icon input">
-          <input type="text" placeholder="Search Buskers..."/> 
-          <i class="play link icon"> </i>
-        </div>
+      <a class="active item" style="width:120px; text-align:center; display:block;" href="schedule.html">Schedule</a>
+            <a class="item" style="width:120px; text-align:center; display:block;" href="search.html">Buskers</a>
+      <a class="item" style="width:120px; text-align:center; display:block;" href="feed.html">My Feed</a>
+
+      <div class="right menu" id='private_section'>
       </div>
     </div>
   </div>

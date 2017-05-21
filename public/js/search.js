@@ -180,13 +180,15 @@ function addBuskersToView(buskers) {
     $("#search-content").html("");
 
     for (var i = 0; i < buskers.length; i++) {
+        //console.log(buskers[i]["Name"]);
         var rowTag = createRow(buskers[i], i);
         var buskerName = $.trim(buskers[i]["Name"]);
         $("#search-content").append(rowTag);
         $("#busker" + i).css("cursor", "pointer");
         $("#busker" + i).on("click", function() {
-            window.location.href = "./busker_info_" + buskerName +".html";
-        });
+            //console.log("./busker_info_" + this +".html");
+            window.location.href = "./busker_info_" + this +".html";
+        }.bind(buskerName));
     }
 }
 
