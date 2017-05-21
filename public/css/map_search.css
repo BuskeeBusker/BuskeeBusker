@@ -27,7 +27,7 @@ html, body {
 }
 
 .ui.message {
-    font-size: 20px;
+    font-size: 115%;
     background: #FFFFFF;
     padding-bottom: 2em;
 }
