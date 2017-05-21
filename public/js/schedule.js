@@ -68,6 +68,10 @@ $(document).ready(function() {
  		$('#buskerstag')[0].innerHTML=bsktg[0]+', '+bsktg[1];
  		$('#curlike')[0].innerHTML=bsklk;
 		$('#curviews')[0].innerHTML=bskvs;
+		var buskerpage='busker_info_'+bskname;
+		$('#moreinfo')[0].onclick=function () {
+        location.href = buskerpage+".html";
+    };
  		$('#buskerdetail').show()
  		var clsinfo=document.getElementById('closeinfo');
  		clsinfo.onclick = function(){
