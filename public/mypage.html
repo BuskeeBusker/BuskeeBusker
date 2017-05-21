@@ -3,10 +3,19 @@
 <link rel="stylesheet" type="text/css" href="css/fullcalendar.min.css">
 <link rel="stylesheet" media="print" type="text/css" href="css/fullcalendar.print.min.css">
 <link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
 <script
-src="https://code.jquery.com/jquery-3.1.1.min.js"
-integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="dist/semantic/dist/semantic.min.js"></script>
+<script>
+var config = {
+  apiKey: "AIzaSyDtYfBRd2SFynGz7FplveLrkgjT1Nqa1dE",
+ databaseURL: "https://buskeebusker-656a6.firebaseio.com"
+}
+firebase.initializeApp(config);
+</script>
 <script src="js/fullcalendar.min.js"></script>
 <script src="dist/semantic/dist/semantic.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -22,91 +31,27 @@ crossorigin="anonymous"></script>
   <!-- Site Properties -->
   <title>Buskee Busker</title>
   <script>
-  function loadCal(){
-    $('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,basicWeek,basicDay'
-			},
-			defaultDate: '2016-12-12',
-			navLinks: true, // can click day/week names to navigate views
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2016-12-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2016-12-07',
-					end: '2016-12-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2016-12-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2016-12-16T16:00:00'
-				},
-				{
-					title: 'Conference',
-					start: '2016-12-11',
-					end: '2016-12-13'
-				},
-				{
-					title: 'Meeting',
-					start: '2016-12-12T10:30:00',
-					end: '2016-12-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2016-12-12T12:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2016-12-12T14:30:00'
-				},
-				{
-					title: 'Happy Hour',
-					start: '2016-12-12T17:30:00'
-				},
-				{
-					title: 'Dinner',
-					start: '2016-12-12T20:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2016-12-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2016-12-28'
-				}
-			]
-		});
-  }
   $(document)
     .ready(function() {
     $('#calendar').hide();
+    $('.ui.four.cards').hide();
     $('.ui.pointing.menu a.item').on('click', function() {
       if ($(this).text().trim() == "Feed"){
         // read feeds from database and add to segment
         $('.ui.pink.card').show();
         $('#calendar').hide();
+        $('.ui.four.cards').hide();
       }
       else if ($(this).text().trim() == "Calendar"){
         $('.ui.pink.card').hide();
+        $('.ui.four.cards').hide();
         loadCal();
         $('#calendar').show();
         $('#calendar').fullCalendar('render');
+
       }
       else {
+        $('.ui.four.cards').show();
         $('.ui.pink.card').hide();
         $('#calendar').hide();
       }
@@ -115,29 +60,55 @@ crossorigin="anonymous"></script>
         .siblings()
         .removeClass('active')
     });
+     $('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2017-05-22',
+			navLinks: true, // can click day/week names to navigate views
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2017-05-22'
+				}
+			],
+        eventColor: "#ff0095",
+        eventTextColor: "rgba(255,255,255,0.9)"
+		});
+
   })
-  
+  function loadCal(){
+    // remove all schedules to re-render
+    $("#calendar").fullCalendar('removeEventSources');
+    // render all events by looping into firebase
+    $('#calendar').fullCalendar('renderEvent',{title: 'Test event',start: '2017-05-23'});
+    $('#calendar').show();
+  }
   </script>
 </head>
 <body>
 
   <!-- Fixed Top Menu Start -->
 
-  <div class="ui massive top inverted fixed menu" id="main_menu">
+<div class="ui massive top inverted fixed menu" id="main_menu">
 
-    <div class="ui container">
-      <a class="header item" href="index.html">
-        <i class="music icon"></i>
-        BuskeeBusker
-      </a>
-      <a class="item" href="schedule.html">Schedule</a>
-      <a class="item" href="feed.html">Feed</a>
-      <a class="item" href="search.html">Search</a>
+  <div class="ui container">
+    <a class="header item" href="index.html">
+      <i class="music icon"></i>
+      BuskeeBusker
+    </a>
+    <a class="item" style="width:120px; text-align:center; display:block;" href="schedule.html">Schedule</a>
+    <a class="active item" style="width:120px; text-align:center; display:block;" href="search.html">Buskers</a>
+    <a class="item" style="width:120px; text-align:center; display:block;" href="feed.html">My Feed</a>
 
-      <div class="right menu" id='private_section'>
-      </div>
+    <div class="right menu" id='private_section'>
     </div>
   </div>
+</div>
 
   <!-- Fixed Top Menu End -->
 
@@ -486,6 +457,21 @@ crossorigin="anonymous"></script>
           </div>
         </div>
       </div>
+      <div class="ui four cards">
+      <div class="card">
+        <div class="content">
+<!--          contains bookmarked time & date-->
+          <div class="right floated meta">14h</div>
+<!--          profile photo of busker-->
+          <img class="ui avatar image" src="img/Hu_video_1.png"> <a href="busker_info.html">Hu Seong Jung</a>
+        </div>
+        
+<!--        need to add src url for each video-->
+        <div class="image" id="video">
+          <iframe class="video" style="border:0; width:100%" src="https://www.youtube.com/embed/H5QvzsCdvts?html5=1" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </div>
+        </div>
       <div id="calendar" style="max-width:900px; margin: 0 auto"></div>
     </div>
   </div>
