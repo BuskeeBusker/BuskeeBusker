@@ -49,19 +49,14 @@ function getEventFromDB() {
             var entries = snapshot.val();
             for (var i = 0; i < keys.length; i++) {
                 var obj = entries[keys[i]];
-                //console.log(keys[i]);
-                //console.log(obj);
                 var buskerName = obj["Name"];
                 var events = obj["Events"];
                 var eventKeys = Object.keys(events);
-                console.log("=========");
-                console.log(events.length);
                 for (var j = 0; j <events.length; j++) {
                     var event = events[eventKeys[j]];
                     var locObj = event["Location"];
                     var time = event["StartTime"];
                     time = formatDate(time);
-                    console.log(time);
                     var isToday = (time.getDate() == "22");
                     if (!isToday) {
                         continue;
@@ -72,9 +67,6 @@ function getEventFromDB() {
                         lng: Number(locObj["LGT"]),
                     };
                     var locationName = locObj["Region"];
-                    console.log(buskerName);
-                    console.log(time);
-                    console.log(location);
                     addEvent(location, buskerName, time, locationName);
                     map.setCenter(location);
                 }
@@ -195,7 +187,7 @@ function addEvent(location, buskerName, time, locationName) {
     markers.push(marker);
 }
 function addCircle(location) {
-    console.log(map.getZoom());
+    //console.log(map.getZoom());
     var initDistance = zoomArray[initialZoom];
     var currentDisance = zoomArray[map.getZoom()];
     var scaleRatio = currentDisance / initDistance;
