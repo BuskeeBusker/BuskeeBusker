@@ -97,7 +97,7 @@ function getBuskerInfo(isAll) {
 }
 
 function filterBuskers(buskers) {
-    console.log("filter start");
+    //console.log("filter start");
     var result, temp;
     var genre = $('input[name="genre"]:checked').val();
     temp = filterBuskersByKey(buskers, "Genre", genre);
@@ -147,8 +147,8 @@ function filterBuskersByKey(buskers, keyName, valueName) {
     else {
         for (var i = 0; i < buskers.length; i++) {
             var value = buskers[i][keyName];
-            console.log(keyName);
-            console.log(value);
+            //console.log(keyName);
+            //console.log(value);
             //string.indexOf(substring) !== -1; <-- substring is in the string.
             var subString = $.trim(valueName.toLowerCase());
             if (value.constructor == Array) {
@@ -174,7 +174,7 @@ function filterBuskersByKey(buskers, keyName, valueName) {
 
 function addBuskersToView(buskers) {
     var resultNum = buskers.length;
-    console.log(resultNum);
+    //console.log(resultNum);
     var message;
     if (resultNum <= 1) {
         message = "Found " + resultNum + " busker in total."
