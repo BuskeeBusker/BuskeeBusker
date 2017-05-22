@@ -68,6 +68,10 @@
           }
         })
       ;
+
+      $('#sign_up').on('click', function() {
+        $('.sign.nag').nag('show');
+      })
     })
   ;
   </script>
@@ -119,7 +123,15 @@
     </div>
 
     <div class="ui message">
-      New to us? <a href="#"> Sign Up</a>
+      New to us? <a href="#" id="sign_up"> Sign Up</a>
+    </div>
+    <div class="ui inline sign nag">
+      <span class="title">
+        Sorry, You can't use Sing up function now. <br/>
+        Try with below account! <br/>
+        ID: guest <br/> PW: buskeebusker
+      </span>
+      <i class="close icon"></i>
     </div>
 
   </div>
@@ -132,7 +144,7 @@ function processInput() {
 
   accountRef.orderByKey().equalTo(given_id).on("value", function(snapshot){
     if (snapshot.val() === null) {
-      localStorage.setItem('login', false);
+      localStorage.setItem('logIn', false);
 
       $('.id.nag')
         .nag('show')
@@ -153,6 +165,7 @@ function processInput() {
     }
   })
 };
+
 </script>
 
 </body>
