@@ -86,12 +86,30 @@ $(document).ready(function(){
   var viid='vi'+(k+1);
   var videoaddr=videosources[k];
   document.getElementById(viid).src='http://img.youtube.com/vi/'+getVideoID(videoaddr)+'/0.jpg'
+  getTitle(getVideoID(videoaddr),viid);
 }
 
   //Busker Vedio finish// 
 
 })
 })
+
+function getTitle(youtubeId,viid) {
+  var youTubeURL = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id='+youtubeId+'&key=AIzaSyCzOtBG-a_S95KU7FlMjNnoHutCPOp7POE';
+  var json = (function() {
+      var json = null;
+      $.ajax({
+          'async': false,
+          'url': youTubeURL,
+          'dataType': "json",
+          'success': function(data) {
+              json = data.items['0'].snippet.title;
+              console.log('title_'+viid);
+              document.getElementById('title_'+viid).innerHTML = json;
+          }
+      });
+  })();
+}
 
 function getVideoID(videoaddr){
   //https://www.youtube.com/embed/RYv1TeUHLz4"
