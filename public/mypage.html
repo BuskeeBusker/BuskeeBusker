@@ -20,6 +20,7 @@ firebase.initializeApp(config);
 <script src="dist/semantic/dist/semantic.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script src="js/header.js"></script>
+<script src="js/mypage.js"></script>
 
 <html>
 <head>
@@ -30,65 +31,6 @@ firebase.initializeApp(config);
 
   <!-- Site Properties -->
   <title>Buskee Busker</title>
-  <script>
-  $(document)
-    .ready(function() {
-    $('#calendar').hide();
-    $('.ui.four.cards').hide();
-    $('.ui.pointing.menu a.item').on('click', function() {
-      if ($(this).text().trim() == "Feed"){
-        // read feeds from database and add to segment
-        $('.ui.pink.card').show();
-        $('#calendar').hide();
-        $('.ui.four.cards').hide();
-      }
-      else if ($(this).text().trim() == "Calendar"){
-        $('.ui.pink.card').hide();
-        $('.ui.four.cards').hide();
-        loadCal();
-        $('#calendar').show();
-        $('#calendar').fullCalendar('render');
-
-      }
-      else {
-        $('.ui.four.cards').show();
-        $('.ui.pink.card').hide();
-        $('#calendar').hide();
-      }
-      $(this)  
-        .addClass('active')
-        .siblings()
-        .removeClass('active')
-    });
-     $('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,basicWeek,basicDay'
-			},
-			defaultDate: '2017-05-22',
-			navLinks: true, // can click day/week names to navigate views
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2017-05-22'
-				}
-			],
-        eventColor: "#ff0095",
-        eventTextColor: "rgba(255,255,255,0.9)"
-		});
-
-  })
-  function loadCal(){
-    // remove all schedules to re-render
-    $("#calendar").fullCalendar('removeEventSources');
-    // render all events by looping into firebase
-    $('#calendar').fullCalendar('renderEvent',{title: 'Test event',start: '2017-05-23'});
-    $('#calendar').show();
-  }
-  </script>
 </head>
 <body>
 
@@ -120,6 +62,9 @@ firebase.initializeApp(config);
     <div class="ui pointing menu">
       <a class="item active">
         Feed
+      </a>
+      <a class="item">
+        Video
       </a>
       <a class="item">
         Calendar
