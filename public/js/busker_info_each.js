@@ -318,7 +318,7 @@ function show_popup(location,pos){
     console.log(videoaddr);
        $(pos)
         .popup({
-          html: '<iframe class="map" frameborder="0" style="border:0" height = 400px; width = 500px; src="'+ videoaddr + '" allowfullscreen></iframe>',
+          html: '<iframe class="map" frameborder="0" style="border:0" height = 400px; width = 500px; src="'+ videoaddr + '" allowfullscreen></iframe><br><span class="ui right aligned" style="float:right">Bookmark <i class="empty star icon" /></span>',
           on: 'click'
         })
     }
