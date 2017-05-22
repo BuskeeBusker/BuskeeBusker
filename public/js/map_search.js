@@ -148,6 +148,12 @@ function initMap() {
     centerControlDiv.index = 2;
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
 
+    var currentControlDiv = document.createElement('div');
+    var currentControl = new CurrentControl(currentControlDiv, map);
+
+    centerControlDiv.index = 3;
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(currentControlDiv);
+
     getEventFromDB();
 }
 
@@ -269,11 +275,63 @@ function CenterControl(controlDiv, map) {
     controlText.style.color = 'rgba(255,255,255, 0.9)';
     controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
     controlText.style.fontSize = '16px';
+    controlText.style.lineHeight = '44px';
+    controlText.style.paddingLeft = '5px';
+    controlText.style.paddingRight = '5px';
+    controlText.innerHTML = 'Delete circles';
+    controlUI.appendChild(controlText);
+
+    // Setup the click event listeners: simply set the map to Chicago.
+    controlUI.addEventListener('click', function () {
+        deleteMarkers()
+    });
+}
+
+function CurrentControl(controlDiv, map) {
+    /*
+    // Set CSS for the control border.
+    var controlUI = document.createElement('div');
+    controlUI.style.backgroundColor = '#ff69b4';
+    controlUI.style.border = '1.5px solid #ff69b4';
+    controlUI.style.borderRadius = '3px';
+    controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+    controlUI.style.cursor = 'pointer';
+    controlUI.style.marginBottom = '22px';
+    controlUI.style.textAlign = 'center';
+    controlUI.title = 'Click to delete all circles';
+    controlDiv.appendChild(controlUI);
+    */
+    var controlBox = document.createElement('div');
+    //controlBox.setAttribute("class", "current-location ui icon button");
+    controlBox.setAttribute("data-tooltip", "Add users to your feed");
+    //controlBox.style.backgroundColor="white";
+    //var controlUI = `<i class="location arrow icon"></i>`;
+    var controlUI = document.createElement('i');
+    controlUI.className += " location";
+    controlUI.className += " arrow";
+    controlUI.className += " icon";
+    controlUI.className += " huge";
+    controlUI.style.color = 'rgba(10,10,10, 0.7)';
+    controlUI.style.cursor = "pointer";
+
+    controlBox.append(controlUI);
+    controlDiv.appendChild(controlBox);
+    controlUI.addEventListener('click', function() {
+       moveToCurrentPosition();
+    });
+
+    /*
+    // Set CSS for the control interior.
+    var controlText = document.createElement('div');
+    controlText.style.color = 'rgba(255,255,255, 0.9)';
+    controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+    controlText.style.fontSize = '16px';
     controlText.style.lineHeight = '38px';
     controlText.style.paddingLeft = '5px';
     controlText.style.paddingRight = '5px';
     controlText.innerHTML = 'Delete circles';
     controlUI.appendChild(controlText);
+    */
 
     // Setup the click event listeners: simply set the map to Chicago.
     controlUI.addEventListener('click', function () {
@@ -378,4 +436,35 @@ function showDivs(n) {
         x[i].style.display = "none";
     }
     x[slideIndex-1].style.display = "block";
+}
+
+function moveToCurrentPosition() {
+    //var infoWindow = new google.maps.InfoWindow({map: map});
+
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            //infoWindow.setPosition(pos);
+            //infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+        }, function() {
+            //handleLocationError(true, infoWindow, map.getCenter());
+        });
+    } else {
+        // Browser doesn't support Geolocation
+        //handleLocationError(false, infoWindow, map.getCenter());
+    }
+}
+
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(browserHasGeolocation ?
+        'Error: The Geolocation service failed.' :
+        'Error: Your browser doesn\'t support geolocation.');
 }

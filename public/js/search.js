@@ -153,8 +153,8 @@ function filterBuskersByKey(buskers, keyName, valueName) {
             var subString = $.trim(valueName.toLowerCase());
             if (value.constructor == Array) {
                 for (var j = 0; j < value.length; j++) {
-                    value[j] = $.trim(value[j].toLowerCase());
-                    var mainString = $.trim(value[j].toLowerCase());
+                    var targetValue = $.trim(value[j].toLowerCase());
+                    var mainString = targetValue;
                     if (mainString.indexOf(subString) !== -1) {
                         result.push(buskers[i]);
                         break;
