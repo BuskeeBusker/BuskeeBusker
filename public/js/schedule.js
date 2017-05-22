@@ -292,12 +292,13 @@ $(document).ready(function() {
 		$('#moreinfo')[0].onclick=function () {
         location.href = buskerpage+".html";
     }
- 		$('#buskerdetail').show()
- 		$('#locationdetal').hide();
+ 		$('#buskerdetail').show();
+ 		$('#locationdetail').hide();
  		$('#hotnow').hide();
  		var clsinfo=document.getElementById('closeinfo');
  		clsinfo.onclick = function(){
  			$('#buskerdetail').hide();
+      $('#locationdetail').hide();
  			$('#hotnow').show();
 
  		}
@@ -321,6 +322,7 @@ $(document).ready(function() {
  		var clsmap=document.getElementById('closemap');
  		clsmap.onclick = function(){
  			$('#locationdetail').hide();
+      $('#buskerdetail').hide();
  			$('#hotnow').show();
 
  		}
@@ -369,7 +371,7 @@ $(document).ready(function() {
         location.href = buskerpage+".html";
     }
  		$('#buskerdetail').show()
- 		$('#locationdetal').hide();
+ 		$('#locationdetail').hide();
  		$('#hotnow').hide();
  		var clsinfo=document.getElementById('closeinfo');
  		clsinfo.onclick = function(){
