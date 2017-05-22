@@ -10,6 +10,7 @@ var allowLocation = ["All", "Seoul", "Sinchon", "Hongdae", "Itaewon", "Apgujeong
 
 $(document).ready(function() {
     getBuskerInfo(true);
+    $('.ui.checkbox').checkbox();
 
 	$(".ui.dropdown.filter").dropdown({
           allowCategorySelection: true
