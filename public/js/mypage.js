@@ -1,9 +1,10 @@
 $(document)
   .ready(function() {
-  $('#calendar').hide();
+  $('#calendar').show();
   $('.ui.four.cards').hide();
+  $('.ui.pink.card').hide();
   $('.ui.pointing.menu a.item').on('click', function() {
-    if ($(this).text().trim() == "Feed"){
+    if ($(this).text().trim() == "Post"){
       // read feeds from database and add to segment
       $('.ui.pink.card').show();
       $('#calendar').hide();
