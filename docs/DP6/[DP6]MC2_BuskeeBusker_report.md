@@ -25,7 +25,7 @@ People in twenties or thirties who like to watch buskings in the street and want
 ### 1) URL of prototype
 * https://buskeebusker.github.io/BuskeeBusker
 ### 2) URL of Git repository
-* https://github.com/BuskeeBusker/BuskeeBusker 
+* https://github.com/BuskeeBusker/BuskeeBusker (README last updated on 25th May, 2017)
 ### 3) Libraries and frameworks
 * Semantic-ui 
 * FullCalendar
@@ -33,8 +33,7 @@ People in twenties or thirties who like to watch buskings in the street and want
 * Youtube API
 * Firebase API
 ### 4) Lessons from heurisitc evaluation
-* Heuristic evaluation feedbacks from classmates - [link](https://docs.google.com/spreadsheets/d/1HOIoVmurvo-6bXSrU2jN-FwHSKflDXOiJr-pQgokbWI/edit)
-
+#### Heuristic evaluation feedbacks from classmates - [link](https://docs.google.com/spreadsheets/d/1HOIoVmurvo-6bXSrU2jN-FwHSKflDXOiJr-pQgokbWI/edit)
 Based on heuristic evaluation feedback from our classmates, we discuss about some important usability issues. To discuss this result more in depth, we re-classified each comment. While some comments pointed out usability issue on ‘not-yet-implemented’ functions (and we finally were able to implement in Hi-fi prototype), we only discuss about functions/features that already implemented but users found inconvenient. 
 1. Help & Documentation 
 + While our prototype contains pages for different needs (schedule, feed, search), users needed more detailed explanation on each page. For example, some users were confused about what ‘feed’ page stands for. To address this issue, our team tried to design the UI of each page to be more intuitive. Also, we changed the naming of each page to hep user to get more clear understanding about each page’s function. 
