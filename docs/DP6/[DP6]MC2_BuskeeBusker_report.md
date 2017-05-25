@@ -34,14 +34,15 @@ People in twenties or thirties who like to watch buskings in the street and want
 * Firebase API
 ### 4) Lessons from heurisitc evaluation
 * Heuristic evaluation feedbacks from classmates - [link](https://docs.google.com/spreadsheets/d/1HOIoVmurvo-6bXSrU2jN-FwHSKflDXOiJr-pQgokbWI/edit)
+
 Based on heuristic evaluation feedback from our classmates, we discuss about some important usability issues. To discuss this result more in depth, we re-classified each comment. While some comments pointed out usability issue on ‘not-yet-implemented’ functions (and we finally were able to implement in Hi-fi prototype), we only discuss about functions/features that already implemented but users found inconvenient. 
-** Help & Documentation 
-*** While our prototype contains pages for different needs (schedule, feed, search), users needed more detailed explanation on each page. For example, some users were confused about what ‘feed’ page stands for. To address this issue, our team tried to design the UI of each page to be more intuitive. Also, we changed the naming of each page to hep user to get more clear understanding about each page’s function. 
-** Consistency & standards
-*** (External Consistency) There were comments on external consistency. For example, one said that search button on right top looks like ‘play’ button and another said that clickable text with pop-up image should be distinguished with text with hyperlink. To increase the external consistency of our prototype, we replaced clickable text with text with clickable button to show pop-up image. Regarding the ‘search’ box on top-right edge, as we will discuss below, we removed the function.  
-*** (Internal Consistency) There also were a number of comments regarding internal consistency. For example, some pointed out that  event check out had different button for each page/section and searchable location in schedule and search pages were not exactly same.  Also, another classmate pointed out that indentations and widths for same level of categories were different. To tackle this issue, our team members tried to concisely figure out what kind of function/features are used in common for different pages and reorganized/re-designed those features.  
-** Visibility of system status
-*** A number of users pointed out that our system has to distinguishing ‘no result’ case from loading/functioning status. Users were confused when there is no busking event/busker for their schedule/busker search. We decided to include ‘No result’ notification in such case. 
+1. Help & Documentation 
++While our prototype contains pages for different needs (schedule, feed, search), users needed more detailed explanation on each page. For example, some users were confused about what ‘feed’ page stands for. To address this issue, our team tried to design the UI of each page to be more intuitive. Also, we changed the naming of each page to hep user to get more clear understanding about each page’s function. 
+2. Consistency & standards
++ (External Consistency) There were comments on external consistency. For example, one said that search button on right top looks like ‘play’ button and another said that clickable text with pop-up image should be distinguished with text with hyperlink. To increase the external consistency of our prototype, we replaced clickable text with text with clickable button to show pop-up image. Regarding the ‘search’ box on top-right edge, as we will discuss below, we removed the function.  
++ (Internal Consistency) There also were a number of comments regarding internal consistency. For example, some pointed out that  event check out had different button for each page/section and searchable location in schedule and search pages were not exactly same.  Also, another classmate pointed out that indentations and widths for same level of categories were different. To tackle this issue, our team members tried to concisely figure out what kind of function/features are used in common for different pages and reorganized/re-designed those features.  
+3. Visibility of system status
++ A number of users pointed out that our system has to distinguishing ‘no result’ case from loading/functioning status. Users were confused when there is no busking event/busker for their schedule/busker search. We decided to include ‘No result’ notification in such case. 
 From heuristic evaluation provided by our classmates, we could realize that our prototype still contains confusing/inconsistent features. Our team, who implemented the prototype and know its function/storyline well, could not know that users can be very confused or feel uncomfortable because of such ill-designed features. Moreover, we found that emphasizing our system’s characteristic while maintaining external consistency is not easy. For example, in mid-fi prototype, we had direct search box on top-right corner with ‘play’ icon for the search function. We designed the icon to be ‘play’ image as our system is about music and performance but some found out that such design is very confusing. 
 ### 5) Representative screenshots
 #### (1) Main page: Busking search with map.
@@ -90,41 +91,35 @@ There are many feedbacks, and also we tried to deduce the meaning implied by the
 #### a) I like your high-fi prototype, which is well implemented most of key functions of your works!
 ### 2) “Wishes” Feedback 
 #### a) I wish that some buttons looks more/less clickable...
-##### i) In the busker information page, ‘Facebook’ button 
-##### ii) In the schedule page, ‘Like’ Button
-##### iii) In Schedule page, the Like button in busker information looks like clickable.
-##### iv)  Some other clickable buttons are too small, hard to click
++ i) In the busker information page, ‘Facebook’ button 
++ ii) In the schedule page, ‘Like’ Button
++ iii) In Schedule page, the Like button in busker information looks like clickable.
++ iv)  Some other clickable buttons are too small, hard to click
 #### b) I wish more visual sugar...
-##### i) Maybe have some horizontal lines for the calendar?
-##### ii) Some dropdown go over the edge of the page. 
-##### iii) On video tab, video is too small to watch.
++ i) Maybe have some horizontal lines for the calendar?
++ ii) Some dropdown go over the edge of the page. 
++ iii) On video tab, video is too small to watch.
 #### c) I wish more user consideration...
-##### i) On the schedule page, I tried to click a name of Busker and a name of Location, but it is not clickable.
-##### ii) In the index page, beside the map in the events found section, I want to click those events. 
-##### iii) On radio buttons, clicking radio is working as selection but label (ex: Pop) is not.
-##### iv) In the main page, can the order of the slides be buskee, busker and buskeebusker. i think it’ll be more intuitive.
-##### v) Also, in my feed page, I cannot distinguish the pin this busker and busking functions. It would be better to show short explanations of small functions.
-##### vi) In home page, I don’t know the ‘Delete circles’ button does
++ i) On the schedule page, I tried to click a name of Busker and a name of Location, but it is not clickable.
++ ii) In the index page, beside the map in the events found section, I want to click those events. 
++ iii) On radio buttons, clicking radio is working as selection but label (ex: Pop) is not.
++ iv) In the main page, can the order of the slides be buskee, busker and buskeebusker. i think it’ll be more intuitive.
++ v) Also, in my feed page, I cannot distinguish the pin this busker and busking functions. It would be better to show short explanations of small functions.
++ vi) In home page, I don’t know the ‘Delete circles’ button does
 #### d) I wish better implementation...
-##### i) The like button shows the value “1” for a short time. was this intended?
-##### ii) First login is malfunction.
-##### iii) Search with genre as keyword is not working. e.g. Search “Jazz” doesn’t show SoundBox as result.
-##### iv) Clicking numbers next to “star” and “heart” is not working
-##### v) Drawing circle’s size is not limited, so I can draw that covers earth.
-##### vi) If you are using youtube, perhaps link it with a google id?
++ i) The like button shows the value “1” for a short time. was this intended?
++ ii) First login is malfunction.
++ iii) Search with genre as keyword is not working. e.g. Search “Jazz” doesn’t show SoundBox as result.
++ iv) Clicking numbers next to “star” and “heart” is not working
++ v) Drawing circle’s size is not limited, so I can draw that covers earth.
++ vi) If you are using youtube, perhaps link it with a google id?
 There is no redirection to homepage when sign out
 #### e) I wish more functions...
-##### i) In the busker info page, I want the buskers to write down their description.
-##### ii) In the busker info page, I want to see their past busking information as well.
++ i) In the busker info page, I want the buskers to write down their description.
++ ii) In the busker info page, I want to see their past busking information as well.
 ### 3) Our reflection
 #### Overall reflection
-There was feedbacks on a visual (affordance) part in the ui side, errors and more
-functionality requests. We are primarily satisfied with this. Because there was no 
-feedback that somebody do not know which components function in the ui aspect. This 
-is the most nervous part of the development, because the importance of information 
-scent to prevent new users from clogging. Also, for more functionality requests, we will 
-consider its priority is lower than feedback on ui, but will add as much as possible from 
-important functions.
+There was feedbacks on a visual (affordance) part in the ui side, errors and more functionality requests. We are primarily satisfied with this. Because there was no feedback that somebody do not know which components function in the ui aspect. This is the most nervous part of the development, because the importance of information scent to prevent new users from clogging. Also, for more functionality requests, we will consider its priority is lower than feedback on ui, but will add as much as possible from important functions.
 #### Reflection to each category
 * (a.i) Thank you for a feedback. We tried to implement all functions we thought.
 * (b.i) We checked there were a lot of button visuality issues. Thus, we first made a clear distinction between labels and buttons, and we decided on a visual convention for clickable and unclickable buttons. It might be caused by re-use other teammates’ code.
@@ -132,5 +127,3 @@ important functions.
 * (b.iii) We think user consideration is also an important part. I learned what part of KAIST students were unfriendly to write. I will reflect some important feedbacks right away, but I think that other feedbacks should be checked to see if there is a lack of consideration for the target user.
 * (b.iv) We think that malfunction should be the first priority because it is bad for the user experience. There was also feedback on features that were planned due to time constraints but not developed, and there was also advice on development. 
 * (b.v) We think these new functions are good. Because these functions are aligned with our POVs and Tasks. Thus, after reflect the ui feedback, we add these functions to our Service.
-
-
