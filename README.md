@@ -12,7 +12,7 @@
 
 #### Demo Url: https://buskeebusker.github.io/BuskeeBusker
 
-![img](0.main(readme).png)
+![img](docs/DP6/0.main(readme).png)
 ## What does it do?
 Webpage to connect any buskees to buskers. Buskees can easily search for buskers, follow their activities, and receive information of other buskings.
 
@@ -34,9 +34,9 @@ Webpage to connect any buskees to buskers. Buskees can easily search for buskers
 + Most significantly, you can see all buskings you pinned at one glance through calendar interface. 
 
 ## Code Structure
-* All pages share same header navigation bar stylesheets and javascript.
+### All pages share same header navigation bar stylesheets and javascript.
 + header.js → handles redirections in header (and login)
-* All html page has distinct javascript file which handles events in that page.
+### All html page has distinct javascript file which handles events in that page.
 + map_search.js → show famous busking place in the map and give information about buskings shown in the map.
 + schedule.js → initializes schedule table, chart for hot busker, hot busking
 + search.js → loads busker information from firebase and shows filtered result.
