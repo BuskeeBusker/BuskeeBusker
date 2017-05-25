@@ -12,10 +12,7 @@
 
   <link rel="stylesheet" href="dist/w3/w3.css">
   <link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
+  <script src="dist/jquery/jquery.min.js"></script>
   <script src="dist/semantic/dist/semantic.min.js"></script>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
 
@@ -71,8 +68,8 @@
             <p class="caption-text">The place where Buskees and Buskers meet.</p>
           </div>
         </div>
-        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+        <button class="w3-button w3-display-bottomleft w3-black carousel-button" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-bottomright w3-black carousel-button" onclick="plusDivs(1)">&#10095;</button>
       </div>
       <!--
         <a href = "busker_info.html">
@@ -91,7 +88,7 @@
               <i class="map outline icon"></i>
               <div class="content">
                 Hot Busking Place These Days!
-                <div class="sub header">Click on the map to draw circles and find out events.</div>
+                <div class="sub header">Click on the map to draw circles and find out buskings.</div>
               </div>
             </h1>
             <div class="ui divider"></div>
@@ -102,7 +99,7 @@
               </div>
               <div class="six wide column">
                 <div class="ui centered grid hline">
-                  <h3>Events found</h3>
+                  <h3>Buskings found</h3>
                 </div>
                 <div class="ui divider"></div>
                 <div id="card_content" class="ui cards">
@@ -129,11 +126,10 @@
     </div>
   </div>
 
-
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+  <script src="js/map_search.js"></script>
   <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu5k5xd7dI4P1nlvJuLsjFDgI9rptXXdY&callback=initMap&libraries=geometry">
   </script>
-  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
-  <script src="js/map_search.js"></script>
 </body>
 </html>

@@ -4,10 +4,7 @@
 <link rel="stylesheet" media="print" type="text/css" href="css/fullcalendar.print.min.css">
 <link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+<script src="dist/jquery/jquery.min.js"></script>
 <script src="dist/semantic/dist/semantic.min.js"></script>
 <script>
 var config = {
@@ -57,17 +54,29 @@ firebase.initializeApp(config);
   <!-- Body Start -->
   <div class="ui grid container">
     <!-- Left Section Start -->
-    <div class="sixteen wide column">
-    
+    <div class="sixteen wide column ">
+<!--
+          <div class="ui attached left very thin demo vertical inverted sidebar labeled icon menu">
+    <a class="item">
+      1
+    </a>
+    <a class="item">
+      2
+    </a>
+    <a class="item">
+      3
+    </a>
+  </div>
+-->
     <div class="ui pointing menu">
       <a class="item active">
-        Feed
+        Calendar
       </a>
       <a class="item">
         Video
       </a>
       <a class="item">
-        Calendar
+        Post       
       </a>
     </div>
     <div class="ui segment">
