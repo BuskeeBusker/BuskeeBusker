@@ -45,19 +45,19 @@ Based on heuristic evaluation feedback from our classmates, we discuss about som
 From heuristic evaluation provided by our classmates, we could realize that our prototype still contains confusing/inconsistent features. Our team, who implemented the prototype and know its function/storyline well, could not know that users can be very confused or feel uncomfortable because of such ill-designed features. Moreover, we found that emphasizing our system’s characteristic while maintaining external consistency is not easy. For example, in mid-fi prototype, we had direct search box on top-right corner with ‘play’ icon for the search function. We designed the icon to be ‘play’ image as our system is about music and performance but some found out that such design is very confusing. 
 ### 5) Representative screenshots
 #### (1) Main page: Busking search with map.
-![img](1. map_search.png)
+![img](1.map_search.png)
 #### (2) Schedule page: Busking search with time and location.
-![img](2. schedule.png)
+![img](2.schedule.png)
 #### (3) Buskers page: Busker search with time and location.
-![img](3. buskers.png)
+![img](3.buskers.png)
 #### (4) Busker info page: View detailed information of selected busker.
-![img](4. busker_info.png)
+![img](4.busker_info.png)
 #### (5) Login page: Login to the account. (Preliminary condition to use My feed page.)
-![img](5. login.png)
+![img](5.login.png)
 #### (6) My feed page: View posts of “following” buskers.
-![img](6. My_feed.png)
+![img](6.My_feed.png)
 #### (7) My page: View bookmarked posts, videos and vents in a user private page.
-![img](7. My_page.png)
+![img](7.My_page.png)
 ## 5. Individual Reflections
 ### Hyoungseok Kim
 #### UI contribution
