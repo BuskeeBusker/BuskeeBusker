@@ -1,4 +1,4 @@
-# DP4 Report  - Lo-fi Prototyping
+# DP6 Report  - Hi-fi Prototyping
 
 ### [MC2] Team Buskee Busker
 
@@ -99,32 +99,32 @@ There are many feedbacks, and also we tried to deduce the meaning implied by the
 #### a) I like your high-fi prototype, which is well implemented most of key functions of your works!
 ### 2) “Wishes” Feedback 
 #### a) I wish that some buttons looks more/less clickable...
-+ i) In the busker information page, ‘Facebook’ button 
-+ ii) In the schedule page, ‘Like’ Button
-+ iii) In Schedule page, the Like button in busker information looks like clickable.
-+ iv)  Some other clickable buttons are too small, hard to click
++  In the busker information page, ‘Facebook’ button 
++  In the schedule page, ‘Like’ Button
++  In Schedule page, the Like button in busker information looks like clickable.
++  Some other clickable buttons are too small, hard to click
 #### b) I wish more visual sugar...
-+ i) Maybe have some horizontal lines for the calendar?
-+ ii) Some dropdown go over the edge of the page. 
-+ iii) On video tab, video is too small to watch.
++  Maybe have some horizontal lines for the calendar?
++  Some dropdown go over the edge of the page. 
++  On video tab, video is too small to watch.
 #### c) I wish more user consideration...
-+ i) On the schedule page, I tried to click a name of Busker and a name of Location, but it is not clickable.
-+ ii) In the index page, beside the map in the events found section, I want to click those events. 
-+ iii) On radio buttons, clicking radio is working as selection but label (ex: Pop) is not.
-+ iv) In the main page, can the order of the slides be buskee, busker and buskeebusker. i think it’ll be more intuitive.
-+ v) Also, in my feed page, I cannot distinguish the pin this busker and busking functions. It would be better to show short explanations of small functions.
-+ vi) In home page, I don’t know the ‘Delete circles’ button does
++  On the schedule page, I tried to click a name of Busker and a name of Location, but it is not clickable.
++  In the index page, beside the map in the events found section, I want to click those events. 
++  On radio buttons, clicking radio is working as selection but label (ex: Pop) is not.
++  In the main page, can the order of the slides be buskee, busker and buskeebusker. i think it’ll be more intuitive.
++  Also, in my feed page, I cannot distinguish the pin this busker and busking functions. It would be better to show short explanations of small functions.
++  In home page, I don’t know the ‘Delete circles’ button does
 #### d) I wish better implementation...
-+ i) The like button shows the value “1” for a short time. was this intended?
-+ ii) First login is malfunction.
-+ iii) Search with genre as keyword is not working. e.g. Search “Jazz” doesn’t show SoundBox as result.
-+ iv) Clicking numbers next to “star” and “heart” is not working
-+ v) Drawing circle’s size is not limited, so I can draw that covers earth.
-+ vi) If you are using youtube, perhaps link it with a google id?
-There is no redirection to homepage when sign out
++  The like button shows the value “1” for a short time. was this intended?
++  First login is malfunction.
++  Search with genre as keyword is not working. e.g. Search “Jazz” doesn’t show SoundBox as result.
++  Clicking numbers next to “star” and “heart” is not working
++  Drawing circle’s size is not limited, so I can draw that covers earth.
++  If you are using youtube, perhaps link it with a google id?
++  There is no redirection to homepage when sign out
 #### e) I wish more functions...
-+ i) In the busker info page, I want the buskers to write down their description.
-+ ii) In the busker info page, I want to see their past busking information as well.
++  In the busker info page, I want the buskers to write down their description.
++  In the busker info page, I want to see their past busking information as well.
 ### 3) Our reflection
 #### Overall reflection
 There was feedbacks on a visual (affordance) part in the ui side, errors and more functionality requests. We are primarily satisfied with this. Because there was no feedback that somebody do not know which components function in the ui aspect. This is the most nervous part of the development, because the importance of information scent to prevent new users from clogging. Also, for more functionality requests, we will consider its priority is lower than feedback on ui, but will add as much as possible from important functions.
