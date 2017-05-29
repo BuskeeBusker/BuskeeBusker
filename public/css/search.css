@@ -7,7 +7,7 @@
 	font-weight: bold;
 }
 
-.ui.dropdown {
+.ui.dropdown.filter {
 	background: #FFFFFF;
 	border: 1px solid rgba(34, 36, 38, 0.15);
 	color: rgba(0, 0, 0, 1);
@@ -20,15 +20,14 @@
 
 #main_menu {
   background-color: #ff69b4;
-  font-size: 20px;
   margin-bottom: 50px;
 }
 #main_container {
-	margin-top: 50px;
+	margin-top: 10px;
 }
 
 .ui.message {
-	font-size: 20px;
+	font-size: 18px;
 	background: #FFFFFF;
     padding-bottom: 2em;
 }
@@ -40,4 +39,8 @@
 #search-button {
 	background: #ff69b4;
 	color: rgba(255, 255, 255, 0.9);
+}
+
+.intro-text {
+	font-size: 16px;
 }

@@ -1,10 +1,7 @@
 <!doctype html>
 
 <link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+<script src="dist/jquery/jquery.min.js"></script>
 <script src="dist/semantic/dist/semantic.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
 <html>
@@ -68,6 +65,10 @@
           }
         })
       ;
+
+      $('#sign_up').on('click', function() {
+        $('.sign.nag').nag('show');
+      })
     })
   ;
   </script>
@@ -119,7 +120,15 @@
     </div>
 
     <div class="ui message">
-      New to us? <a href="#"> Sign Up</a>
+      New to us? <a href="#" id="sign_up"> Sign Up</a>
+    </div>
+    <div class="ui inline sign nag">
+      <span class="title">
+        Sorry, You can't use Sing up function now. <br/>
+        Try with below account! <br/>
+        ID: guest <br/> PW: buskeebusker
+      </span>
+      <i class="close icon"></i>
     </div>
 
   </div>
@@ -132,7 +141,7 @@ function processInput() {
 
   accountRef.orderByKey().equalTo(given_id).on("value", function(snapshot){
     if (snapshot.val() === null) {
-      localStorage.setItem('login', false);
+      localStorage.setItem('logIn', false);
 
       $('.id.nag')
         .nag('show')
@@ -141,10 +150,11 @@ function processInput() {
     }
     else if (snapshot.val()[given_id] === given_password) {
       localStorage.setItem('logIn', true);
+      localStorage.setItem('id', given_id);
       history.go(-1);
 
     } else {
-      localStorage.setItem('login', false);
+      localStorage.setItem('logIn', false);
       $('.password.nag')
         .nag('show')
       ;
@@ -152,6 +162,7 @@ function processInput() {
     }
   })
 };
+
 </script>
 
 </body>

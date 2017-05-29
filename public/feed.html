@@ -1,390 +1,231 @@
-
 <!DOCTYPE html>
 
 <link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
 <script
-src="https://code.jquery.com/jquery-3.1.1.min.js"
-integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-crossorigin="anonymous"></script>
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
+</script>
+<script src="dist/jquery/jquery.min.js"></script>
 <script src="dist/semantic/dist/semantic.min.js"></script>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
 <script src="js/header.js"></script>
 <script src="js/feed.js"></script>
 
 <html>
 <head>
-  <!-- Standard Meta -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <!-- Site Properties -->
-  <title>Buskee Busker</title>
-
-  <link rel="stylesheet" type="text/css" href="dist/semantic/dist/semantic.min.css">
-  <script
-    src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
-  <script src="dist/semantic/dist/semantic.min.js"></script>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- Site Properties -->
+    <title>Feed | Buskee Busker</title>
 </head>
 <body>
 
-  <!-- Fixed Top Menu Start -->
+<!-- Fixed Top Menu Start -->
 
-  <div class="ui massive top inverted fixed menu" id="main_menu">
+<div class="ui massive top inverted fixed menu" id="main_menu">
 
     <div class="ui container">
-      <a class="header item" href="index.html">
-        <i class="music icon"></i>
-        BuskeeBusker
-      </a>
-      <a class="item" href="schedule.html">Schedule</a>
-      <a class="active item" href="feed.html">Feed</a>
-      <a class="item" href="search.html">Search</a>
+        <a class="header item" href="index.html">
+            <i class="music icon"></i>
+            BuskeeBusker
+        </a>
+        <a class="item" style="width:120px; text-align:center; display:block;" href="schedule.html">Schedule</a>
+        <a class="item" style="width:120px; text-align:center; display:block;" href="search.html">Buskers</a>
+        <a class="active item" style="width:120px; text-align:center; display:block;" href="feed.html">My Feed</a>
 
-      <div class="right menu" id='private_section'>
-      </div>
+        <div class="right menu" id='private_section'>
+        </div>
     </div>
-  </div>
+</div>
 
-  <!-- Fixed Top Menu End -->
+<!-- Fixed Top Menu End -->
 
-  <!-- Body Start -->
-  <div class="ui grid container">
+<!-- Body Start -->
+<div class="ui grid container">
 
     <div class="ui nag">
       <span class="title">
         Sorry, You can't use Comment function now.
       </span>
-      <i class="close icon"></i>
+        <i class="close icon"></i>
     </div>
     <!-- Left Section Start -->
     <div class="eleven wide column">
 
-      <div class="ui segment" id='loading' style="height: 100%">
-        <div class="ui active inverted dimmer">
-          <div class="ui text loader">Loading</div>
-        </div>
-      </div>
-
-      <!-- Post Cards Section Only -->
-      <!-- <div class="ui pink card">
-        <div class="content">
-          <div class="header">
-            <a class="image" href="#">
-              <img class="ui avatar image" src="img/helen.jpg">
-            </a>
-            Lovely Helen
-            <div class="ui icon top right floated pointing dropdown basic button">
-              <i class="pink pin icon"></i>
-              <div class="menu">
-                <div class="item"> Pin this busker</div>
-                <div class="item">Pin this busking</div>
-                <div class="item">Pin this post</div>
-              </div>
-            </div>
-          </div>
-          <div class="meta">
-            <span class="right floated time">2 hours ago</span>
-            <span class="category">singer</span>
-          </div>
-          <div class="description">
-            <div class="ui fluid pink card">
-              <div class="content">
-                <div class="pink header" style="color: #FF0095"> <i class="info icon"></i> Busking - Love and Romance</div>
-                <div class="meta"></div>
-                <div class="description">
-                  <div class="ui list">
-                    <div class="item">
-                      <div class="content">
-                        <div class="ui fluid pink label">
-                          <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="content">
-                        <div class="ui fluid label">
-                          <i class="at icon"></i> Hongdae, Seoul
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="content">
-                        <div class="ui fluid label">
-                          <i class="users icon"></i> Helen, JSB
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="content">
-                        <div class="ui fluid label">
-                          <i class="dollar icon"></i> 15000 won
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p>
-              Hello Everyone!
-              I am Helen.
-              R&B Singer.
-              <br/>
-              Enjoy <3
-            </p>
-          </div>
-        </div>
-        <div class="extra content">
-          <i class="like icon"></i>
-          1,023
-          <div class="right floated">
-            <i class="star icon"></i>
-            40
-          </div>
-        </div>
-        <div class="ui styled fluid accordion">
-          <div class="title">
-            <i class="comment icon"></i>
-            See comments
-          </div>
+        <!-- Post Cards Section Only -->
+        <!-- <div class="ui pink card">
           <div class="content">
-            <div class="ui comments">
-              <div class="comment">
-                <a class="avatar">
-                  <img src="img/elliot.jpg">
-                </a>
-                <div class="content" style="padding-bottom: 0px">
-                  <a class="author">Stevie Feliciano</a>
-                  <div class="metadata">
-                    <div class="date">2 hours ago</div>
-                    <div class="rating">
-                      <i class="star icon"></i>
-                      15 Faves
+            <div class="header">
+              <a class="image" href="#">
+                <img class="ui avatar image" src="img/helen.jpg">
+              </a>
+              Lovely Helen
+              <div class="ui icon top right floated pointing dropdown basic button">
+                <i class="pink pin icon"></i>
+                <div class="menu">
+                  <div class="item"> Pin this busker</div>
+                  <div class="item">Pin this busking</div>
+                  <div class="item">Pin this post</div>
+                </div>
+              </div>
+            </div>
+            <div class="meta">
+              <span class="right floated time">2 hours ago</span>
+              <span class="category">singer</span>
+            </div>
+            <div class="description">
+              <div class="ui fluid pink card">
+                <div class="content">
+                  <div class="pink header" style="color: #FF0095"> <i class="info icon"></i> Busking - Love and Romance</div>
+                  <div class="meta"></div>
+                  <div class="description">
+                    <div class="ui list">
+                      <div class="item">
+                        <div class="content">
+                          <div class="ui fluid pink label">
+                            <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="content">
+                          <div class="ui fluid label">
+                            <i class="at icon"></i> Hongdae, Seoul
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="content">
+                          <div class="ui fluid label">
+                            <i class="users icon"></i> Helen, JSB
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="content">
+                          <div class="ui fluid label">
+                            <i class="dollar icon"></i> 15000 won
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="text">
-                    Hey guys, I hope you hear her songs!!
                   </div>
                 </div>
               </div>
-              <div class="comment">
-                <a class="avatar">
-                  <img src="img/helen.jpg">
-                </a>
-                <div class="content" style="padding-bottom: 0px">
-                  <a class="author">Lovely Helen</a>
-                  <div class="metadata">
-                    <div class="date">2 hours ago</div>
-                    <div class="rating">
-                      <i class="star icon"></i>
-                      24 Faves
+              <p>
+                Hello Everyone!
+                I am Helen.
+                R&B Singer.
+                <br/>
+                Enjoy <3
+              </p>
+            </div>
+          </div>
+          <div class="extra content">
+            <i class="like icon"></i>
+            1,023
+            <div class="right floated">
+              <i class="star icon"></i>
+              40
+            </div>
+          </div>
+          <div class="ui styled fluid accordion">
+            <div class="title">
+              <i class="comment icon"></i>
+              See comments
+            </div>
+            <div class="content">
+              <div class="ui comments">
+                <div class="comment">
+                  <a class="avatar">
+                    <img src="img/elliot.jpg">
+                  </a>
+                  <div class="content" style="padding-bottom: 0px">
+                    <a class="author">Stevie Feliciano</a>
+                    <div class="metadata">
+                      <div class="date">2 hours ago</div>
+                      <div class="rating">
+                        <i class="star icon"></i>
+                        15 Faves
+                      </div>
+                    </div>
+                    <div class="text">
+                      Hey guys, I hope you hear her songs!!
                     </div>
                   </div>
-                  <div class="text">
-                    Thanks, Enjoy BuskeeBusker! it's AWESOME
+                </div>
+                <div class="comment">
+                  <a class="avatar">
+                    <img src="img/helen.jpg">
+                  </a>
+                  <div class="content" style="padding-bottom: 0px">
+                    <a class="author">Lovely Helen</a>
+                    <div class="metadata">
+                      <div class="date">2 hours ago</div>
+                      <div class="rating">
+                        <i class="star icon"></i>
+                        24 Faves
+                      </div>
+                    </div>
+                    <div class="text">
+                      Thanks, Enjoy BuskeeBusker! it's AWESOME
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div> -->
+        </div> -->
 
-      <!-- Post Cards Section End -->
+        <!-- Post Cards Section End -->
 
     </div>
     <!-- Left Section End -->
 
     <!-- Right Section Start -->
     <div class="five wide column">
-      <!-- My Page Start -->
-      <!-- <div class="ui link pink cards">
-        <div class="card">
-          <div class="image">
-            <img src="img/veronika.jpg">
-          </div>
-          <div class="content">
-            <div class="meta">
-              <a>Your account</a>
+        <!-- My Page Start -->
+        <!-- <div class="ui link pink cards">
+          <div class="card">
+            <div class="image">
+              <img src="img/veronika.jpg">
             </div>
-            <div class="header">Matt Giampietro</div>
-            <div class="description">
-              I Love Songs
+            <div class="content">
+              <div class="meta">
+                <a>Your account</a>
+              </div>
+              <div class="header">Matt Giampietro</div>
+              <div class="description">
+                I Love Songs
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="left floated">
+                <i class="sound icon"></i>
+                15 Follows
+              </span>
+              <span class="right floated">
+                <i class="user icon"></i>
+                75 Friend
+              </span>
             </div>
           </div>
-          <div class="extra content">
-            <span class="left floated">
-              <i class="sound icon"></i>
-              15 Follows
-            </span>
-            <span class="right floated">
-              <i class="user icon"></i>
-              75 Friend
-            </span>
-          </div>
-        </div>
-      </div> -->
-      <!-- My Page End -->
+        </div> -->
+        <!-- My Page End -->
 
-      <!-- How Now, Recommended Section Start-->
-      <div class="ui top attached tabular menu">
-        <a class="item active" data-tab="first" style="width: 50% !important">
-          <i class="yellow star icon"></i>
-          Hot <br/> Busker
-        </a>
-        <a class="item" data-tab="second" style="width: 50% !important">
-          <i class="red heart icon"></i>
-          Hot <br/> Busking
-        </a>
-      </div>
+        <!-- How Now, Recommended Section Start-->
 
-      <div class="ui bottom attached tab segment active" data-tab="first">
-        <div class="ui cards">
-          <div class="card">
-            <div class="content">
-              <div class="header">
-                <div class="left floated ui pink label" style="margin-right: 5px">1</div>
-                Elliot Fu
-              </div>
-              <div class="description">
-                <div class="ui fluid basic label">
-                  <i class="music icon"></i> R&B Solo
-                </div>
-                <div class="ui fluid basic label">
-                  <i class="at icon"></i> Sinchon, Seoul
-                </div>
-                Hi. I will give you best R&B song.
-              </div>
-            </div>
-            <div class="ui bottom attached button">
-              <i class="pin icon"></i>
-              Pin this Busker
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <div class="header">
-                <div class="left floated ui pink label" style="margin-right: 5px">2</div>
-                Veronika Ossi
-              </div>
-              <div class="description">
-                <div class="ui fluid basic label">
-                  <i class="music icon"></i> Rock Band
-                </div>
-                <div class="ui fluid basic label">
-                  <i class="at icon"></i> Sinchon, Seoul
-                </div>
-                Rock! and! Roll!
-              </div>
-            </div>
-            <div class="ui bottom attached button">
-              <i class="pin icon"></i>
-              Pin this Busker
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <div class="header">
-                <div class="left floated ui pink label" style="margin-right: 5px">3</div>
-                Jenny Hess 
-              </div>
-              <div class="description">
-                <div class="ui fluid basic label">
-                  <i class="music icon"></i> Dance Team
-                </div>
-                <div class="ui fluid basic label">
-                  <i class="at icon"></i> Sinchon, Seoul
-                </div>
-                We are sexy dance team! XD
-              </div>
-            </div>
-            <div class="ui bottom attached button">
-              <i class="pin icon"></i>
-              Pin this Busker
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ui bottom attached tab segment" data-tab="second">
-        <div class="ui cards">
-          <div class="card">
-            <div class="content">
-              <div class="header">
-                <div class="left floated ui pink label" style="margin-right: 5px">1</div>
-                SUPER Festival
-              </div>
-              <div class="description">
-                <div class="ui fluid basic label">
-                  <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
-                </div>
-                <div class="ui fluid basic label">
-                  <i class="at icon"></i> Sinchon, Seoul
-                </div>
-                5 buskers and Korea No.1 Busking Festival
-              </div>
-            </div>
-            <div class="ui bottom attached button">
-              <i class="pin icon"></i>
-              Pin this Busking
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <div class="header">
-                <div class="left floated ui pink label" style="margin-right: 5px">2</div>
-                BuskerBusker Busking
-              </div>
-              <div class="description">
-                <div class="ui fluid basic label">
-                  <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
-                </div>
-                <div class="ui fluid basic label">
-                  <i class="at icon"></i> Sinchon, Seoul
-                </div>
-                
-              </div>
-            </div>
-            <div class="ui bottom attached button">
-              <i class="pin icon"></i>
-              No description. Just Come!
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <div class="header">
-                <div class="left floated ui pink label" style="margin-right: 5px">3</div>
-                Baby Buskers
-              </div>
-              <div class="description">
-                <div class="ui fluid basic label">
-                  <i class="calendar icon"></i> May 28th 20:00 ~ 21:30
-                </div>
-                <div class="ui fluid basic label">
-                  <i class="at icon"></i> Sinchon, Seoul
-                </div>
-                Love Busking? Love us Plz
-              </div>
-            </div>
-            <div class="ui bottom attached button">
-              <i class="pin icon"></i>
-              Pin this Busking
-            </div>
-          </div>
-        </div>
-      </div>
+        <!-- How Now, Recommended Section End -->
+        <!-- Right Section End -->
 
     </div>
 
-      <!-- How Now, Recommended Section End -->
-      <!-- Right Section End -->
-
-  </div>
-  <!-- Body End -->
+</div>
+    <!-- Body End -->
 </body>
 </html>
