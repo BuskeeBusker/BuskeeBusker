@@ -24,7 +24,7 @@
 4. After the use-session, we will ask few questions to you regarding your experience of using our service. 
 
 ### Task & Instruction
-Informed Consent
+#### Informed Consent
 We’re collecting
 1. The approaches of searching buskers/busking through screenshot, written notes.
 2. General information such as which button/tab they click in which order, but no personal information such as which busker they choose, which video they watch. 
@@ -42,7 +42,7 @@ Task 2 - Search for favorite buskers with various tags to view their detailed in
 * Search a busker who play near Hongdae
 * Search a busker with both male and female
 * Search a busker who is famous for guitar 
-* From busker found from a)-d), explore more detailed information for them. 
+* From busker found from 4 items above, explore more detailed information for them. 
 * From busker’s personal page, try to see a busking video of him 
 * From busker’s personal page, try to give ‘like’ to the busker
  
@@ -64,19 +64,26 @@ Writing notes
 
 ### Questionnaires and Interview Questions
 Add more questions specified on each tasks + comparison with existing services (e.g. Indistreet)
+
 Task 1
 * Was it easy to find busking on specific date?
+
 * Was there any information you wished to see in schedule table?
+
 * Were there any information that seemed unnecessary in the table: Busker, Time, Weather, Location?
 
 Task 2
 * Was it easy to search for a busker? Please answer either “yes” or “no”
+
 * Did radio buttons easy to filter? If not, do you have any preference of other style and why?
+
 * Was there any information you wanted to see in busker’s personal page that were not provided?
 
 Task 3
 * Was it easy to find log-in button and to log-in?
+
 * Were buskers’ feeds well-displayed and readable?
+
 * Was my page helpful to remember pinned busking events, videos or posts?
 
 Overall
@@ -101,7 +108,7 @@ In respective order,
     * Age: 22
     * Occupation: Undergraduate
     * Region: Daejeon, Seoul
-* Contex information
+* Context information
     * Likes to sing and listening/watching other people singing. 
     * Follow some buskers facebook page in Facebook. 
     * Follow ‘일반인들의 소름돋는 라이브’ page in Facebook and use it to find excellent buskers/singers
@@ -121,7 +128,7 @@ In respective order,
     * Age: 27
     * Occupation: Businessman and Developer
     * Region: Seoul, Bundang
-* Contex information
+* Context information
     * Interested in buskers who can play music instruments very well. He really enjoys jazzy performance.
     * It was great experience for him to get to know young, not popular piano player few years ago and watching how the player become more popular over time. 
 #### Summary of session 
@@ -209,15 +216,21 @@ a) Qualitative question
 
 ### “Wishes” Feedback
 a) It would be better to compare with other services/possible ways for the same ‘goal’ question
+
 b) Map interview questions with tasks
+
 c) Add information about time in informed consent
+
 d) I am worried how you would gather target users
 
 ### Our reflection
 #### Overall reflection
 Firstly, we were satisfied since there were no serious feedback on our user testing method. Moreover, feedback helped us to be more prepared to get better results from user testing. Especially, we mapped our questions to each tasks from feedback b). This helped us identify usability issue separately from each tasks.
-#### reflection to each category
+#### Reflection to each category
 a) We added a question to ask user to compare our service with existing ones such as “Indistreet”
+
 b) We reorganized interview questions and categorized them into each tasks
+
 c) We added the information in informed consent about expected time taken in user testing.
+
 d) We have extensively asked many friends of ours and have enough potential users for testing
