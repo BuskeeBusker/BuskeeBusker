@@ -89,7 +89,7 @@ Overall
 ### Debrief Prompt
 In respective order,
 1. Thank you for attending the user testing.
-2. During and after the use, you have pointed out [~], [~], and [~] are malfunctioning/inconvenient. It was very helpful to hear from you about our system’s weakness . We will try to reflect your feedback to improve our system.
+2. During and after the use, you have pointed out `~`, `~`, and `~` are malfunctioning/inconvenient. It was very helpful to hear from you about our system’s weakness . We will try to reflect your feedback to improve our system.
 
 
 ## 2. Session observation
