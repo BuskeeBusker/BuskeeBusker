@@ -30,7 +30,8 @@ We’re collecting
 2. General information such as which button/tab they click in which order, but no personal information such as which busker they choose, which video they watch. 
 3. Testing should take about 5 minutes.
 
-Instruction: Our service BuskeeBusker is the website that helps to find buskings and related busker information. We are doing user testing to get feedback to improve the usability of our service. Use our service in freely for 5 minutes and try each tasks.
+#### Instruction
+Our service BuskeeBusker is the website that helps to find buskings and related busker information. We are doing user testing to get feedback to improve the usability of our service. Use our service in freely for 5 minutes and try each tasks.
 
 Task 1 - Choose a specific date or location to search for overall busking schedule and related information.
 * Pick any date in May and see which buskers have busking schedule on that day in Seoul.
@@ -67,23 +68,17 @@ Add more questions specified on each tasks + comparison with existing services (
 
 Task 1
 * Was it easy to find busking on specific date?
-
 * Was there any information you wished to see in schedule table?
-
 * Were there any information that seemed unnecessary in the table: Busker, Time, Weather, Location?
 
 Task 2
 * Was it easy to search for a busker? Please answer either “yes” or “no”
-
 * Did radio buttons easy to filter? If not, do you have any preference of other style and why?
-
 * Was there any information you wanted to see in busker’s personal page that were not provided?
 
 Task 3
 * Was it easy to find log-in button and to log-in?
-
 * Were buskers’ feeds well-displayed and readable?
-
 * Was my page helpful to remember pinned busking events, videos or posts?
 
 Overall
@@ -226,6 +221,7 @@ d) I am worried how you would gather target users
 ### Our reflection
 #### Overall reflection
 Firstly, we were satisfied since there were no serious feedback on our user testing method. Moreover, feedback helped us to be more prepared to get better results from user testing. Especially, we mapped our questions to each tasks from feedback b). This helped us identify usability issue separately from each tasks.
+
 #### Reflection to each category
 a) We added a question to ask user to compare our service with existing ones such as “Indistreet”
 
