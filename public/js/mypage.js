@@ -56,6 +56,11 @@ $(document)
             eventTextColor: "rgba(255,255,255,0.9)"
         });
 
+        $('.button.remove').on('click', function() {
+            $(this).closest('.card').find('.remove.nag').find('span').text('You remove this post!');
+            $('.remove.nag').nag('show');
+            $(this).closest('.card').hide();
+        });
     });
 
 function loadCal() {
