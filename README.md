@@ -16,7 +16,7 @@
 
 #### Demo Video: [https://youtu.be/QD1sxcsN1Pc](https://youtu.be/QD1sxcsN1Pc)
 
-![img](docs/img/DP6/main_page.png)
+![img](docs/img/main_page.png)
 ## What does it do?
 Webpage to connect any buskees to buskers. Buskees can easily search for buskers, follow their activities, and receive information of other buskings.
 
