@@ -223,7 +223,7 @@ function createRow(obj, id) {
                 <div class="row">
                     <div class="ui sixteen wide column grid">
                         <div class="six wide column">
-                            <a href = "busker_info.html">
+                            <a href = "busker_info_${buskerName}.html">
                                 <img class="ui image centered" src="${imageUrl}" style="height: 250px;" />
                             </a>
                         </div>
