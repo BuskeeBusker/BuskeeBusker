@@ -270,7 +270,7 @@ function CenterControl(controlDiv, map) {
     controlText.style.lineHeight = '44px';
     controlText.style.paddingLeft = '5px';
     controlText.style.paddingRight = '5px';
-    controlText.innerHTML = 'Delete circles';
+    controlText.innerHTML = 'Clear Results';
     controlUI.appendChild(controlText);
 
     // Setup the click event listeners: simply set the map to Chicago.
