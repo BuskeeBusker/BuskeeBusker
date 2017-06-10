@@ -6,162 +6,166 @@
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
 <html>
 <head>
-<style type="text/css">
-    body {
-      background-color: #E9EBEE;
-    }
-    body > .grid {
-      height: 100%;
-    }
-    .image {
-      margin-top: -100px;
-    }
-    .column {
-      max-width: 450px;
-    }
-  </style>
-  <script>
-  $(document)
-    .ready(function() {
-
-      var config = {
-          apiKey: "AIzaSyDtYfBRd2SFynGz7FplveLrkgjT1Nqa1dE",
-          databaseURL: "https://buskeebusker-656a6.firebaseio.com"
+    <title>Login | Buskee Busker</title>
+    <style type="text/css">
+        body {
+            background-color: #E9EBEE;
         }
 
-      firebase.initializeApp(config);
-      var database = firebase.database();
-      accountRef = database.ref("accounts");
+        body > .grid {
+            height: 100%;
+        }
 
-      $('.ui.form')
-        .form({
-          fields: {
-            id: {
-              identifier  : 'id',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your id'
-                },
-                {
-                  type   : 'length[5]',
-                  prompt : '"Your id must be at least 5 characters'
-                }
-              ]
-            },
-            password: {
-              identifier  : 'password',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your password'
-                },
-                {
-                  type   : 'length[6]',
-                  prompt : 'Your password must be at least 6 characters'
-                }
-              ]
-            }
-          }
-        })
-      ;
+        .image {
+            margin-top: -100px;
+        }
 
-      $('#sign_up').on('click', function() {
-        $('.sign.nag').nag('show');
-      })
-    })
-  ;
-  </script>
+        .column {
+            max-width: 450px;
+        }
+    </style>
+    <script>
+        $(document)
+            .ready(function () {
+
+                var config = {
+                    apiKey: "AIzaSyDtYfBRd2SFynGz7FplveLrkgjT1Nqa1dE",
+                    databaseURL: "https://buskeebusker-656a6.firebaseio.com"
+                }
+
+                firebase.initializeApp(config);
+                var database = firebase.database();
+                accountRef = database.ref("accounts");
+
+                $('.ui.form')
+                    .form({
+                        fields: {
+                            id: {
+                                identifier: 'id',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter your id'
+                                    },
+                                    {
+                                        type: 'length[5]',
+                                        prompt: '"Your id must be at least 5 characters'
+                                    }
+                                ]
+                            },
+                            password: {
+                                identifier: 'password',
+                                rules: [
+                                    {
+                                        type: 'empty',
+                                        prompt: 'Please enter your password'
+                                    },
+                                    {
+                                        type: 'length[6]',
+                                        prompt: 'Your password must be at least 6 characters'
+                                    }
+                                ]
+                            }
+                        }
+                    })
+                ;
+
+                $('#sign_up').on('click', function () {
+                    $('.sign.nag').nag('show');
+                })
+            })
+        ;
+    </script>
 
 </head>
 <body>
 
 <div class="ui middle aligned center aligned grid">
-  <div class="column">
-    <h2 class="ui pink icon header">
-      <i class="music pink icon"></i>
-      <div class="content">
-        Log-in to your account
-      </div>
-    </h2>
-    <form onsubmit="processInput(); return false;" class="ui large form" method="POST">
-      <div class="ui stacked segment">
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="user icon"></i>
-            <input type="text" name="id" placeholder="ID">
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Password">
-          </div>
-        </div>
-        <div class="ui fluid large pink submit button">Login</div>
-      </div>
+    <div class="column">
+        <h2 class="ui pink icon header">
+            <i class="music pink icon"></i>
+            <div class="content">
+                Log-in to your account
+            </div>
+        </h2>
+        <form onsubmit="processInput(); return false;" class="ui large form" method="POST">
+            <div class="ui stacked segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="id" placeholder="ID">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="ui fluid large pink submit button">Login</div>
+            </div>
 
-      <div class="ui error message"></div>
+            <div class="ui error message"></div>
 
-    </form>
+        </form>
 
-    <div class="ui inline id nag">
+        <div class="ui inline id nag">
       <span class="title">
         Incorrect ID. Please Try again!
       </span>
-      <i class="close icon"></i>
-    </div>
+            <i class="close icon"></i>
+        </div>
 
-    <div class="ui inline password nag">
+        <div class="ui inline password nag">
       <span class="title">
         Incorrect Password. Please Try again!
       </span>
-      <i class="close icon"></i>
-    </div>
+            <i class="close icon"></i>
+        </div>
 
-    <div class="ui message">
-      New to us? <a href="#" id="sign_up"> Sign Up</a>
-    </div>
-    <div class="ui inline sign nag">
+        <div class="ui message">
+            New to us? <a href="#" id="sign_up"> Sign Up</a>
+        </div>
+        <div class="ui inline sign nag">
       <span class="title">
         Sorry, You can't use Sing up function now. <br/>
         Try with below account! <br/>
         ID: guest <br/> PW: buskeebusker
       </span>
-      <i class="close icon"></i>
-    </div>
+            <i class="close icon"></i>
+        </div>
 
-  </div>
+    </div>
 </div>
 
 <script>
-function processInput() {
-  var given_id = $('input[name=id]').val();
-  var given_password = $('input[name=password]').val();
+    function processInput() {
+        var given_id = $('input[name=id]').val();
+        var given_password = $('input[name=password]').val();
 
-  accountRef.orderByKey().equalTo(given_id).on("value", function(snapshot){
-    if (snapshot.val() === null) {
-      localStorage.setItem('logIn', false);
+        accountRef.orderByKey().equalTo(given_id).on("value", function (snapshot) {
+            if (snapshot.val() === null) {
+                localStorage.setItem('logIn', false);
 
-      $('.id.nag')
-        .nag('show')
-      ;
-      $('input').val('');
-    }
-    else if (snapshot.val()[given_id] === given_password) {
-      localStorage.setItem('logIn', true);
-      localStorage.setItem('id', given_id);
-      history.go(-1);
+                $('.id.nag')
+                    .nag('show')
+                ;
+                $('input').val('');
+            }
+            else if (snapshot.val()[given_id] === given_password) {
+                localStorage.setItem('logIn', true);
+                localStorage.setItem('id', given_id);
+                history.go(-1);
 
-    } else {
-      localStorage.setItem('logIn', false);
-      $('.password.nag')
-        .nag('show')
-      ;
-      $('input[name=password]').val('');
-    }
-  })
-};
+            } else {
+                localStorage.setItem('logIn', false);
+                $('.password.nag')
+                    .nag('show')
+                ;
+                $('input[name=password]').val('');
+            }
+        })
+    };
 
 </script>
 

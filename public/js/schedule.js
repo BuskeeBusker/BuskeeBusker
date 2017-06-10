@@ -14,6 +14,13 @@ $(document).ready(function() {
 		});
 	$('.ui.search.dropdown')
   		.dropdown();
+	$('#double').range({
+        min: 0,
+        max: 10,
+        start: 5,
+        input: '#input'
+    });
+
   	$('#hotnow').append(`
       <div class="ui top attached tabular menu">
         <a class="item active" data-tab="first" style="width: 50% !important">
