@@ -286,8 +286,8 @@ $(document)
 
                             busking_info = card_templete;
                             pin_tab = `
-                              <div class="item">Pin this busking</div>
-                              <div class="item">Pin this post</div>
+                              <div class="item">Pin this Busking</div>
+                              <div class="item">Pin this Post</div>
                             `;
                         }
 
@@ -299,9 +299,9 @@ $(document)
                           <img class="ui avatar image" src=${pic}>
                           </a>
                           ${name}
-                          <div class="ui icon top right floated pointing dropdown basic button">
+                          <div class="ui icon top right floated pointing dropdown basic button pin">
                           <i class="pink pin icon"></i>
-                          <div class="menu">
+                          <div class="pin menu">
                           ${pin_tab}
                           </div>
                           </div>
@@ -320,10 +320,6 @@ $(document)
                           <div class="extra content">
                           <i class="like icon"></i>
                           ${like}
-                          <div class="right floated">
-                          <i class="star icon"></i>
-                          ${star}
-                          </div>
                           </div>
                           <div class="ui styled fluid accordion">
                           <div class="title">
@@ -334,7 +330,15 @@ $(document)
                           Sorry, No comments
                           </div>
                           </div>
+                          <div class="ui inline pin nag">
+                          <span class="title">
+                            Pin~!
+                          </span>
+                          <i class="close icon"></i>
+                        </div>
                           </div>
+                          
+
                         `;
 
                         posts_array.push(post_templete);
@@ -357,36 +361,44 @@ $(document)
 
                 $('.extra.content .like.icon').on('click', function () {
                     console.log('like')
-                })
+                });
 
-                $('.extra.content .star.icon').on('click', function () {
-                    console.log('star')
-                })
+                $('.pin.menu .item').on('click', function () {
+                    $(this).closest('.card').find('.pin.nag').find('span').text('You '+$(this).text().toLowerCase() + '! Check it in My page');
+                    $(this).closest('.card').find('.pin.nag').nag('show');
+                });
 
+                $('.button.pin').on('click', function() {
+                   let menu_length = $(this).find('.item').length;
+                   if (menu_length === 0) {
+                       $(this).closest('.card').find('.pin.nag').find('span').text('You pin this post! Check it in My page');
+                       $(this).closest('.card').find('.pin.nag').nag('show');
+                   }
+                });
             });
 
         } else {
 
             $('.eleven.wide.column').append(`
-    <div class="ui modal">
-      <i class="close icon"></i>
-      <div class="header">
-        You have not log In.
-      </div>
-      <div class="content">
-        <p> If you want to see Feed, Please Log in! </p>
-      </div>
-      <div class="actions">
-        <div class="ui red button">
-          Back to Previous Page
-        </div>
-        <div class="ui right labeled icon pink button">
-          Go to Log in
-          <i class="checkmark icon"></i>
-        </div>
-      </div>
-    </div>
-    `)
+                <div class="ui modal">
+                  <i class="close icon"></i>
+                  <div class="header">
+                    You have not log In.
+                  </div>
+                  <div class="content">
+                    <p> If you want to see Feed, Please Log in! </p>
+                  </div>
+                  <div class="actions">
+                    <div class="ui red button">
+                      Back to Previous Page
+                    </div>
+                    <div class="ui right labeled icon pink button">
+                      Go to Log in
+                      <i class="checkmark icon"></i>
+                    </div>
+                  </div>
+                </div>
+            `);
 
             $('.ui.modal')
                 .modal('show')
