@@ -13,17 +13,17 @@
 ## 1. Iteration 
 #### Bugs fixed & features added: We (1) fixed bugs found in previous round of user testing and (2) added/redesigned some features.   
 * Main page <br>
-a) Changed text ‘Delete Circles’ to ‘Clear Result’ in main page to give more intuitive instruction to users. <br>
-b) Changed the color of ‘current location’ button so that user easily recognize it. 
+  a) Changed text ‘Delete Circles’ to ‘Clear Result’ in main page to give more intuitive instruction to users. <br>
+  b) Changed the color of ‘current location’ button so that user easily recognize it. 
 * Busking (Schedule) page<br>
-a) Removed dummy pre-loaded image for each busker’s info page that confused users in previous user testing.  <br>
-b) Changed design implementation of date/location choice feature to enhance responsibility of feature.  
+  a) Removed dummy pre-loaded image for each busker’s info page that confused users in previous user testing.  <br>
+  b) Changed design implementation of date/location choice feature to enhance responsibility of feature.  
 * Buskers’ information page <br>
-a) Fixed “Undefined’ at genres in each buskers information page. <br>
-b) Changed visual representation of button for each buskers SNS (facebook, instagram) to enhance external consistency.  
+  a) Fixed “Undefined’ at genres in each buskers information page. <br>
+  b) Changed visual representation of button for each buskers SNS (facebook, instagram) to enhance external consistency.  
 * Feed page <br>
-a) Removed ‘star’ button that many user confused about. <br>
-b) Redesigned ‘pin’ button and related features so that user can pin exactly what they want among post/busking event. Distinguished post with and without busking information.
+  a) Removed ‘star’ button that many user confused about. <br>
+  b) Redesigned ‘pin’ button and related features so that user can pin exactly what they want among post/busking event. Distinguished post with and without busking information.
  
 #### User testing: To reflect a studio feedback about effectiveness measurement of our system, we recruited 5 more users to compare our system with other existing methods.  
 * Method: We asked users to do followings. Each tasks assume some situation as our system uses limited database.  
