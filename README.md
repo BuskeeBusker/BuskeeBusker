@@ -14,7 +14,7 @@
 
 #### Demo Url: https://buskeebusker.github.io/BuskeeBusker
 
-#### Demo Video: [https://youtu.be/QD1sxcsN1Pc](https://youtu.be/QD1sxcsN1Pc)
+#### Demo Video: https://youtu.be/gHfaVvm0Hhk
 
 ![img](docs/img/main_page.png)
 ## What does it do?
