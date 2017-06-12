@@ -10,6 +10,12 @@
 
 **Eun-Young Ko (audit) 20090044**
 
+## 0. Deliverables
+
+#### Final slide: https://docs.google.com/presentation/d/1omSD1R9GG3aTsRCAe1bOG-TLVpGyRjR7q5Yv3W5vNvg/edit?usp=sharing
+
+#### Final video: https://youtu.be/gHfaVvm0Hhk
+
 ## 1. Iteration 
 #### Bugs fixed & features added: We (1) fixed bugs found in previous round of user testing and (2) added/redesigned some features.   
 * **Main page** <br>
