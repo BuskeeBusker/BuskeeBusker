@@ -11,10 +11,10 @@
 **Eun-Young Ko (audit) 20090044**
 
 ## 1. Iteration 
-### Bugs fixed & features added: We (1) fixed bugs found in previous round of user testing and (2) added/redesigned some features.   
-#### Main page
-a) Changed text ‘Delete Circles’ to ‘Clear Result’ in main page to give more intuitive instruction to users. 
-b) Changed the color of ‘current location’ button so that user easily recognize it. 
+#### Bugs fixed & features added: We (1) fixed bugs found in previous round of user testing and (2) added/redesigned some features.   
+* Main page
+** Changed text ‘Delete Circles’ to ‘Clear Result’ in main page to give more intuitive instruction to users. 
+** Changed the color of ‘current location’ button so that user easily recognize it. 
 #### Busking (Schedule) page
 a) Removed dummy pre-loaded image for each busker’s info page that confused users in previous user testing.  
 b) Changed design implementation of date/location choice feature to enhance responsibility of feature.  
@@ -44,7 +44,7 @@ b) Redesigned ‘pin’ button and related features so that user can pin exactly
 ### Kyung Je Jo
 1. Contribution: The pages I was in charge of designing and implementing was busker’s page and mypage. As a team, we shared some image of what should be included in a page and what should not. However, organizing and displaying the shared ideas in a page was my task. Especially, in busker’s page, our team wanted to put too many information all together. I decided to categorize them into three sections: 1) information, 2) schedule, and 3) videos. Furthermore, I added more efficiency in terms of space by using buttons that explicitly seemed clickable and follow external consistency. Similarly, in mypage, I made three tabs to display informations in an organized manner.
 2. Our team’s chemistry was boosted by our friendship. We knew each other for more than three years, and also experienced teamwork with the current teammates before. We could start right on from the very first day of our team meeting. Thus, we could use our time in most efficient way from the beginning of the semester. We were all thinking to make this project big, a full website with multiple pages. Therefore, time management was the biggest hurdle. For each pages, we have deep discussion of what should be included for each pages. Then, we allocated at most two pages per person to implement. I learned that having deep discussions is really important before any implementation is done. Teammates are very likely to have different picture in mind. 
-3 “Users are not always optimistic about new UI.” We implemented the UI with passion and confidence that it is awesome and useful. However, there often seemed clear difference between users’ expectation versus our product. Thus, I learned that users’ feedback must be the most important part in implementing user-centered GUI. As we went through the iteration cycle of designing and getting feedback, I also learned about iteration cycle itself. Most significantly, how I should run a user testing or what questions I should be asking to users in order to receive meaningful feedback.
+3. “Users are not always optimistic about new UI.” We implemented the UI with passion and confidence that it is awesome and useful. However, there often seemed clear difference between users’ expectation versus our product. Thus, I learned that users’ feedback must be the most important part in implementing user-centered GUI. As we went through the iteration cycle of designing and getting feedback, I also learned about iteration cycle itself. Most significantly, how I should run a user testing or what questions I should be asking to users in order to receive meaningful feedback.
  
  
 ### Seokchan Ahn
